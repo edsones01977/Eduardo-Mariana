@@ -281,8 +281,10 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
   <div class="row">
     <h1>Planejamento Patrimonial <span>· Eduardo &amp; Mariana Pinho</span></h1>
     <div class="meta">
-      <div><strong>Cordier Investimentos</strong> · BTG Pactual</div>
-      <div>Versão 2 · maio/2026</div>
+      <div style="font-size:14px;font-weight:600;color:#fff;">Edson Santos</div>
+      <div style="font-size:12px;color:#c9d1d9;">Consultor Financeiro · (11) 98492-6100</div>
+      <div style="font-size:12px;color:#c9d1d9;">edson.santos@cordierinvestimentos.com.br</div>
+      <div style="font-size:11px;color:var(--accent-soft);font-weight:600;margin-top:2px;">Cordier · BTG Pactual</div>
     </div>
   </div>
 </header>
@@ -314,22 +316,27 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
     <details class="collapse" style="background:transparent;box-shadow:none;border-radius:0;">
       <summary style="padding:20px 24px;">
         <div style="flex:1;">
-          <div class="label">Capacidade de Poupança</div>
-          <div class="value" id="capacidadeVal">R$ 1,62 mi <small style="font-size:14px;color:var(--ink-soft);font-weight:500;">/ ano</small></div>
-          <div class="hint">~64% da renda anual · detalhamento abaixo</div>
+          <div class="label">Folga mensal recorrente</div>
+          <div class="value" id="capacidadeVal">R$ 10 k <small style="font-size:14px;color:var(--ink-soft);font-weight:500;">/ mês</small></div>
+          <div class="hint">apenas salários · bônus de R$ 1,5 mi/ano não contado aqui</div>
         </div>
       </summary>
       <div class="body" style="padding:0 24px 20px;">
+        <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:6px;">Recorrente (mensal · base para aportes do item 3)</div>
         <div class="kpi-table" style="margin-top:0;border-top:none;padding-top:0;">
-          <div class="ln"><span>(+) Salário Eduardo</span><span>R$ 420 k</span></div>
-          <div class="ln"><span>(+) Salário Mariana</span><span>R$ 600 k</span></div>
-          <div class="ln"><span>(+) Bônus Eduardo</span><span>R$ 1.500 k</span></div>
-          <div class="ln"><span style="font-weight:600;">Renda total anual</span><span style="font-weight:600;">R$ 2.520 k</span></div>
-          <div class="ln"><span class="neg">(–) Aluguel (R$ 25k × 12)</span><span class="neg">R$ 300 k</span></div>
-          <div class="ln"><span class="neg">(–) Demais despesas (R$ 50k × 12)</span><span class="neg">R$ 600 k</span></div>
-          <div class="ln tot"><span>(=) Capacidade de poupança</span><span>R$ 1.620 k/ano</span></div>
+          <div class="ln"><span>(+) Salário Eduardo</span><span>R$ 35 k/mês</span></div>
+          <div class="ln"><span>(+) Salário Mariana</span><span>R$ 50 k/mês</span></div>
+          <div class="ln"><span style="font-weight:600;">Renda mensal</span><span style="font-weight:600;">R$ 85 k/mês</span></div>
+          <div class="ln"><span class="neg">(–) Aluguel</span><span class="neg">R$ 25 k/mês</span></div>
+          <div class="ln"><span class="neg">(–) Demais despesas</span><span class="neg">R$ 50 k/mês</span></div>
+          <div class="ln tot"><span>(=) Folga mensal recorrente</span><span>R$ 10 k/mês</span></div>
         </div>
-        <p style="font-size:11px;color:var(--ink-soft);margin-top:8px;line-height:1.4;">Equivale a <strong>R$ 135k/mês</strong> disponíveis para aporte nas caixinhas.</p>
+        <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:0.06em;margin:14px 0 6px;">Pontual (anual · bônus)</div>
+        <div class="kpi-table" style="margin-top:0;border-top:none;padding-top:0;">
+          <div class="ln"><span>(+) Bônus Eduardo (abr)</span><span>R$ 1.500 k/ano</span></div>
+          <div class="ln tot"><span>(=) Capacidade anual TOTAL</span><span>R$ 1.620 k/ano</span></div>
+        </div>
+        <p style="font-size:11px;color:var(--ink-soft);margin-top:10px;line-height:1.4;">Os aportes mensais do item 3 devem somar até <strong>R$ 10k/mês</strong> para serem sustentáveis sem mexer no bônus. O bônus anual entra separado, alocado conforme split estratégico 50/30/20.</p>
       </div>
     </details>
   </div>
@@ -413,7 +420,7 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
 <!-- ============ 3. SLIDERS EDITÁVEIS ============ -->
 <div class="sec">
   <h2><span class="num">3</span>Parâmetros editáveis · Simulação em tempo real</h2>
-  <p class="sub">Mova os controles para recalcular instantaneamente caixinhas, projeções, cenário do imóvel e comparativo. Todos os gráficos são reativos.</p>
+  <p class="sub">Levando em consideração que o casal tem uma <strong>folga mensal recorrente de R$ 10k</strong> (apenas salários, após despesas atuais — ver detalhe no header) <strong>+ bônus anual de R$ 1,5 mi</strong>, os sliders abaixo definem o aporte mensal por caixinha. Todos os gráficos são reativos.</p>
   <div class="sliders-panel">
     <div class="sliders-header">
       <div class="lead" style="margin:0;flex:1;">🎯 Ajuste os parâmetros e veja o impacto em cada seção. Tudo recalcula em tempo real.</div>
@@ -426,22 +433,22 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
       <div class="slider-item">
         <label><span style="color:var(--c-divid)">●</span> Aporte Dividendos</label>
         <div class="val" id="apDivVal">R$ 0<span class="unit">/mês · <span id="apDivPct">0%</span></span></div>
-        <input type="range" id="apDiv" min="0" max="100000" step="1000" value="0">
-        <div class="scale"><span>R$ 0</span><span>R$ 100k</span></div>
+        <input type="range" id="apDiv" min="0" max="10000" step="500" value="0">
+        <div class="scale"><span>R$ 0</span><span>R$ 10k</span></div>
       </div>
 
       <div class="slider-item">
         <label><span style="color:var(--c-off)">●</span> Aporte Offshore</label>
         <div class="val" id="apOffVal">R$ 0<span class="unit">/mês · <span id="apOffPct">0%</span></span></div>
-        <input type="range" id="apOff" min="0" max="100000" step="1000" value="0">
-        <div class="scale"><span>R$ 0</span><span>R$ 100k</span></div>
+        <input type="range" id="apOff" min="0" max="10000" step="500" value="0">
+        <div class="scale"><span>R$ 0</span><span>R$ 10k</span></div>
       </div>
 
       <div class="slider-item">
         <label><span style="color:var(--c-apos)">●</span> Aporte Aposentadoria (PGBL)</label>
         <div class="val" id="apAposVal">R$ 0<span class="unit">/mês · <span id="apAposPct">0%</span></span></div>
-        <input type="range" id="apApos" min="0" max="50000" step="500" value="0">
-        <div class="scale"><span>R$ 0</span><span>R$ 50k</span></div>
+        <input type="range" id="apApos" min="0" max="10000" step="500" value="0">
+        <div class="scale"><span>R$ 0</span><span>R$ 10k</span></div>
       </div>
 
       <div style="grid-column:1/-1;padding:10px 14px;background:var(--primary);color:#fff;border-radius:4px;display:flex;justify-content:space-between;align-items:center;">
@@ -449,44 +456,69 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
         <div style="font-size:22px;font-weight:700;" id="aporteTotalVal">R$ 0/mês</div>
       </div>
 
-      <div class="subgroup-title">Taxas das caixinhas (editáveis)</div>
+      <div class="subgroup-title">Portabilidade da previdência atual → BTG</div>
 
       <div class="slider-item">
-        <label>Cetipados (Dividendos)</label>
-        <div class="val" id="rDivVal">11,0<span class="unit">% a.a.</span></div>
-        <input type="range" id="rDiv" min="8" max="14" step="0.5" value="11">
-        <div class="scale"><span>8%</span><span>14%</span></div>
+        <label><span style="color:var(--mariana)">●</span> Brasilprev (Mariana) → BTG</label>
+        <div class="val" id="pctPortarMarianaVal">0<span class="unit">% (fica no BB · R$ 731 k)</span></div>
+        <input type="range" id="pctPortarMariana" min="0" max="100" step="10" value="0">
+        <div class="scale"><span>0% (fica)</span><span>100% (vem tudo)</span></div>
       </div>
 
       <div class="slider-item">
-        <label>Treasuries (Offshore USD)</label>
-        <div class="val" id="rOffVal">4,0<span class="unit">% a.a.</span></div>
-        <input type="range" id="rOff" min="2" max="6" step="0.25" value="4">
-        <div class="scale"><span>2%</span><span>6%</span></div>
+        <label><span style="color:var(--eduardo)">●</span> Previdência XP (Eduardo) → BTG</label>
+        <div class="val" id="pctPortarEduardoVal">0<span class="unit">% (fica na XP · R$ 392 k)</span></div>
+        <input type="range" id="pctPortarEduardo" min="0" max="100" step="10" value="0">
+        <div class="scale"><span>0% (fica)</span><span>100% (vem tudo)</span></div>
       </div>
 
-      <div class="slider-item">
-        <label>PGBL/VGBL (Aposentadoria)</label>
-        <div class="val" id="rAposVal">10,0<span class="unit">% a.a.</span></div>
-        <input type="range" id="rApos" min="6" max="14" step="0.5" value="10">
-        <div class="scale"><span>6%</span><span>14%</span></div>
+      <div style="grid-column:1/-1;padding:10px 14px;background:var(--accent-faint);border-left:3px solid var(--accent);border-radius:4px;display:flex;justify-content:space-between;align-items:center;">
+        <div style="font-size:11px;color:var(--ink-soft);">Patrimônio adicional sob gestão BTG (via portabilidade)</div>
+        <div style="font-size:18px;font-weight:700;color:var(--primary);" id="patPortadoVal">R$ 0</div>
       </div>
 
-      <div class="slider-item">
-        <label>IPCA (reajuste aluguel)</label>
-        <div class="val" id="ipcaVal">4,14<span class="unit">% a.a.</span></div>
-        <input type="range" id="ipca" min="2" max="8" step="0.1" value="4.14">
-        <div class="scale"><span>2%</span><span>8%</span></div>
-      </div>
     </div>
+
+    <details class="collapse" style="margin-top:18px;box-shadow:none;border:1px solid var(--border);">
+      <summary>⚙️ Taxas das caixinhas e premissas macro · stress test (clique para expandir)</summary>
+      <div class="body">
+        <p class="sub" style="font-size:11px;margin-top:10px;">Valores default refletem o cenário-base (Focus + premissas BTG). Use para simular cenários de stress: Selic mais baixa, IPCA mais alto, etc. Não devem ser ajustados na reunião de cliente, salvo para sensibilidade.</p>
+        <div class="sliders-grid" style="margin-top:12px;">
+          <div class="slider-item">
+            <label>Cetipados (Caixinha Dividendos)</label>
+            <div class="val" id="rDivVal">11,0<span class="unit">% a.a.</span></div>
+            <input type="range" id="rDiv" min="8" max="14" step="0.5" value="11">
+            <div class="scale"><span>8%</span><span>14%</span></div>
+          </div>
+          <div class="slider-item">
+            <label>Treasuries (Caixinha Offshore USD)</label>
+            <div class="val" id="rOffVal">4,0<span class="unit">% a.a.</span></div>
+            <input type="range" id="rOff" min="2" max="6" step="0.25" value="4">
+            <div class="scale"><span>2%</span><span>6%</span></div>
+          </div>
+          <div class="slider-item">
+            <label>PGBL/VGBL (Caixinha Aposentadoria)</label>
+            <div class="val" id="rAposVal">10,0<span class="unit">% a.a.</span></div>
+            <input type="range" id="rApos" min="6" max="14" step="0.5" value="10">
+            <div class="scale"><span>6%</span><span>14%</span></div>
+          </div>
+          <div class="slider-item">
+            <label>IPCA (reajuste aluguel)</label>
+            <div class="val" id="ipcaVal">4,14<span class="unit">% a.a.</span></div>
+            <input type="range" id="ipca" min="2" max="8" step="0.1" value="4.14">
+            <div class="scale"><span>2%</span><span>8%</span></div>
+          </div>
+        </div>
+      </div>
+    </details>
     <p class="sub" style="margin-top:14px;font-size:11px;color:var(--ink-soft);">💡 Os parâmetros do <strong>financiamento imobiliário</strong> (preço, entrada, taxa SBPE, TR) ficam exclusivamente dentro da seção 9 (Cenário Imóvel), para não poluir esta visão geral.</p>
   </div>
 </div>
 
 <!-- ============ 4. CAIXINHAS ============ -->
 <div class="sec">
-  <h2><span class="num">4</span>As 5 caixinhas · Estrutura por objetivo</h2>
-  <p class="sub">Cada caixinha tem um propósito específico e uma classe de ativo correspondente. Patrimônio inicial alocado para que cada caixinha esteja "operacional" desde o mês 1. <strong>Total alocado: <span id="caixinhasTotal">R$ 6,14 mi</span></strong>.</p>
+  <h2><span class="num">4</span>As 5 caixinhas · Sugestão de primeira alocação</h2>
+  <p class="sub">Estas 5 caixinhas representam a <strong>sugestão de primeira alocação</strong> para o patrimônio do casal. Cada uma tem um propósito específico e uma classe de ativo correspondente. O cardápio detalhado dos títulos atuais que compõem essa distribuição está logo abaixo no item 5. <strong>Total alocado: <span id="caixinhasTotal">R$ 6,14 mi</span></strong>.</p>
   <div class="caixinhas-grid">
     <div class="caixinha">
       <div class="icon">🏠</div>
@@ -534,7 +566,7 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
 <!-- ============ 5. BANCOS ============ -->
 <div class="sec">
   <h2><span class="num">5</span>Migração de custódia · STVM + realocação no vencimento</h2>
-  <p class="sub">Toda a custódia migra para o BTG via <span class="tip wide" data-tip="Sistema de Transferência de Valores Mobiliários — transferência regulatória de custódia entre corretoras, sem fato gerador de IR e preservando data de compra.">STVM</span>, sem liquidação dos papéis. Cada papel é carregado até seu vencimento; ao vencer, o principal é realocado dentro da caixinha de Dividendos (cetipados 11% a.a.). <strong>Exceção:</strong> previdência (PGBL/VGBL) tipicamente permanece nos bancos de origem (slider abaixo decide o % a portar via portabilidade previdenciária).</p>
+  <p class="sub">Toda a custódia migra para o BTG via <span class="tip wide" data-tip="Sistema de Transferência de Valores Mobiliários — transferência regulatória de custódia entre corretoras, sem fato gerador de IR e preservando data de compra.">STVM</span>, sem liquidação dos papéis. Cada papel é carregado até seu vencimento; <strong>ao vencer, o principal volta para caixa e é redistribuído entre as caixinhas conforme o split definido nos sliders do item 3</strong>. <strong>Exceção:</strong> previdência (PGBL/VGBL) tipicamente permanece nos bancos de origem.</p>
   <div class="banco-grid">
     <div class="col">
       <h3><span class="badge origem">Origem</span> Hoje</h3>
@@ -546,15 +578,101 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
     </div>
     <div class="col">
       <h3><span class="badge btg">Destino</span> BTG Pactual via STVM</h3>
-      <div class="linha"><span>STVM imediato · papéis líquidos XP/BB/Itaú</span><span>R$ 4,30 mi</span></div>
-      <div class="linha"><span>Permanece na origem · Brasilprev (Mariana)</span><span>R$ 731 k</span></div>
-      <div class="linha"><span>Permanece na origem · Previdência XP (Eduardo)</span><span>R$ 392 k</span></div>
-      <div class="linha"><span style="font-size:11px;color:var(--ink-soft);">↳ Slider abaixo define % portado em PGBL/VGBL</span><span></span></div>
-      <div class="linha"><span style="font-size:11px;color:var(--ink-soft);">↳ Papéis vencidos → realocação na Caixinha Dividendos</span><span></span></div>
-      <div class="total"><span>Total controlado pelo BTG</span><span class="v">R$ 6,14 mi</span></div>
+      <div class="linha"><span>STVM imediato · papéis líquidos XP/BB/Itaú</span><span>R$ 5,02 mi</span></div>
+      <div class="linha"><span>Portabilidade Brasilprev (Mariana) <span style="font-size:10px;color:var(--mariana);">slider item 3</span></span><span id="portMarianaVal">R$ 0</span></div>
+      <div class="linha"><span>Portabilidade Prev XP (Eduardo) <span style="font-size:10px;color:var(--eduardo);">slider item 3</span></span><span id="portEduardoVal">R$ 0</span></div>
+      <div class="linha"><span style="font-size:11px;color:var(--ink-soft);">↳ Vencimentos chegam JÁ no BTG → split estratégico 50/30/20</span><span></span></div>
+      <div class="total"><span>Total sob gestão BTG</span><span class="v" id="totalGestaoBTGVal">R$ 5,02 mi</span></div>
     </div>
   </div>
-  <p class="sub" style="margin-top:12px;font-size:11px;color:var(--ink-soft);"><strong>Sobre a previdência:</strong> Brasilprev (Mariana R$ 731k) e Previdência XP (Eduardo R$ 392k) tipicamente permanecem nos bancos de origem — a portabilidade PGBL↔PGBL e VGBL↔VGBL não é fato gerador de IR e preserva o regime regressivo. A decisão sobre portar ou não pode ser revista a qualquer momento sem custo.</p>
+  <p class="sub" style="margin-top:12px;font-size:11px;color:var(--ink-soft);"><strong>Sobre a previdência:</strong> Brasilprev (Mariana R$ 731k) e Previdência XP (Eduardo R$ 392k) tipicamente permanecem nos bancos de origem — a portabilidade PGBL↔PGBL e VGBL↔VGBL não é fato gerador de IR e preserva o regime regressivo. A decisão sobre portar ou não é controlada nos sliders do item 3.</p>
+
+  <details class="collapse" style="margin-top:20px;">
+    <summary>📋 Cardápio completo · Títulos e liquidezes (cascata por custódia)</summary>
+    <div class="body">
+      <p class="sub" style="margin-top:12px;font-size:11px;">Detalhamento de todos os papéis atuais por banco, com valor presente e data de liquidez/vencimento. Todos os papéis seguem para o BTG via STVM (exceto previdência, que depende do slider do item 3).</p>
+
+      <div style="margin-top:18px;">
+        <div style="font-size:11px;font-weight:700;color:var(--eduardo);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;border-bottom:2px solid var(--eduardo);padding-bottom:4px;">Eduardo · XP Investimentos · Conta 2516867 · R$ 3,04 mi</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead><tr style="background:var(--bg);"><th style="text-align:left;padding:6px 8px;font-weight:600;">Produto</th><th style="text-align:left;padding:6px 8px;font-weight:600;">Tipo</th><th style="text-align:right;padding:6px 8px;font-weight:600;">Valor</th><th style="text-align:right;padding:6px 8px;font-weight:600;">Liquidez/Vencimento</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:5px 8px;">LFT mar/2028</td><td>Tesouro</td><td style="text-align:right;">R$ 371.152</td><td style="text-align:right;">mar/2028</td></tr>
+            <tr><td style="padding:5px 8px;">LTN jan/2028</td><td>Tesouro</td><td style="text-align:right;">R$ 330.404</td><td style="text-align:right;">jan/2028</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B ago/2040</td><td>Tesouro</td><td style="text-align:right;">R$ 192.666</td><td style="text-align:right;">ago/2040</td></tr>
+            <tr><td style="padding:5px 8px;">Kinea Prev Atlas</td><td>Previdência</td><td style="text-align:right;">R$ 185.669</td><td style="text-align:right;">— (prev)</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B Princ mai/2029</td><td>Tesouro</td><td style="text-align:right;">R$ 178.137</td><td style="text-align:right;">mai/2029</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B mai/2035</td><td>Tesouro</td><td style="text-align:right;">R$ 174.240</td><td style="text-align:right;">mai/2035</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B mai/2055</td><td>Tesouro</td><td style="text-align:right;">R$ 139.241</td><td style="text-align:right;">mai/2055</td></tr>
+            <tr><td style="padding:5px 8px;">CDB Paulista 112% CDI</td><td>RF privada</td><td style="text-align:right;">R$ 126.174</td><td style="text-align:right;">nov/2028</td></tr>
+            <tr><td style="padding:5px 8px;">LCI Banco Inter</td><td>RF privada · isenta</td><td style="text-align:right;">R$ 121.552</td><td style="text-align:right;">mai/2027</td></tr>
+            <tr><td style="padding:5px 8px;">LFT mar/2027</td><td>Tesouro</td><td style="text-align:right;">R$ 118.470</td><td style="text-align:right;">mar/2027</td></tr>
+            <tr><td style="padding:5px 8px;">Demais RF privada + previdência</td><td>Vários</td><td style="text-align:right;">R$ 644.787</td><td style="text-align:right;">vários</td></tr>
+            <tr><td style="padding:5px 8px;">Ações</td><td>RV</td><td style="text-align:right;">R$ 59.641</td><td style="text-align:right;">D+2 (bolsa)</td></tr>
+            <tr><td style="padding:5px 8px;">Disponível (custódia remunerada)</td><td>Caixa</td><td style="text-align:right;">R$ 156.509</td><td style="text-align:right;">D+0</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:20px;">
+        <div style="font-size:11px;font-weight:700;color:var(--mariana);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;border-bottom:2px solid var(--mariana);padding-bottom:4px;">Mariana · XP Investimentos · Conta 2515026 · R$ 729 k</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead><tr style="background:var(--bg);"><th style="text-align:left;padding:6px 8px;font-weight:600;">Produto</th><th style="text-align:left;padding:6px 8px;font-weight:600;">Tipo</th><th style="text-align:right;padding:6px 8px;font-weight:600;">Valor</th><th style="text-align:right;padding:6px 8px;font-weight:600;">Liquidez/Vencimento</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:5px 8px;">NTN-B Princ mai/2029</td><td>Tesouro</td><td style="text-align:right;">R$ 204.988</td><td style="text-align:right;">mai/2029</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B Princ mai/2035</td><td>Tesouro</td><td style="text-align:right;">R$ 87.413</td><td style="text-align:right;">mai/2035</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B mai/2055</td><td>Tesouro</td><td style="text-align:right;">R$ 78.289</td><td style="text-align:right;">mai/2055</td></tr>
+            <tr><td style="padding:5px 8px;">LTN jan/2028</td><td>Tesouro</td><td style="text-align:right;">R$ 60.441</td><td style="text-align:right;">jan/2028</td></tr>
+            <tr><td style="padding:5px 8px;">VALE3</td><td>Ação</td><td style="text-align:right;">R$ 54.873</td><td style="text-align:right;">D+2 (bolsa)</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B ago/2032</td><td>Tesouro</td><td style="text-align:right;">R$ 49.412</td><td style="text-align:right;">ago/2032</td></tr>
+            <tr><td style="padding:5px 8px;">HASH11</td><td>ETF cripto</td><td style="text-align:right;">R$ 43.006</td><td style="text-align:right;">D+2 (bolsa)</td></tr>
+            <tr><td style="padding:5px 8px;">CDB Afinz 111% CDI</td><td>RF privada</td><td style="text-align:right;">R$ 36.311</td><td style="text-align:right;">nov/2027</td></tr>
+            <tr><td style="padding:5px 8px;">LFT mar/2028</td><td>Tesouro</td><td style="text-align:right;">R$ 26.484</td><td style="text-align:right;">mar/2028</td></tr>
+            <tr><td style="padding:5px 8px;">LFT mar/2027</td><td>Tesouro</td><td style="text-align:right;">R$ 23.845</td><td style="text-align:right;">mar/2027</td></tr>
+            <tr><td style="padding:5px 8px;">Demais (DEB + outros)</td><td>Vários</td><td style="text-align:right;">R$ 64.213</td><td style="text-align:right;">vários</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:20px;">
+        <div style="font-size:11px;font-weight:700;color:#4a7c40;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;border-bottom:2px solid #4a7c40;padding-bottom:4px;">Mariana · Banco do Brasil · R$ 1,55 mi</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead><tr style="background:var(--bg);"><th style="text-align:left;padding:6px 8px;font-weight:600;">Produto</th><th style="text-align:left;padding:6px 8px;font-weight:600;">Tipo</th><th style="text-align:right;padding:6px 8px;font-weight:600;">Valor</th><th style="text-align:right;padding:6px 8px;font-weight:600;">Liquidez/Vencimento</th></tr></thead>
+          <tbody>
+            <tr style="background:#fff8e1;"><td style="padding:5px 8px;">Brasilprev Plus FICFIF RF</td><td><strong>Previdência</strong></td><td style="text-align:right;">R$ 501.677</td><td style="text-align:right;">slider item 3</td></tr>
+            <tr style="background:#fff8e1;"><td style="padding:5px 8px;">Brasilprev Kinea Sigma Prev</td><td><strong>Previdência</strong></td><td style="text-align:right;">R$ 137.134</td><td style="text-align:right;">slider item 3</td></tr>
+            <tr style="background:#fff8e1;"><td style="padding:5px 8px;">Brasilprev Renda Fixa Ativo IV</td><td><strong>Previdência</strong></td><td style="text-align:right;">R$ 87.641</td><td style="text-align:right;">slider item 3</td></tr>
+            <tr style="background:#fff8e1;"><td style="padding:5px 8px;">Brasilprev RT Premium III</td><td><strong>Previdência</strong></td><td style="text-align:right;">R$ 4.330</td><td style="text-align:right;">slider item 3</td></tr>
+            <tr><td style="padding:5px 8px;">LCA POS CDI</td><td>RF · isenta</td><td style="text-align:right;">R$ 284.962</td><td style="text-align:right;">— (curto)</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B 15/05/2035</td><td>Tesouro</td><td style="text-align:right;">R$ 113.187</td><td style="text-align:right;">mai/2035</td></tr>
+            <tr><td style="padding:5px 8px;">BB RF LP High</td><td>Fundo RF</td><td style="text-align:right;">R$ 211.896</td><td style="text-align:right;">D+30 (resgate)</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B Princ 15/08/2026</td><td>Tesouro</td><td style="text-align:right;">R$ 64.519</td><td style="text-align:right;">ago/2026</td></tr>
+            <tr><td style="padding:5px 8px;">NTN-B 15/05/2055</td><td>Tesouro</td><td style="text-align:right;">R$ 36.948</td><td style="text-align:right;">mai/2055</td></tr>
+            <tr><td style="padding:5px 8px;">LFT 01/03/2027</td><td>Tesouro</td><td style="text-align:right;">R$ 34.425</td><td style="text-align:right;">mar/2027</td></tr>
+            <tr><td style="padding:5px 8px;">TAEEB2 (TAESA)</td><td>DEB incentivada</td><td style="text-align:right;">R$ 22.809</td><td style="text-align:right;">set/2031</td></tr>
+            <tr><td style="padding:5px 8px;">HASH11 + C2OI34</td><td>RV</td><td style="text-align:right;">R$ 24.788</td><td style="text-align:right;">D+2 (bolsa)</td></tr>
+            <tr><td style="padding:5px 8px;">RUMOA2 (RUMO)</td><td>DEB incentivada</td><td style="text-align:right;">R$ 11.105</td><td style="text-align:right;">jun/2031</td></tr>
+            <tr><td style="padding:5px 8px;">BB RF Régia Equilíbrio</td><td>Fundo RF</td><td style="text-align:right;">R$ 14.885</td><td style="text-align:right;">D+30 (resgate)</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:11px;color:var(--ink-soft);margin-top:6px;"><span style="background:#fff8e1;padding:2px 6px;">Previdência (Brasilprev)</span> R$ 730.782 — portabilidade controlada pelo slider do item 3.</p>
+      </div>
+
+      <div style="margin-top:20px;">
+        <div style="font-size:11px;font-weight:700;color:var(--eduardo);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;border-bottom:2px solid var(--eduardo);padding-bottom:4px;">Eduardo · Itaú · Ag 3789 / Conta 11603-9 · R$ 820 k</div>
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead><tr style="background:var(--bg);"><th style="text-align:left;padding:6px 8px;font-weight:600;">Produto</th><th style="text-align:left;padding:6px 8px;font-weight:600;">Tipo</th><th style="text-align:right;padding:6px 8px;font-weight:600;">Valor</th><th style="text-align:right;padding:6px 8px;font-weight:600;">Liquidez/Vencimento</th></tr></thead>
+          <tbody>
+            <tr><td style="padding:5px 8px;">CDB-DI 100% DI</td><td>RF privada</td><td style="text-align:right;">R$ 820.328</td><td style="text-align:right;">D+1 (liquidez diária desde 30/04/26) · venc abr/2031</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:16px;padding:10px 14px;background:var(--bg);border-radius:4px;font-size:12px;">
+        <strong>Total casal:</strong> R$ 6,14 mi · <strong>Total em previdência (R$ 1,12 mi):</strong> Brasilprev R$ 731k + Prev XP R$ 392k — controlados pelos sliders do item 3.
+      </div>
+    </div>
+  </details>
 </div>
 
 <!-- ============ 6. ONDAS ============ -->
@@ -568,34 +686,50 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
       <div class="quando">Maio 2026</div>
       <ul>
         <li>Abertura de conta no BTG Pactual</li>
-        <li>Solicitação de <span class="tip wide" data-tip="Sistema de Transferência de Valores Mobiliários — processo regulatório (B3) de transferência de custódia entre corretoras, sem fato gerador de IR e preservando data de compra dos ativos.">STVM</span> (transferência de custódia XP/BB → BTG)</li>
-        <li>Mapeamento dos 16 papéis em XP/BB</li>
-        <li>Definição das 5 caixinhas</li>
+        <li>Solicitação de <span class="tip wide" data-tip="Sistema de Transferência de Valores Mobiliários — processo regulatório (B3) de transferência de custódia entre corretoras, sem fato gerador de IR e preservando data de compra dos ativos.">STVM</span> (XP/BB/Itaú → BTG)</li>
+        <li>Definição das 5 caixinhas + perfil + objetivos</li>
       </ul>
     </div>
     <div class="onda">
       <div class="nro">Onda 1</div>
       <h4>D+0 a D+30</h4>
       <div class="quando">Jun/26</div>
-      <ul><li>Migra liquidez Itaú → BTG</li><li>Abre conta offshore (BTG NY)</li><li>Monta Reserva + RV inicial</li></ul>
+      <ul>
+        <li>STVM imediato de <strong>TODOS</strong> os papéis para BTG</li>
+        <li>Abertura de conta <strong>BTG Internacional</strong></li>
+        <li>Monta Caixinha Reserva (~R$ 450k em CDB liquidez D+0)</li>
+        <li>Decisão sobre portabilidade de previdência (sliders item 3)</li>
+      </ul>
     </div>
     <div class="onda">
       <div class="nro">Onda 2</div>
       <h4>D+30 a D+180</h4>
       <div class="quando">Jul–dez/26</div>
-      <ul><li>PGBL Eduardo (R$ 318k espaço fiscal)</li><li>1ºs aportes Offshore (50%)</li><li>1ºs cetipados Dividendos</li></ul>
+      <ul>
+        <li>1ºs aportes mensais nas caixinhas conforme item 3</li>
+        <li>Início da construção da Caixinha Offshore (USD)</li>
+        <li>1ºs cetipados isentos compõem a Caixinha Dividendos</li>
+      </ul>
     </div>
     <div class="onda">
       <div class="nro">Onda 3</div>
       <h4>D+180 a D+365</h4>
       <div class="quando">Jan–abr/27</div>
-      <ul><li>Recebe vencimentos XP → Dividendos</li><li>Recebe bônus abr/27 (R$ 1,5 mi)</li><li>Preparação para compra do imóvel</li></ul>
+      <ul>
+        <li>Papéis em custódia BTG começam a vencer (LFTs mar/27)</li>
+        <li>Realocação dos vencimentos pelo split estratégico 50/30/20</li>
+        <li>Recebimento do bônus abr/27 (R$ 1,5 mi) · alocação 50/30/20</li>
+      </ul>
     </div>
     <div class="onda">
       <div class="nro">Onda 4</div>
       <h4>D+365+</h4>
       <div class="quando">Mai/27 →</div>
-      <ul><li><strong>Compra do imóvel (mai/27)</strong></li><li>Caixinha Dividendos paga parcela + amortiza</li><li>Migração progressiva concluída</li></ul>
+      <ul>
+        <li><strong>Compra do imóvel (mai/27 · R$ 4 mi)</strong></li>
+        <li>Caixinha Dividendos passa a pagar parcela + amortização extra</li>
+        <li>Demais vencimentos seguem realocando pelo split do item 3</li>
+      </ul>
     </div>
   </div>
 </div>
@@ -605,8 +739,53 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
   <h2><span class="num">7</span>Curto prazo · Evolução das 5 caixinhas (24 meses)</h2>
   <p class="sub">Crescimento das caixinhas mês a mês. Inclui aportes regulares, bônus de abr/27 e vencimentos de RF privada redirecionados para Dividendos. Linha tracejada = aluguel mensal (R$ 25k corrigido por IPCA).</p>
   <div class="chart-wrap">
-    <div class="chart-info">📈 Em <strong>D+30</strong> a caixinha Dividendos já atinge a meta de gerar o equivalente ao aluguel atual. A partir daí o casal está, do ponto de vista de fluxo de caixa, com a moradia "paga pela carteira".</div>
-    <h3>Patrimônio total (24 meses)</h3>
+    <div style="background:var(--paper);border:1px solid var(--border);border-radius:6px;padding:16px 20px;margin-bottom:18px;">
+      <h3 style="margin-bottom:10px;">💼 Plano de Realocação · próximos 24 meses</h3>
+      <p class="sub" style="font-size:11px;margin-bottom:14px;">Mapa do "combustível" que alimenta as caixinhas no curto prazo. <strong>Todo recurso (vencimentos + aportes + bônus) é distribuído entre as caixinhas pelo split definido nos sliders do item 3</strong> — quanto vai para cada caixinha é decisão única e centralizada lá.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;">
+        <div style="background:var(--bg);padding:12px 14px;border-radius:4px;border-left:3px solid #7C2D12;">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink-faint);font-weight:600;">Vencimentos previstos</div>
+          <div style="font-size:18px;font-weight:700;color:var(--ink);margin-top:4px;">R$ 1,18 mi</div>
+          <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">6 papéis (datas reais dos extratos) → caixa → split do item 3</div>
+        </div>
+        <div style="background:var(--bg);padding:12px 14px;border-radius:4px;border-left:3px solid var(--c-off);">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink-faint);font-weight:600;">Aportes mensais (sliders)</div>
+          <div style="font-size:18px;font-weight:700;color:var(--ink);margin-top:4px;" id="aporteAcum24">R$ 0</div>
+          <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">= aporte mensal × 24 · ajuste no item 3</div>
+        </div>
+        <div style="background:var(--bg);padding:12px 14px;border-radius:4px;border-left:3px solid var(--c-divid);">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink-faint);font-weight:600;">Bônus realocados</div>
+          <div style="font-size:18px;font-weight:700;color:var(--ink);margin-top:4px;" id="bonusRealoc24">R$ 3,00 mi</div>
+          <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;" id="bonusRealoc24Detail">2× R$ 1,5 mi (abr/27 + abr/28) · 100% realocado</div>
+        </div>
+        <div style="background:var(--primary);color:#fff;padding:12px 14px;border-radius:4px;">
+          <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:var(--accent-soft);font-weight:600;">Total realocado (24m)</div>
+          <div style="font-size:20px;font-weight:800;margin-top:4px;" id="totalRealoc24">R$ 4,18 mi</div>
+          <div style="font-size:11px;opacity:0.8;margin-top:2px;">somado ao patrimônio inicial</div>
+        </div>
+      </div>
+
+      <div id="splitCaixinhasCard" style="margin-top:14px;padding:12px 14px;background:var(--bg);border-radius:4px;border:1px dashed var(--border);">
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.04em;color:var(--ink-faint);font-weight:600;margin-bottom:8px;">📊 Como o total realocado é distribuído entre as caixinhas (split do item 3)</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;font-size:13px;">
+          <div><span style="color:var(--c-divid);font-weight:700;">●</span> <strong>Caixinha Dividendos:</strong> <span id="splitDivVal">—</span></div>
+          <div><span style="color:var(--c-off);font-weight:700;">●</span> <strong>Caixinha Offshore:</strong> <span id="splitOffVal">—</span></div>
+          <div><span style="color:var(--c-apos);font-weight:700;">●</span> <strong>Caixinha Aposentadoria:</strong> <span id="splitAposVal">—</span></div>
+        </div>
+      </div>
+      <div style="margin-top:16px;padding:12px 14px;background:var(--accent-faint);border-left:3px solid var(--accent);border-radius:3px;">
+        <div class="slider-item" style="margin:0;">
+          <label style="font-size:11px;">⚙️ % do bônus realocado nas caixinhas <span style="color:var(--ink-soft);font-weight:400;">(o resto fica fora — caixa, emergência, decisão pessoal)</span></label>
+          <div class="val" id="pctBonusRealocVal" style="font-size:18px;">100<span class="unit">% (default · todo o bônus entra)</span></div>
+          <input type="range" id="pctBonusRealoc" min="0" max="100" step="5" value="100">
+          <div class="scale"><span>0% (bônus 100% fora)</span><span>100% (todo entra)</span></div>
+        </div>
+        <p style="font-size:11px;color:var(--ink-soft);margin-top:8px;line-height:1.5;"><strong>Sugestão Cordier:</strong> manter <strong>70–80%</strong> oferece flexibilidade — preserva 20-30% do bônus em conta corrente/Reserva para imprevistos (substituição de carro, despesa médica, oportunidade pontual) sem precisar resgatar caixinhas estruturadas. Em anos sem emergência, sobe para 100%.</p>
+      </div>
+    </div>
+
+    <div class="chart-info">📈 Comparativo entre <strong>manter a alocação atual</strong> (sem novos aportes mensais) e <strong>fazer aportes recorrentes</strong> conforme os sliders do item 3. Inclui também o impacto do % do bônus realocado (acima). O delta mostra quanto os aportes mensais agregam em 24 meses.</div>
+    <h3>Patrimônio total (24 meses) · Com vs Sem aportes mensais</h3>
     <div class="chart-canvas" style="height:300px;"><canvas id="chartCurtoTotal"></canvas></div>
     <details class="collapse" style="margin-top:14px;box-shadow:none;border:1px solid var(--border);">
       <summary>📂 Ver detalhamento por caixinha</summary>
@@ -664,6 +843,38 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
         <strong>Vencimentos próximos (até 2032):</strong> ~R$ 1,78 mi de fluxo previsível para realocação na Caixinha Dividendos. Papéis longos (NTN-B 2035, 2040, 2055) mantidos para renda perpétua.
         <br>Origem: <span class="marker" style="background:#2E5C8A"></span>Eduardo (XP) <span class="marker" style="background:#C77F4A"></span>Mariana (XP) <span class="marker" style="background:#4a7c40"></span>Mariana (BB)
       </div>
+
+      <h3 style="margin-top:24px;">Calendário mensal de liquidez · 24 meses</h3>
+      <p class="sub" style="font-size:11px;">Quanto cai no caixa para realocação a cada mês. Splitado pelo split estratégico 50/30/20 entre as caixinhas. Combine com aportes mensais (sliders item 3) para ter o "combustível total" mês a mês.</p>
+      <table style="width:100%;border-collapse:collapse;font-size:12px;margin-bottom:18px;">
+        <thead><tr style="background:var(--primary);color:#fff;">
+          <th style="text-align:left;padding:8px;font-weight:600;">Mês</th>
+          <th style="text-align:left;padding:8px;font-weight:600;">Papéis vencendo</th>
+          <th style="text-align:right;padding:8px;font-weight:600;">Valor cai no caixa</th>
+          <th style="text-align:right;padding:8px;font-weight:600;">→ Offshore (50%)</th>
+          <th style="text-align:right;padding:8px;font-weight:600;">→ Apos (30%)</th>
+          <th style="text-align:right;padding:8px;font-weight:600;">→ Div (20%)</th>
+        </tr></thead>
+        <tbody>
+          <tr><td style="padding:6px 8px;"><strong>ago/26</strong></td><td>NTN-B Princ Mariana BB</td><td style="text-align:right;font-weight:600;">R$ 64.500</td><td style="text-align:right;color:var(--c-off);">R$ 32.250</td><td style="text-align:right;color:var(--c-apos);">R$ 19.350</td><td style="text-align:right;color:var(--c-divid);">R$ 12.900</td></tr>
+          <tr><td style="padding:6px 8px;"><strong>mar/27</strong></td><td>LFTs Eduardo + Mariana XP + Mariana BB</td><td style="text-align:right;font-weight:600;">R$ 176.700</td><td style="text-align:right;color:var(--c-off);">R$ 88.350</td><td style="text-align:right;color:var(--c-apos);">R$ 53.010</td><td style="text-align:right;color:var(--c-divid);">R$ 35.340</td></tr>
+          <tr><td style="padding:6px 8px;"><strong>mai/27</strong></td><td>LCI Banco Inter (Eduardo XP)</td><td style="text-align:right;font-weight:600;">R$ 121.600</td><td style="text-align:right;color:var(--c-off);">R$ 60.800</td><td style="text-align:right;color:var(--c-apos);">R$ 36.480</td><td style="text-align:right;color:var(--c-divid);">R$ 24.320</td></tr>
+          <tr><td style="padding:6px 8px;"><strong>nov/27</strong></td><td>CDB Afinz (Mariana XP)</td><td style="text-align:right;font-weight:600;">R$ 36.300</td><td style="text-align:right;color:var(--c-off);">R$ 18.150</td><td style="text-align:right;color:var(--c-apos);">R$ 10.890</td><td style="text-align:right;color:var(--c-divid);">R$ 7.260</td></tr>
+          <tr><td style="padding:6px 8px;"><strong>jan/28</strong></td><td>LTNs Eduardo + Mariana XP</td><td style="text-align:right;font-weight:600;">R$ 390.800</td><td style="text-align:right;color:var(--c-off);">R$ 195.400</td><td style="text-align:right;color:var(--c-apos);">R$ 117.240</td><td style="text-align:right;color:var(--c-divid);">R$ 78.160</td></tr>
+          <tr><td style="padding:6px 8px;"><strong>mar/28</strong></td><td>LFTs Eduardo + Mariana XP</td><td style="text-align:right;font-weight:600;">R$ 397.700</td><td style="text-align:right;color:var(--c-off);">R$ 198.850</td><td style="text-align:right;color:var(--c-apos);">R$ 119.310</td><td style="text-align:right;color:var(--c-divid);">R$ 79.540</td></tr>
+        </tbody>
+        <tfoot><tr style="background:var(--accent-faint);font-weight:700;border-top:2px solid var(--accent);">
+          <td colspan="2" style="padding:8px;">Total 24 meses</td>
+          <td style="text-align:right;padding:8px;">R$ 1.187.600</td>
+          <td style="text-align:right;padding:8px;color:var(--c-off);">R$ 593.800</td>
+          <td style="text-align:right;padding:8px;color:var(--c-apos);">R$ 356.280</td>
+          <td style="text-align:right;padding:8px;color:var(--c-divid);">R$ 237.520</td>
+        </tr></tfoot>
+      </table>
+
+      <h3>Liquidez acumulada vs aportes mensais · 24 meses</h3>
+      <p class="sub" style="font-size:11px;">Vencimentos acumulados convertendo-se em caixa para redistribuição, vs aportes mensais (sliders item 3) acumulados.</p>
+      <div class="chart-canvas" style="height:280px;"><canvas id="chartLiquidez"></canvas></div>
     </div>
   </details>
 </div>
@@ -671,7 +882,7 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
 <!-- ============ 9. LONGO PRAZO ============ -->
 <div class="sec">
   <h2><span class="num">9</span>Longo prazo · Projeção patrimonial (15 anos)</h2>
-  <p class="sub">Valores <strong>nominais</strong> (R$ correntes) com equivalente em <strong>USD</strong> ao câmbio projetado. Inclui bônus anual de R$ 1,5 mi do Eduardo, capacidade de poupança decrescente (despesas crescem 5% a.a. com 2 filhos) e juros compostos por caixinha.</p>
+  <p class="sub">Valores <strong>nominais</strong> (R$ correntes), com equivalente em <strong>R$ de hoje</strong> (deflacionado IPCA) e <strong>USD</strong> ao câmbio projetado. <strong>O valor "Com aportes" reflete os sliders do item 3</strong> (aporte mensal por caixinha). Linha tracejada cinza mostra o cenário sem aportes mensais (só patrimônio inicial + bônus + juros + saque imóvel).</p>
   <div class="chart-wrap">
     <h3>Patrimônio total · 2026–2041</h3>
     <div class="chart-canvas" style="height:320px;"><canvas id="chartLongoTotal"></canvas></div>
@@ -736,7 +947,7 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
   <p class="sub">Detalhamento do financiamento: parâmetros editáveis abaixo, projeção mensal de fluxo, evolução do saldo devedor e impacto da amortização extra na quitação antecipada.</p>
 
   <details class="collapse" style="margin-bottom:20px;">
-    <summary>⚙️ Parâmetros do financiamento (editáveis aqui dentro)</summary>
+    <summary>⚙️ Parâmetros do financiamento &amp; composição da entrada (editáveis aqui dentro)</summary>
     <div class="body">
       <div class="sliders-grid" style="margin-top:14px;">
         <div class="slider-item">
@@ -746,7 +957,7 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
           <div class="scale"><span>R$ 2 mi</span><span>R$ 6 mi</span></div>
         </div>
         <div class="slider-item">
-          <label>Entrada</label>
+          <label>Entrada total</label>
           <div class="val" id="entradaImovelVal">R$ 2,0<span class="unit"> mi</span></div>
           <input type="range" id="entradaImovel" min="500000" max="4500000" step="100000" value="2000000">
           <div class="scale"><span>R$ 0,5 mi</span><span>R$ 4,5 mi</span></div>
@@ -763,6 +974,31 @@ footer.bottom { text-align: center; padding: 32px 48px; font-size: 12px; color: 
           <input type="range" id="trMensal" min="0" max="0.5" step="0.01" value="0.17">
           <div class="scale"><span>0%</span><span>0,5%</span></div>
         </div>
+      </div>
+
+      <div style="margin-top:18px;padding:14px 16px;background:var(--accent-faint);border-left:3px solid var(--accent);border-radius:4px;">
+        <div style="font-size:12px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:10px;">💰 Composição da entrada · de onde sai o R$ 2 mi</div>
+        <div class="sliders-grid">
+          <div class="slider-item">
+            <label><span style="color:var(--c-divid)">●</span> % da Caixinha Dividendos</label>
+            <div class="val" id="pctEntradaDivVal">50<span class="unit">% · <span id="pctEntradaDivR">R$ 1,0 mi</span></span></div>
+            <input type="range" id="pctEntradaDiv" min="0" max="100" step="5" value="50">
+            <div class="scale"><span>0%</span><span>100%</span></div>
+          </div>
+          <div class="slider-item">
+            <label><span style="color:var(--c-off)">●</span> % da Caixinha Offshore</label>
+            <div class="val" id="pctEntradaOffVal">35<span class="unit">% · <span id="pctEntradaOffR">R$ 700 k</span></span></div>
+            <input type="range" id="pctEntradaOff" min="0" max="100" step="5" value="35">
+            <div class="scale"><span>0%</span><span>100%</span></div>
+          </div>
+          <div class="slider-item">
+            <label><span style="color:var(--c-res)">●</span> % da Caixinha Reserva</label>
+            <div class="val" id="pctEntradaResVal">15<span class="unit">% · <span id="pctEntradaResR">R$ 300 k</span></span></div>
+            <input type="range" id="pctEntradaRes" min="0" max="100" step="5" value="15">
+            <div class="scale"><span>0%</span><span>100%</span></div>
+          </div>
+        </div>
+        <div id="entradaSplitWarn" style="margin-top:10px;font-size:11px;color:var(--ink-soft);"></div>
       </div>
     </div>
   </details>
@@ -921,6 +1157,16 @@ const STATE = {
   cxRv0: 210000,
   // bônus
   bonusAnual: 1500000,
+  pctBonusRealoc: 100, // % do bônus que entra nas caixinhas (editável)
+  // portabilidade previdência
+  pctPortarMariana: 0, // % Brasilprev Mariana → BTG (R$ 731k base)
+  pctPortarEduardo: 0, // % Previdência XP Eduardo → BTG (R$ 392k base)
+  prevMariana: 731000,
+  prevEduardo: 392000,
+  // composição da entrada do imóvel (% cada uma)
+  pctEntradaDiv: 50,
+  pctEntradaOff: 35,
+  pctEntradaRes: 15,
   // despesas
   despesaMensal: 75000,
   aluguelMensal: 25000,
@@ -944,7 +1190,7 @@ const STATE = {
 };
 
 // =================== SLIDERS ===================
-const SLIDERS = ['apDiv','apOff','apApos','rDiv','rOff','rApos','precoImovel','entradaImovel','taxaSbpe','trMensal','ipca'];
+const SLIDERS = ['apDiv','apOff','apApos','rDiv','rOff','rApos','precoImovel','entradaImovel','taxaSbpe','trMensal','ipca','pctBonusRealoc','pctPortarMariana','pctPortarEduardo','pctEntradaDiv','pctEntradaOff','pctEntradaRes'];
 
 function bindSliders() {
   SLIDERS.forEach(id => {
@@ -987,11 +1233,23 @@ function updateSliderLabel(id, v) {
     case 'trMensal': lblEl.innerHTML = v.toFixed(2).replace('.',',') + '<span class="unit">% /mês</span>'; break;
     case 'precoImovel': lblEl.innerHTML = 'R$ ' + (v/1e6).toFixed(1).replace('.',',') + '<span class="unit"> mi</span>'; break;
     case 'entradaImovel': lblEl.innerHTML = 'R$ ' + (v/1e6).toFixed(1).replace('.',',') + '<span class="unit"> mi</span>'; break;
+    case 'pctBonusRealoc':
+      const lbl = v == 100 ? '% (default · todo o bônus entra)' : (v == 0 ? '% (bônus 100% fora das caixinhas)' : '% do bônus realocado');
+      lblEl.innerHTML = v + '<span class="unit">' + lbl + '</span>'; break;
+    case 'pctPortarMariana':
+      lblEl.innerHTML = v + '<span class="unit">% · R$ ' + ((STATE.prevMariana * v / 100)/1000).toFixed(0) + 'k portado</span>'; break;
+    case 'pctPortarEduardo':
+      lblEl.innerHTML = v + '<span class="unit">% · R$ ' + ((STATE.prevEduardo * v / 100)/1000).toFixed(0) + 'k portado</span>'; break;
+    case 'pctEntradaDiv':
+    case 'pctEntradaOff':
+    case 'pctEntradaRes':
+      const valor = STATE.entradaImovel * v / 100;
+      lblEl.innerHTML = v + '<span class="unit">% · ' + fmtBRsmart(valor) + '</span>'; break;
   }
 }
 
 function resetSliders() {
-  const defaults = { apDiv:0, apOff:0, apApos:0, rDiv:11, rOff:4, rApos:10, precoImovel:4000000, entradaImovel:2000000, taxaSbpe:11.69, trMensal:0.17, ipca:4.14 };
+  const defaults = { apDiv:0, apOff:0, apApos:0, rDiv:11, rOff:4, rApos:10, precoImovel:4000000, entradaImovel:2000000, taxaSbpe:11.69, trMensal:0.17, ipca:4.14, pctBonusRealoc:100, pctPortarMariana:0, pctPortarEduardo:0, pctEntradaDiv:50, pctEntradaOff:35, pctEntradaRes:15 };
   Object.keys(defaults).forEach(k => {
     const el = document.getElementById(k);
     if (el) { el.value = defaults[k]; STATE[k] = defaults[k]; updateSliderLabel(k, defaults[k]); }
@@ -1016,10 +1274,12 @@ function cambioAno(ano) {
 function aam(annual) { return Math.pow(1 + annual/100, 1/12) - 1; }
 
 // =================== SIMULAÇÃO 24 MESES ===================
-function simularCurto() {
+function simularCurto(opts = {}) {
+  const withAporte = opts.withAporte !== false; // default true
   const months = 24;
-  const series = { Reserva: [], Dividendos: [], Offshore: [], Aposentadoria: [], RV: [], Total: [], Aluguel: [] };
+  const series = { Reserva: [], Dividendos: [], Offshore: [], Aposentadoria: [], RV: [], Total: [], Aluguel: [], Liquidez: [], AporteAcum: [] };
   let cx = { res: STATE.cxReserva0, div: STATE.cxDiv0, off: STATE.cxOff0, apos: STATE.cxApos0, rv: STATE.cxRv0 };
+  let liqAcum = 0, apAcum = 0;
 
   const rDivM = aam(STATE.rDiv), rOffM = aam(STATE.rOff), rAposM = aam(STATE.rApos), rRvM = aam(STATE.rRv), rResM = aam(STATE.rReserva);
 
@@ -1030,27 +1290,35 @@ function simularCurto() {
     cx.off *= (1 + rOffM);
     cx.apos *= (1 + rAposM);
     cx.rv *= (1 + rRvM);
-    // aportes diretos em R$ por caixinha
-    cx.off += STATE.apOff;
-    cx.apos += STATE.apApos;
-    cx.div += STATE.apDiv;
-    // bônus: abr/27 e abr/28 (mês 11 e mês 23). Distribui pelo split atual; se aporte total = 0, usa 50/30/20 default
-    if (m === 10 || m === 22) {
-      const tot = STATE.aporteMensal;
-      const pOff = tot > 0 ? STATE.apOff/tot : 0.50;
-      const pApos = tot > 0 ? STATE.apApos/tot : 0.30;
-      const pDiv = tot > 0 ? STATE.apDiv/tot : 0.20;
-      cx.off += STATE.bonusAnual * pOff;
-      cx.apos += STATE.bonusAnual * pApos;
-      cx.div += STATE.bonusAnual * pDiv;
+    // aportes mensais em R$ (controlado por opts.withAporte)
+    if (withAporte) {
+      cx.off += STATE.apOff;
+      cx.apos += STATE.apApos;
+      cx.div += STATE.apDiv;
+      apAcum += STATE.aporteMensal;
     }
-    // vencimentos REAIS dos extratos → realocação em Dividendos (mês 0 = mai/26)
-    if (m === 3)  cx.div += 64500;          // ago/26 · NTN-B Princ Mariana BB
-    if (m === 10) cx.div += 176700;         // mar/27 · LFT Eduardo + Mariana XP + Mariana BB
-    if (m === 12) cx.div += 121600;         // mai/27 · LCI Banco Inter Eduardo
-    if (m === 18) cx.div += 36300;          // nov/27 · CDB Afinz Mariana XP
-    if (m === 20) cx.div += 390800;         // jan/28 · LTN Eduardo + Mariana XP
-    if (m === 22) cx.div += 397700;         // mar/28 · LFT Eduardo + Mariana XP
+    // bônus: abr/27 e abr/28 — split ESTRATÉGICO FIXO 50/30/20 (independente dos aportes mensais)
+    if (m === 10 || m === 22) {
+      const bonusRealoc = STATE.bonusAnual * (STATE.pctBonusRealoc / 100);
+      cx.off += bonusRealoc * 0.50;
+      cx.apos += bonusRealoc * 0.30;
+      cx.div += bonusRealoc * 0.20;
+    }
+    // vencimentos REAIS dos extratos → caixa → redistribuídos pelo split do item 3
+    let vencMes = 0;
+    if (m === 3)  vencMes = 64500;          // ago/26 · NTN-B Princ Mariana BB
+    if (m === 10) vencMes = 176700;         // mar/27 · LFT Eduardo + Mariana XP + Mariana BB
+    if (m === 12) vencMes = 121600;         // mai/27 · LCI Banco Inter Eduardo
+    if (m === 18) vencMes = 36300;          // nov/27 · CDB Afinz Mariana XP
+    if (m === 20) vencMes = 390800;         // jan/28 · LTN Eduardo + Mariana XP
+    if (m === 22) vencMes = 397700;         // mar/28 · LFT Eduardo + Mariana XP
+    if (vencMes > 0) {
+      // split ESTRATÉGICO FIXO 50/30/20 (independente dos aportes mensais)
+      cx.off += vencMes * 0.50;
+      cx.apos += vencMes * 0.30;
+      cx.div += vencMes * 0.20;
+    }
+    liqAcum += vencMes;
 
     // aluguel (corrigido mensalmente por IPCA)
     const aluguel = STATE.aluguelMensal * Math.pow(1 + STATE.ipca/100, m/12);
@@ -1062,12 +1330,15 @@ function simularCurto() {
     series.RV.push(cx.rv);
     series.Total.push(cx.res + cx.div + cx.off + cx.apos + cx.rv);
     series.Aluguel.push(aluguel);
+    series.Liquidez.push(liqAcum);
+    series.AporteAcum.push(apAcum);
   }
   return series;
 }
 
 // =================== SIMULAÇÃO LONGO PRAZO (15 anos) ===================
-function simularLongo() {
+function simularLongo(opts = {}) {
+  const withAporte = opts.withAporte !== false;
   const years = 16;
   const series = { ano: [], Reserva: [], Dividendos: [], Offshore: [], Aposentadoria: [], RV: [], Total: [], AporteAcum: [], BonusAcum: [], JurosAcum: [] };
   let cx = { res: STATE.cxReserva0, div: STATE.cxDiv0, off: STATE.cxOff0, apos: STATE.cxApos0, rv: STATE.cxRv0 };
@@ -1076,27 +1347,25 @@ function simularLongo() {
   let despesa = STATE.despesaMensal * 12;
   let aluguel = STATE.aluguelMensal * 12;
 
-  // splits do aporte mensal: se aporte total > 0 usa proporção dos sliders; senão 50/30/20
   const totMes = STATE.aporteMensal;
-  const pOff = totMes > 0 ? STATE.apOff/totMes : 0.50;
-  const pApos = totMes > 0 ? STATE.apApos/totMes : 0.30;
-  const pDiv = totMes > 0 ? STATE.apDiv/totMes : 0.20;
 
   for (let y = 0; y < years; y++) {
     const ano = 2026 + y;
-    // saldo antes (para calcular juros acumulados depois)
     const saldoIni = cx.res + cx.div + cx.off + cx.apos + cx.rv;
-    // aporte anual = sliders × 12. NÃO usa "capacidade poupança" — usa o que o user definiu.
-    const aporteAno = totMes * 12;
-    cx.off += aporteAno * pOff;
-    cx.apos += aporteAno * pApos;
-    cx.div += aporteAno * pDiv;
+    // aporte mensal × 12 — vai DIRETO em R$ pra cada caixinha (sliders do item 3)
+    const aporteAno = withAporte ? totMes * 12 : 0;
+    if (withAporte) {
+      cx.off += STATE.apOff * 12;
+      cx.apos += STATE.apApos * 12;
+      cx.div += STATE.apDiv * 12;
+    }
     aporteAcum += aporteAno;
-    // bônus anual (R$ 1,5 mi)
-    cx.off += STATE.bonusAnual * pOff;
-    cx.apos += STATE.bonusAnual * pApos;
-    cx.div += STATE.bonusAnual * pDiv;
-    bonusAcum += STATE.bonusAnual;
+    // bônus anual — split ESTRATÉGICO FIXO 50/30/20
+    const bonusRealoc = STATE.bonusAnual * (STATE.pctBonusRealoc / 100);
+    cx.off += bonusRealoc * 0.50;
+    cx.apos += bonusRealoc * 0.30;
+    cx.div += bonusRealoc * 0.20;
+    bonusAcum += bonusRealoc;
     // juros anuais
     const saldoMeio = cx.res + cx.div + cx.off + cx.apos + cx.rv;
     cx.res *= (1 + STATE.rReserva/100);
@@ -1110,7 +1379,9 @@ function simularLongo() {
     // ano 1 (2027) — compra imóvel ocorre mai/27
     if (y === 1) {
       const ent = STATE.entradaImovel;
-      const sDiv = ent * 0.50, sOff = ent * 0.35, sRes = ent * 0.15;
+      const sDiv = ent * (STATE.pctEntradaDiv/100);
+      const sOff = ent * (STATE.pctEntradaOff/100);
+      const sRes = ent * (STATE.pctEntradaRes/100);
       cx.div = Math.max(0, cx.div - sDiv);
       cx.off = Math.max(0, cx.off - sOff);
       cx.res = Math.max(0, cx.res - sRes);
@@ -1167,7 +1438,7 @@ function simularFinanciamento() {
   saldo = PV;
   let cxDiv = 0; // calculamos cxDiv no ponto da compra a partir do simularCurto
   const curto = simularCurto();
-  cxDiv = curto.Dividendos[STATE.mesCompra - 1] - (STATE.entradaImovel * 0.50);
+  cxDiv = curto.Dividendos[STATE.mesCompra - 1] - (STATE.entradaImovel * (STATE.pctEntradaDiv/100));
   if (cxDiv < 0) cxDiv = 0;
 
   const rDivM = aam(STATE.rDiv);
@@ -1211,39 +1482,6 @@ function simularFinanciamento() {
   return { sem, com, jurosTotalSem, jurosTotalCom, mesQuit, parcelaInicial: sem.parcela[0] };
 }
 
-// =================== SIMULAÇÃO CARTEIRA ATUAL (proxy) ===================
-function simularAtual() {
-  // mantém papéis até vencimento (rendendo taxa contratada equivalente ~110% CDI = ~13,2% bruto)
-  // reaplica vencimentos em CDB 100% CDI bruto (~Selic)
-  // aporte mensal em CDB 100% CDI bruto
-  // sem PGBL, sem offshore, sem cetipados estruturados
-  const years = 15;
-  const series = { ano: [], Total: [] };
-  let saldo = STATE.patrimonio0;
-  // taxa nominal proxy: 100% CDI bruto a Selic projetada (vai caindo)
-  let rate = STATE.rReserva/100; // ~12% inicial
-  for (let y = 0; y < years; y++) {
-    const ano = 2026 + y;
-    // selic projetada
-    if (ano <= 2026) rate = 0.13;
-    else if (ano === 2027) rate = 0.1125;
-    else rate = 0.10;
-    // bruto ≈ Selic
-    saldo *= (1 + rate);
-    // aporte anual = capacidade poupança (decrescente com despesas)
-    let cap = 1520000 * Math.pow(0.96, y); // mesma decrescência de capacidade
-    if (cap < 800000) cap = 800000;
-    saldo += cap;
-    // bônus anual
-    saldo += STATE.bonusAnual;
-    // compra imóvel: ano 2 → tira entrada
-    if (y === 1) saldo -= STATE.entradaImovel;
-    series.ano.push(ano);
-    series.Total.push(saldo);
-  }
-  return series;
-}
-
 // =================== CHARTS ===================
 const COLORS = {
   Dividendos: 'rgba(185,28,28,0.85)',
@@ -1268,6 +1506,7 @@ function destroyChart(k) { if (CHARTS[k]) { CHARTS[k].destroy(); CHARTS[k] = nul
 function renderCurto(series) {
   destroyChart('curto');
   destroyChart('curtoTotal');
+  destroyChart('liquidez');
   const labels = ['mai/26','jun/26','jul/26','ago/26','set/26','out/26','nov/26','dez/26','jan/27','fev/27','mar/27','abr/27','mai/27','jun/27','jul/27','ago/27','set/27','out/27','nov/27','dez/27','jan/28','fev/28','mar/28','abr/28'];
   const lineDS = (label, data, color, bw, dash, yAxis) => ({
     label, data, borderColor: color, backgroundColor: color,
@@ -1275,14 +1514,17 @@ function renderCurto(series) {
     borderDash: dash || [], yAxisID: yAxis || 'y'
   });
 
-  // gráfico 1: só patrimônio total + linha de aluguel
+  // simulação adicional SEM aportes para comparativo
+  const semAporte = simularCurto({ withAporte: false });
+
+  // gráfico 1: total COM vs SEM aportes
   CHARTS.curtoTotal = new Chart(document.getElementById('chartCurtoTotal'), {
     type: 'line',
     data: {
       labels,
       datasets: [
-        lineDS('Patrimônio total', series.Total, COLORS_LINE.Total, 3.5),
-        lineDS('Aluguel mensal (eixo dir →)', series.Aluguel, '#b85c3a', 2, [6,4], 'yAluguel')
+        lineDS('Com aportes mensais (sliders)', series.Total, COLORS_LINE.Total, 3.5),
+        lineDS('Sem aportes mensais (só alocação inicial + bônus + juros)', semAporte.Total, '#9CA3AF', 2.5, [6,4])
       ]
     },
     options: {
@@ -1293,11 +1535,36 @@ function renderCurto(series) {
       },
       scales: {
         y: { ticks: { callback: (v) => 'R$ ' + (v/1e6).toFixed(1) + ' mi', font: { size: 10 } } },
-        yAluguel: { position: 'right', min: 0, max: 60000, ticks: { callback: (v) => 'R$ ' + (v/1000).toFixed(0) + 'k', font: { size: 10 } }, grid: { display: false } },
         x: { ticks: { font: { size: 10 }, maxRotation: 45, minRotation: 45 } }
       }
     }
   });
+
+  // gráfico de liquidez (vencimentos acumulados + aportes acumulados)
+  const ctxLiq = document.getElementById('chartLiquidez');
+  if (ctxLiq) {
+    CHARTS.liquidez = new Chart(ctxLiq, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          lineDS('Liquidez acumulada (vencimentos RF → Caixinha Dividendos)', series.Liquidez, '#7C2D12', 2.5),
+          lineDS('Aportes mensais acumulados', series.AporteAcum, COLORS_LINE.Offshore, 2.5)
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'line', font: { size: 12 }, padding: 14 } },
+          tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBRsmart(ctx.parsed.y || 0)}` } }
+        },
+        scales: {
+          y: { ticks: { callback: (v) => 'R$ ' + (v/1e3).toFixed(0) + 'k', font: { size: 10 } } },
+          x: { ticks: { font: { size: 10 }, maxRotation: 45, minRotation: 45 } }
+        }
+      }
+    });
+  }
 
   // gráfico 2: caixinhas separadas (renderiza só quando o details é aberto, mas Chart.js precisa do canvas visível)
   const ctxDetail = document.getElementById('chartCurto');
@@ -1330,35 +1597,6 @@ function renderCurto(series) {
   }
 }
 
-function renderGantt() {
-  destroyChart('gantt');
-  // curva acumulada de vencimentos por mês
-  const evts = [
-    { m: 2, v: 5000 }, { m: 7, v: 2000 }, { m: 11, v: 121600 }, { m: 16, v: 60300 },
-    { m: 17, v: 36300 + 58800 }, { m: 19, v: 21900 }, { m: 30, v: 126200 },
-    { m: 36, v: 68700 + 55200 }, { m: 48, v: 9000 }, { m: 49, v: 105100 },
-    { m: 61, v: 11100 }, { m: 64, v: 22800 }, { m: 71, v: 1100 + 2000 }
-  ];
-  const labels = [], data = [];
-  let acc = 0, idx = 0;
-  for (let m = 0; m <= 72; m++) {
-    while (idx < evts.length && evts[idx].m === m) { acc += evts[idx].v; idx++; }
-    const ano = 2026 + Math.floor((m + 4) / 12);
-    const mes = ((m + 4) % 12) + 1;
-    if (m % 3 === 0) labels.push(`${('0'+mes).slice(-2)}/${String(ano).slice(-2)}`);
-    else labels.push('');
-    data.push(acc);
-  }
-  CHARTS.gantt = new Chart(document.getElementById('chartGantt'), {
-    type: 'line',
-    data: { labels, datasets: [{ label: 'Liquidez acumulada → Caixinha Dividendos', data, backgroundColor: 'rgba(139,74,60,0.2)', borderColor: '#8B4A3C', fill: 'origin', tension: 0.2, pointRadius: 0, borderWidth: 2 }] },
-    options: { responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { position: 'bottom' }, tooltip: { callbacks: { label: (ctx) => 'Acumulado: ' + fmtBRsmart(ctx.parsed.y) } } },
-      scales: { y: { ticks: { callback: (v) => 'R$ ' + (v/1000).toFixed(0) + 'k' } }, x: { ticks: { font: { size: 9 } } } }
-    }
-  });
-}
-
 function renderLongo(series) {
   destroyChart('longo');
   destroyChart('longoTotal');
@@ -1366,13 +1604,17 @@ function renderLongo(series) {
     label, data, borderColor: color, backgroundColor: color,
     fill: false, pointRadius: 0, tension: 0.2, borderWidth: bw
   });
-  // gráfico principal: só total
+  // simulação adicional SEM aportes para comparativo
+  const semAporte = simularLongo({ withAporte: false });
+
+  // gráfico principal: total COM vs SEM aportes
   CHARTS.longoTotal = new Chart(document.getElementById('chartLongoTotal'), {
     type: 'line',
     data: {
       labels: series.ano,
       datasets: [
-        { label: 'Patrimônio total · nominal R$', data: series.Total, borderColor: COLORS_LINE.Total, backgroundColor: COLORS_LINE.Total, fill: false, pointRadius: 4, tension: 0.2, borderWidth: 3.5 }
+        { label: 'Com aportes mensais (sliders)', data: series.Total, borderColor: COLORS_LINE.Total, backgroundColor: COLORS_LINE.Total, fill: false, pointRadius: 4, tension: 0.2, borderWidth: 3.5 },
+        { label: 'Sem aportes mensais (só alocação inicial + bônus + juros)', data: semAporte.Total, borderColor: '#9CA3AF', backgroundColor: '#9CA3AF', fill: false, pointRadius: 3, tension: 0.2, borderWidth: 2.5, borderDash:[6,4] }
       ]
     },
     options: {
@@ -1536,24 +1778,6 @@ function renderImovel(finSim) {
   });
 }
 
-function renderCompare(longo, atual) {
-  destroyChart('compare');
-  CHARTS.compare = new Chart(document.getElementById('chartCompare'), {
-    type: 'line',
-    data: {
-      labels: longo.ano,
-      datasets: [
-        { label: 'Carteira Atual (sem migração)', data: atual.Total, borderColor: '#94a3b8', backgroundColor: 'rgba(148,163,184,0.15)', fill: 'origin', pointRadius: 3, borderWidth: 2, tension: 0.2, borderDash:[5,3] },
-        { label: 'Proposta BTG (caixinhas)', data: longo.Total, borderColor: '#00253D', backgroundColor: 'rgba(0,37,61,0.15)', fill: 'origin', pointRadius: 3, borderWidth: 2.5, tension: 0.2 }
-      ]
-    },
-    options: { responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { position: 'bottom' }, tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBR(ctx.parsed.y)}` } } },
-      scales: { y: { ticks: { callback: (v) => 'R$ ' + (v/1e6).toFixed(0) + ' mi' } }, x: { ticks: { font: { size: 10 } } } }
-    }
-  });
-}
-
 // =================== UPDATE CARDS ===================
 function updateCards(curto, longo, finSim) {
   // milestones curto
@@ -1561,6 +1785,53 @@ function updateCards(curto, longo, finSim) {
   document.getElementById('m12Val').textContent = fmtBR(curto.Total[11]);
   document.getElementById('m18Val').textContent = fmtBR(curto.Total[17]);
   document.getElementById('m24Val').textContent = fmtBR(curto.Total[23]);
+
+  // card de Plano de Realocação (24m)
+  const venc24 = 1187600; // soma dos vencimentos reais nos 24m
+  const aporte24 = STATE.aporteMensal * 24;
+  const bonusRealoc24 = STATE.bonusAnual * 2 * (STATE.pctBonusRealoc / 100);
+  const totalRealoc24 = venc24 + aporte24 + bonusRealoc24;
+  document.getElementById('aporteAcum24').textContent = fmtBR(aporte24);
+  document.getElementById('bonusRealoc24').textContent = fmtBR(bonusRealoc24);
+  document.getElementById('bonusRealoc24Detail').innerHTML = '2× R$ 1,5 mi (abr/27 + abr/28) · <strong>' + STATE.pctBonusRealoc + '%</strong> realocado · R$ ' + (3 - bonusRealoc24/1e6).toFixed(2).replace('.',',') + ' mi fora das caixinhas';
+  document.getElementById('totalRealoc24').textContent = fmtBR(totalRealoc24);
+
+  // split do total realocado entre as caixinhas
+  // - aportes mensais: split direto pelos sliders (R$ direto)
+  // - bônus e vencimentos: split estratégico FIXO 50/30/20
+  const splitDivStrat = (venc24 + bonusRealoc24) * 0.20 + STATE.apDiv * 24;
+  const splitOffStrat = (venc24 + bonusRealoc24) * 0.50 + STATE.apOff * 24;
+  const splitAposStrat = (venc24 + bonusRealoc24) * 0.30 + STATE.apApos * 24;
+  document.getElementById('splitDivVal').innerHTML = fmtBR(splitDivStrat) + ' <span style="color:var(--ink-faint);font-size:11px;">(estratégico 20% bônus/venc + aporte slider)</span>';
+  document.getElementById('splitOffVal').innerHTML = fmtBR(splitOffStrat) + ' <span style="color:var(--ink-faint);font-size:11px;">(estratégico 50% bônus/venc + aporte slider)</span>';
+  document.getElementById('splitAposVal').innerHTML = fmtBR(splitAposStrat) + ' <span style="color:var(--ink-faint);font-size:11px;">(estratégico 30% bônus/venc + aporte slider)</span>';
+
+  // portabilidade da previdência → total sob gestão BTG
+  const portMariana = STATE.prevMariana * (STATE.pctPortarMariana / 100);
+  const portEduardo = STATE.prevEduardo * (STATE.pctPortarEduardo / 100);
+  document.getElementById('portMarianaVal').textContent = fmtBR(portMariana);
+  document.getElementById('portEduardoVal').textContent = fmtBR(portEduardo);
+  const totalSobBTG = 5020000 + portMariana + portEduardo;
+  document.getElementById('totalGestaoBTGVal').textContent = fmtBR(totalSobBTG);
+  document.getElementById('patPortadoVal').textContent = fmtBR(portMariana + portEduardo);
+
+  // composição da entrada (validação 100%)
+  const pctTot = STATE.pctEntradaDiv + STATE.pctEntradaOff + STATE.pctEntradaRes;
+  const warnEl = document.getElementById('entradaSplitWarn');
+  if (warnEl) {
+    if (pctTot === 100) {
+      warnEl.innerHTML = '✅ Composição soma 100% (R$ ' + (STATE.entradaImovel/1e6).toFixed(2).replace('.',',') + ' mi).';
+      warnEl.style.color = 'var(--success)';
+    } else {
+      warnEl.innerHTML = '⚠️ Composição atual soma ' + pctTot + '% (deveria ser 100%). Ajuste os sliders.';
+      warnEl.style.color = 'var(--warn)';
+    }
+  }
+  // dynamic update dos valores R$ ao lado dos %
+  const setEnt = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = fmtBRsmart(STATE.entradaImovel * v / 100); };
+  setEnt('pctEntradaDivR', STATE.pctEntradaDiv);
+  setEnt('pctEntradaOffR', STATE.pctEntradaOff);
+  setEnt('pctEntradaResR', STATE.pctEntradaRes);
   // consolidado mês 24
   const setCons = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = fmtBR(v); };
   setCons('cons24Div', curto.Dividendos[23]);
