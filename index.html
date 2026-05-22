@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -554,17 +555,84 @@ table tbody tr:nth-child(even) {
   -moz-appearance: textfield;
 }
 
+/* Custom HTML Tooltip */
+.custom-chart-tooltip {
+  position: absolute;
+  background: rgba(12, 25, 44, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(181, 152, 90, 0.4);
+  border-radius: 8px;
+  color: var(--ink);
+  padding: 12px 14px;
+  pointer-events: none;
+  font-size: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.15s ease, transform 0.1s ease;
+  z-index: 10000;
+  transform: translate(-50%, -105%);
+  min-width: 290px;
+}
+.custom-chart-tooltip.hidden {
+  opacity: 0;
+}
+.tooltip-title {
+  font-weight: 700;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.tooltip-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tooltip-table th {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  padding-bottom: 6px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+  text-align: left;
+}
+.tooltip-table td {
+  padding: 6px 0;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+.tooltip-table tr:last-child td {
+  border-bottom: none;
+}
+.tooltip-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
 </style>
 </head>
 <body>
 
 <div class="login-gate" id="loginGate">
-  <div class="login-box">
-    <div class="brand">BTG Pactual · Cordier</div>
-    <h2>Acesso Restrito</h2>
-    <div class="sub">Planejamento Patrimonial · Eduardo &amp; Mariana Pinho</div>
-    <label>Senha de acesso</label>
-    <input type="password" id="pwd" autocomplete="off" placeholder="••••••••">
+  <div class="login-box" style="text-align: center;">
+    <div class="crest" style="margin: 0 auto 20px; width: 50px; height: 50px; border: 2px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; color: var(--accent-soft); background: rgba(181, 152, 90, 0.15); box-shadow: 0 0 15px rgba(181, 152, 90, 0.2);">ES</div>
+    
+    <div style="font-size: 11px; font-weight: 700; color: var(--accent-soft); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 4px;">Consultoria Financeira</div>
+    <div style="font-size: 24px; font-weight: 800; color: #fff; letter-spacing: -0.02em; margin-bottom: 2px;">Edson Santos</div>
+    <div style="font-size: 12px; color: var(--ink-soft); font-weight: 500; margin-bottom: 18px;">Consultor Patrimonial</div>
+    
+    <div style="width: 50px; height: 1px; background: rgba(181, 152, 90, 0.25); margin: 18px auto;"></div>
+    
+    <div style="font-size: 10px; font-weight: 700; color: var(--accent-soft); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 4px;">Apresentação Exclusiva</div>
+    <h2 style="font-size: 22px; font-weight: 800; color: #fff; margin: 0 0 4px; letter-spacing: -0.01em;">Eduardo &amp; Mariana Pinho</h2>
+    <div class="sub" style="color: var(--ink-soft); font-weight: 500; font-size: 13px; margin-bottom: 28px;">Planejamento Patrimonial de Longo Prazo</div>
+    
+    <label style="text-align: left; display: block; font-size: 10px; font-weight: 700; color: var(--accent-soft); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; margin-top: 16px;">Senha de acesso</label>
+    <input type="password" id="pwd" autocomplete="off" placeholder="••••••••" style="letter-spacing: 0.2em;">
     <button onclick="checkPwd()">Entrar</button>
     <div class="err" id="loginErr"></div>
   </div>
@@ -577,7 +645,7 @@ table tbody tr:nth-child(even) {
       <div style="font-size:14px;font-weight:600;color:#fff;">Edson Santos</div>
       <div style="font-size:12px;color:#c9d1d9;">Consultor Financeiro · (11) 98492-6100</div>
       <div style="font-size:12px;color:#c9d1d9;">edson.santos@cordierinvestimentos.com.br</div>
-      <div style="font-size:11px;color:var(--accent-soft);font-weight:600;margin-top:2px;">Cordier · BTG Pactual</div>
+      <div style="font-size:11px;color:var(--accent-soft);font-weight:600;margin-top:2px;">Planejamento Patrimonial Independente</div>
     </div>
   </div>
 </header>
@@ -653,8 +721,8 @@ table tbody tr:nth-child(even) {
         </div>
         <p style="font-size:11px;color:var(--ink-soft);margin-top:10px;line-height:1.4;">Os aportes mensais do Painel de Controle devem somar até <strong id="labelSugeridoAporte">R$ 5 k/mês</strong> para serem sustentáveis sem mexer no bônus. O bônus anual entra separado, alocado conforme split estratégico.</p>
         <div style="margin-top:12px;padding:10px;background:var(--warn-soft);border-left:3px solid var(--warn);border-radius:3px;">
-          <strong style="font-size:11px;color:var(--warn);">⚠️ ALERTA DE FLUXO DE CAIXA</strong><br>
-          <span style="font-size:11px;color:var(--ink);">A folga foi estressada considerando a iminente licença-maternidade do 2º filho e o suporte necessário aos pais da Mariana.</span>
+          <strong style="font-size:11px;color:var(--warn);">⚠️ ALERTA DE FLUXO DE CAIXA / ALERTE DE FLUX DE TRÉSORERIE</strong><br>
+          <span style="font-size:11px;color:var(--ink); line-height:1.4; display:block;">La marge de manœuvre financière a été ajustée en prévision du congé maternité imminent pour le deuxième enfant et du soutien nécessaire aux parents de Mariana. <br><em style="color:var(--accent-soft); font-weight:600;">Chaleureuses félicitations à la future maman pour cet heureux événement ! 👶🍼</em></span>
         </div>
       </div>
     </details>
@@ -1356,42 +1424,19 @@ table tbody tr:nth-child(even) {
       <div class="obj">Ações já existentes · VALE3 + HASH11 + C2OI34</div>
       <div class="valor" id="cxRvVal">R$ 210 k</div>
       <div class="pct">3,4% do patrimônio</div>
-      <span class="taxa-tag">5% real a.a.</span>
+      <span class="taxa-tag"><span class="tip wide" data-tip="Retorno real (acima da inflação). No cálculo nominal das projeções, assume-se a inflação de longo prazo (IPCA de 4,5% a.a.) somada ao retorno real de 5% a.a., totalizando uma taxa nominal de aproximadamente 9,72% a.a. (cálculo: 1,05 × 1,045 − 1).">5% real a.a.</span></span>
     </div>
   </div>
-      <div style="padding:16px 20px; background:var(--primary); border-radius:6px; border-left:4px solid var(--accent); color:#fff; line-height:1.6; margin-top:20px;">
-      <h4 style="color:var(--accent-soft); font-size:14px; margin-bottom:8px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em;">📦 Estruturação Física do Primeiro Aporte (Liquidez Imediata + Carrego)</h4>
-      <p style="font-size:13px; margin-bottom:8px;">A liquidez imediata (R$ 3,83M) é distribuída no primeiro dia para alimentar a Reserva, RV, e as caixinhas Offshore e Dividendos (parte líquida):</p>
-      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-top:14px; font-size:12px;">
-        <div style="background:var(--bg); padding:10px 12px; border-radius:4px;">
-          <div style="color:var(--ink-soft); font-weight:600;">Caixinha Reserva</div>
-          <div style="font-size:16px; font-weight:700; color:#fff; margin-top:2px;">R$ 900 k</div>
-          <div style="color:var(--ink-soft); margin-top:2px; font-size:10px;">CDI Liquidez Diária</div>
-        </div>
-        <div style="background:var(--bg); padding:10px 12px; border-radius:4px;">
-          <div style="color:var(--ink-soft); font-weight:600;">Caixinha RV</div>
-          <div style="font-size:16px; font-weight:700; color:#fff; margin-top:2px;">R$ 210 k</div>
-          <div style="color:var(--ink-soft); margin-top:2px; font-size:10px;">Ações Mantidas</div>
-        </div>
-        <div style="background:var(--bg); padding:10px 12px; border-radius:4px;">
-          <div style="color:var(--ink-soft); font-weight:600;">Caixinha Offshore</div>
-          <div style="font-size:16px; font-weight:700; color:#fff; margin-top:2px;">R$ 1,91 mi</div>
-          <div style="color:var(--ink-soft); margin-top:2px; font-size:10px;">Enviado para USD</div>
-        </div>
-        <div style="background:var(--bg); padding:10px 12px; border-radius:4px;">
-          <div style="color:var(--ink-soft); font-weight:600;">Caixinha Dividendos</div>
-          <div style="font-size:16px; font-weight:700; color:#fff; margin-top:2px;">R$ 2,00 mi</div>
-          <div style="color:var(--ink-soft); margin-top:2px; font-size:10px;">R$ 812k líq + R$ 1,19M carrego</div>
-        </div>
-      </div>
-    </div>
 </div>
 
 
 <div class="sec">
-  <h2><span class="num">4</span>Cronograma de vencimentos e Realocação de Carrego (STVM)</h2>
-  <div class="body">
-    <p class="sub" style="margin-top:12px;">Esta seção detalha o cronograma de vencimentos de toda a carteira de Renda Fixa (títulos públicos e privados) a ser integrada na custódia do BTG Pactual via STVM. À medida que esses títulos (LCIs, CDBs, debêntures e Tesouro) atingem suas respectivas datas de vencimento, o montante correspondente é liquidado e redirecionado para a <strong>Caixinha de Dividendos</strong> ou a <strong>Caixinha Offshore</strong> de acordo com o split estratégico. Títulos de longo prazo (NTN-Bs 2035, 2040, 2055) são preservados na carteira para fins de rendimento perpétuo.</p>
+  <details class="collapse" id="cronogramaCollapse">
+    <summary style="font-weight: 700; color: var(--accent-soft); font-size: 15px; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center;">
+      <h2 style="margin-bottom:0; font-size:20px; display:flex; align-items:center;"><span class="num">4</span>Cronograma de vencimentos e Realocação de Carrego (STVM)</h2>
+    </summary>
+    <div class="body" style="padding: 24px; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+      <p class="sub" style="margin-top:12px;">Esta seção detalha o cronograma de vencimentos de toda a carteira de Renda Fixa (títulos públicos e privados) a ser integrada na custódia do BTG Pactual via STVM. À medida que esses títulos (LCIs, CDBs, debêntures e Tesouro) atingem suas respectivas datas de vencimento, o montante correspondente é liquidado e redirecionado para a <strong>Caixinha de Dividendos</strong> ou a <strong>Caixinha Offshore</strong> de acordo com o split estratégico. Títulos de longo prazo (NTN-Bs 2035, 2040, 2055) são preservados na carteira para fins de rendimento perpétuo.</p>
 
       <div class="gantt-axis"><div></div><div class="years"><span>2026</span><span>2027</span><span>2028</span><span>2029</span><span>2030</span><span>2031</span><span>2032+</span></div></div>
 
@@ -1447,7 +1492,8 @@ table tbody tr:nth-child(even) {
       <h3>Evolução da Composição de Custódia &amp; Realocação (24 meses)</h3>
       <p class="sub" style="font-size:11px;">Evolução da carteira mês a mês. O bloco dourado ("Ativos de Carrego") representa a renda fixa privada travada que vai vencendo e se transformando em liquidez nas caixinhas de Offshore (azul) e Dividendos Líquidos (vermelho) de acordo com o split.</p>
       <div class="chart-canvas" style="height:320px;"><canvas id="chartLiquidez"></canvas></div>
-  </div>
+    </div>
+  </details>
 </div>
 
 
@@ -1821,6 +1867,95 @@ const fmtBRk = (v) => 'R$ ' + (v/1e3).toLocaleString('pt-BR', {minimumFractionDi
 const fmtBRsmart = (v) => v >= 1e6 ? fmtBR(v) : fmtBRk(v);
 const fmtUSD = (v) => 'US$ ' + (v/1e6).toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' mi';
 const fmtPct = (v) => v.toLocaleString('pt-BR', {minimumFractionDigits: 1, maximumFractionDigits: 1}) + '%';
+
+// =================== CUSTOM TOOLTIP CONFIG ===================
+const customHTMLTooltip = (context) => {
+  let tooltipEl = document.getElementById('chartjs-tooltip');
+  if (!tooltipEl) {
+    tooltipEl = document.createElement('div');
+    tooltipEl.id = 'chartjs-tooltip';
+    tooltipEl.className = 'custom-chart-tooltip';
+    document.body.appendChild(tooltipEl);
+  }
+
+  const tooltipModel = context.tooltip;
+  if (tooltipModel.opacity === 0) {
+    tooltipEl.style.opacity = '0';
+    return;
+  }
+
+  const canvasId = context.chart.canvas.id;
+  const isLongo = canvasId.includes('Longo');
+  const isSaldo = canvasId === 'chartSaldo';
+
+  if (tooltipModel.body) {
+    const titleLines = tooltipModel.title || [];
+    const title = titleLines[0] || '';
+
+    let html = `<div class="tooltip-title">${title}</div>`;
+    html += '<table class="tooltip-table">';
+    html += '<thead><tr><th>Caixinha</th><th style="text-align:right;">Nominal</th><th style="text-align:right;">Val. Hoje (Real)</th></tr></thead>';
+    html += '<tbody>';
+
+    tooltipModel.dataPoints.forEach((dp) => {
+      const label = dp.dataset.label || '';
+      const valNominal = dp.raw;
+      if (valNominal === undefined || valNominal === null) return;
+
+      let m = 0;
+      if (isLongo) {
+        m = dp.dataIndex * 12;
+      } else if (isSaldo) {
+        m = dp.dataIndex + 12;
+      } else {
+        m = dp.dataIndex;
+      }
+
+      const anos = m / 12;
+      const ipca = STATE.ipca / 100;
+      const valHoje = valNominal / Math.pow(1 + ipca, anos);
+
+      const dotColor = dp.dataset.borderColor || dp.dataset.backgroundColor || '#fff';
+      
+      html += '<tr>';
+      html += `<td><span class="tooltip-dot" style="background:${dotColor}"></span>${label}</td>`;
+      html += `<td style="text-align:right; font-family:monospace; font-weight:600; color:#fff;">${fmtBRsmart(valNominal)}</td>`;
+      html += `<td style="text-align:right; font-family:monospace; font-weight:600; color:var(--accent-soft);">${fmtBRsmart(valHoje)}</td>`;
+      html += '</tr>';
+    });
+
+    html += '</tbody></table>';
+    tooltipEl.innerHTML = html;
+  }
+
+  const position = context.chart.canvas.getBoundingClientRect();
+  tooltipEl.style.opacity = '1';
+  tooltipEl.style.position = 'absolute';
+  
+  const tooltipWidth = tooltipEl.offsetWidth || 290;
+  const screenWidth = window.innerWidth;
+  
+  let leftPos = position.left + window.pageXOffset + tooltipModel.caretX;
+  let topPos = position.top + window.pageYOffset + tooltipModel.caretY;
+  
+  if (leftPos + tooltipWidth / 2 > screenWidth - 20) {
+    tooltipEl.style.transform = 'translate(-100%, -105%)';
+    leftPos = position.left + window.pageXOffset + tooltipModel.caretX;
+  } else if (leftPos - tooltipWidth / 2 < 20) {
+    tooltipEl.style.transform = 'translate(0, -105%)';
+    leftPos = position.left + window.pageXOffset + tooltipModel.caretX;
+  } else {
+    tooltipEl.style.transform = 'translate(-50%, -105%)';
+  }
+  
+  tooltipEl.style.left = leftPos + 'px';
+  tooltipEl.style.top = topPos + 'px';
+};
+
+const getTooltipConfig = (isLongo = false, isSaldo = false) => ({
+  enabled: false,
+  external: customHTMLTooltip
+});
 
 // =================== STATE ===================
 const STATE = {
@@ -2375,7 +2510,7 @@ function renderCurto(series, seriesNoAporte) {
       responsive: true, maintainAspectRatio: false,
       plugins: { 
         legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'line', color: '#94a3b8', font: { size: 12 }, padding: 14 } },
-        tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBRsmart(ctx.parsed.y)}` } } 
+        tooltip: getTooltipConfig(false, false)
       },
       scales: { 
         y: { ticks: { callback: (v) => 'R$ ' + (v/1e6).toFixed(1) + ' mi', color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }, 
@@ -2409,7 +2544,7 @@ function renderCurto(series, seriesNoAporte) {
       responsive: true, maintainAspectRatio: false,
       plugins: { 
         legend: { position: 'bottom', labels: { boxWidth: 12, color: '#94a3b8', font: { size: 11 }, padding: 10 } }, 
-        tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBRsmart(ctx.parsed.y)}` } } 
+        tooltip: getTooltipConfig(false, false)
       },
       scales: { 
         y: { stacked: true, ticks: { callback: (v) => 'R$ ' + (v/1e6).toFixed(1) + ' mi', color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }, 
@@ -2441,7 +2576,7 @@ function renderCurto(series, seriesNoAporte) {
       responsive: true, maintainAspectRatio: false,
       plugins: { 
         legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'line', color: '#94a3b8', font: { size: 11 }, padding: 10 } }, 
-        tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBRsmart(ctx.parsed.y)}` } } 
+        tooltip: getTooltipConfig(false, false)
       },
       scales: { 
         y: { ticks: { callback: (v) => 'R$ ' + (v/1e6).toFixed(1) + ' mi', color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }, 
@@ -2482,7 +2617,7 @@ function renderLongo(history, historyNoAporte) {
       responsive: true, maintainAspectRatio: false,
       plugins: { 
         legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'line', color: '#94a3b8', font: { size: 12 }, padding: 14 } }, 
-        tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBR(ctx.parsed.y)}` } } 
+        tooltip: getTooltipConfig(true, false)
       },
       scales: { 
         y: { ticks: { callback: (v) => 'R$ ' + (v/1e6).toFixed(0) + ' mi', color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }, 
@@ -2517,7 +2652,7 @@ function renderLongo(history, historyNoAporte) {
       responsive: true, maintainAspectRatio: false,
       plugins: { 
         legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'line', color: '#94a3b8', font: { size: 11 }, padding: 10 } }, 
-        tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBR(ctx.parsed.y)}` } } 
+        tooltip: getTooltipConfig(true, false)
       },
       scales: { 
         y: { ticks: { callback: (v) => 'R$ ' + (v/1e6).toFixed(0) + ' mi', color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }, 
@@ -2597,7 +2732,7 @@ function renderImovel(finSim) {
       responsive: true, maintainAspectRatio: false,
       plugins: { 
         legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'line', color: '#94a3b8', font: { size: 12 }, padding: 14 } }, 
-        tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBRsmart(ctx.parsed.y || 0)}` } } 
+        tooltip: getTooltipConfig(false, false)
       },
       scales: { 
         y: { ticks: { callback: (v) => 'R$ ' + (v/1000).toFixed(0) + 'k', color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }, 
@@ -2624,7 +2759,7 @@ function renderImovel(finSim) {
       responsive: true, maintainAspectRatio: false,
       plugins: { 
         legend: { position: 'bottom', labels: { usePointStyle: true, pointStyle: 'line', color: '#94a3b8', font: { size: 12 }, padding: 14 } }, 
-        tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${fmtBR(ctx.parsed.y)}` } } 
+        tooltip: getTooltipConfig(false, true)
       },
       scales: { 
         y: { ticks: { callback: (v) => 'R$ ' + (v/1e6).toFixed(1) + ' mi', color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }, 
