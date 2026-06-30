@@ -36,7 +36,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 #lerr{color:#e57373;font-size:.72rem;display:none;text-align:center}
 
 /* APP SHELL */
-#app{display:none;flex-direction:column;height:100vh}
+#app{display:none;flex-direction:column;height:100vh;max-width:1050px;margin:0 auto;box-shadow:0 0 30px rgba(0,0,0,.15);border-left:1px solid var(--g200);border-right:1px solid var(--g200);background:var(--cream)}
 header{height:46px;background:var(--navy);display:flex;align-items:center;padding:0 18px;gap:12px;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,.06)}
 .hb{color:var(--gold-l);font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;line-height:1.4;white-space:nowrap;flex-shrink:0}
 .hb span{display:block;color:rgba(255,255,255,.35);font-size:.51rem;letter-spacing:1.5px;font-weight:400}
@@ -231,6 +231,12 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 .liq-item.l3{border-top:3px solid var(--purple)}
 
 /* RESPONSIVE */
+@media(max-width:1024px) and (orientation:portrait){
+  .c4{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:repeat(2,1fr)}
+  .cx-row3{grid-template-columns:1fr 1fr}.bg2{grid-template-columns:1fr}
+  .sg2,.sg2a{grid-template-columns:1fr}.slide{padding:14px 18px;gap:9px}
+  .liq-ladder{grid-template-columns:repeat(2,1fr)}
+}
 @media(max-width:900px){
   .c4{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:repeat(2,1fr)}
   .cx-row3{grid-template-columns:1fr 1fr}.bg2{grid-template-columns:1fr}
@@ -277,7 +283,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 .pos-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer;padding:5px 0 0;font-size:.63rem;color:var(--blue);font-weight:600;border-top:1px solid var(--g100);margin-top:5px;user-select:none}
 .pos-toggle .parr{transition:transform .3s;font-size:.55rem}
 .pos-toggle.open .parr{transform:rotate(180deg)}
-.pos-table-wrap{overflow:hidden;max-height:0;transition:max-height .35s ease}
+.pos-table-wrap{overflow-x:auto;overflow-y:hidden;max-height:0;transition:max-height .35s ease}
 .pos-table-wrap.open{max-height:600px}
 .pos-table{width:100%;border-collapse:collapse;font-size:.66rem;margin-top:6px}
 .pos-table th{background:var(--g50);padding:4px 7px;text-align:left;font-size:.56rem;text-transform:uppercase;letter-spacing:.6px;color:var(--g500);border-bottom:2px solid var(--g200);font-weight:600}
@@ -335,7 +341,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
   <div class="cards c3" style="flex-shrink:0">
     <div class="kcard-dark">
       <div class="klbl">Patrimônio total</div>
-      <div class="kval">R$ 6,13 MM</div>
+      <div class="kval">R$ 6,14 MM</div>
       <div class="ksub">100% financeiro · 3 instituições</div>
     </div>
     <div class="kcard-dark">
@@ -344,9 +350,9 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
       <div class="ksub">Eduardo + Mariana · líquida</div>
     </div>
     <div class="kcard-dark accent">
-      <div class="klbl">Retorno ponderado estruturado (est.)</div>
-      <div class="kval" id="s1-blend" style="font-size:1.3rem">calculando…</div>
-      <div class="ksub">com alocação por caixinhas</div>
+      <div class="klbl">Rentabilidade estimada da carteira atual</div>
+      <div class="kval" style="font-size:1.3rem">~11,2% a.a.</div>
+      <div class="ksub">retorno atual · aprox. 104% do CDI</div>
     </div>
   </div>
 </div>
@@ -373,7 +379,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
             <tr><td>Trend Pós-Fixado PGBL</td><td>Previdência</td><td class="tdr">R$ 111K</td></tr>
             <tr><td>Multimercado BTG</td><td>Fundo</td><td class="tdr">R$ 285K</td></tr>
             <tr><td>Demais posições</td><td>—</td><td class="tdr">R$ 294K</td></tr>
-            <tr><td><strong>Total Eduardo · XP</strong></td><td></td><td class="tdr"><strong>R$ 3.040K</strong></td></tr>
+            <tr><td><strong>Total Eduardo · XP</strong></td><td></td><td class="tdr"><strong>R$ 3.035K</strong></td></tr>
           </tbody>
         </table>
       </div>
@@ -428,7 +434,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
             <tr><td>Tesouro Direto (LFT + NTN-B)</td><td>Tesouro</td><td class="tdr">R$ 249K</td></tr>
             <tr><td>Fundos RF (LP High + Régia)</td><td>Fundo RF</td><td class="tdr">R$ 227K</td></tr>
             <tr><td>Debêntures / RF Privada</td><td>RF Privada</td><td class="tdr">R$ 34K</td></tr>
-            <tr><td>Ações (C2OI34 + HASH11)</td><td>Renda Variável</td><td class="tdr">R$ 25K</td></tr>
+            <tr><td>Ações (C2OI34 + HASH11)</td><td>Renda Variável</td><td class="tdr">R$ 24K</td></tr>
             <tr><td><strong>Total Mariana · BB</strong></td><td></td><td class="tdr"><strong>R$ 1.550K</strong></td></tr>
           </tbody>
         </table>
@@ -454,20 +460,20 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
     </div>
     <div class="bbar-row">
       <div class="bbar-lbl">Mariana · XP</div>
-      <div class="bbar-track"><div class="bbar-fill" style="width:11.9%;background:#c9a84c"></div></div>
-      <div class="bbar-pct">11,9%</div><div class="bbar-val">R$ 729 K</div>
+      <div class="bbar-track"><div class="bbar-fill" style="width:11.8%;background:#c9a84c"></div></div>
+      <div class="bbar-pct">11,8%</div><div class="bbar-val">R$ 729 K</div>
     </div>
   </div>
   <div class="sg2">
     <div class="card csm">
-      <div class="klbl">Previdências Eduardo (PGBL)</div>
+      <div class="klbl">Previdências Eduardo (PGBL) <span class="badge bg" style="background:#eaf5ee;color:#0f4a28;font-size:0.48rem;padding:1px 4px;margin-left:4px">Lei 14.803/24</span></div>
       <div class="kval" style="font-size:1.05rem">R$ 391.617</div>
-      <div class="ksub">Kinea Atlas + SPX Seahawk + Trend Pós · Regime regressivo</div>
+      <div class="ksub">Kinea Atlas + SPX Seahawk + Trend Pós · Tabela escolhida apenas no resgate</div>
     </div>
     <div class="card csm">
-      <div class="klbl">Previdências Mariana (VGBL)</div>
+      <div class="klbl">Previdências Mariana (VGBL) <span class="badge bg" style="background:#eaf5ee;color:#0f4a28;font-size:0.48rem;padding:1px 4px;margin-left:4px">Lei 14.803/24</span></div>
       <div class="kval" style="font-size:1.05rem">R$ 730.782</div>
-      <div class="ksub">Brasilprev · 4 fundos · Regime regressivo</div>
+      <div class="ksub">Brasilprev · 4 fundos · Tabela escolhida apenas no resgate</div>
     </div>
   </div>
   <div class="alert ab">⚠️ <span>Patrimônio fragmentado em 3 instituições sem estratégia integrada. Previdências <strong>regressivas ativas</strong> — não interromper a contagem de prazo em hipótese alguma.</span></div>
@@ -689,7 +695,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="caixa-tag" style="color:var(--purple)">🛡️ Hedge cambial · Longo prazo</div>
       </div>
       <div class="caixa">
-        <div class="ctip" id="ct-apo">🏦 <strong>Aposentadoria:</strong> Os recursos alocados aqui crescem a ~10% a.a. durante os anos de acumulação antes da aposentadoria de Eduardo. Inclui as previdências PGBL/VGBL já existentes (Eduardo: R$ 391K · Mariana: R$ 730K) + multimercado BTG. Mariana tem RPPS garantido independente. Na aposentadoria, o patrimônio desta caixinha gera renda via TRS de 4%.</div>
+        <div class="ctip" id="ct-apo">🏦 <strong>Aposentadoria:</strong> Os recursos alocados aqui crescem a ~10% a.a. durante os anos de acumulação. Inclui as previdências já existentes + multimercado BTG. <strong>💡 Liability Matching:</strong> Para travar a inflação do padrão de vida, alocaremos NTN-Bs focadas nos anos de aposentadoria (ex: IPCA+ 2045). Na aposentadoria, gera renda via TRS de 4%.</div>
         <div class="caixa-icon">🏦</div>
         <div class="caixa-name">Aposentadoria</div>
         <div class="caixa-val" id="cx-apo">—</div>
@@ -929,6 +935,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
       </div>
       <div class="alert ao" id="a-imov">—</div>
       <div class="alert ab">💡 <span>Edson avalia que a <strong>queda de juros projetada pelo Focus</strong> (Selic 14,00% em dez/2026 → 12,00% em 2027) pode reduzir a taxa SBPE e melhorar a viabilidade. Vale revisar em dez/2026.</span></div>
+      <div class="alert ao" style="margin-top:2px">⚠️ <strong>Stress-Test do Bônus:</strong> Como a parcela comprometerá fluxo de caixa, é vital manter a <em>Reserva de Liquidez em 12 meses</em> para evitar a venda de ativos caso haja um "ano ruim" de bônus de Eduardo.</div>
     </div>
   </div>
   <!-- AMORTIZAÇÃO COM DIVIDENDOS RESIDUAIS — largura total -->
@@ -1025,13 +1032,13 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         </div>
         <div class="card csm">
           <div class="klbl">Vantagem fiscal PGBL</div>
-          <div class="kval" style="font-size:1rem">R$ 18.900</div>
-          <div class="ksub">~37,5% de R$ 50.400 (alíquota IRPF)</div>
+          <div class="kval" style="font-size:1rem">R$ 13.860</div>
+          <div class="ksub">27,5% de R$ 50.400 (alíquota máx IRPF)</div>
         </div>
         <div class="card csm">
           <div class="klbl">Runway PGBL Eduardo</div>
           <div class="kval" id="pgbl-anos" style="font-size:1rem">17 anos</div>
-          <div class="ksub" id="pgbl-total">Economia fiscal acumulada: R$ 321.300</div>
+          <div class="ksub" id="pgbl-total">Economia fiscal acumulada: R$ 235.620</div>
         </div>
         <div class="card csm">
           <div class="klbl">Hedge USD — exposição atual</div>
@@ -1040,7 +1047,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         </div>
       </div>
       <div class="nota" id="pgbl-nota">
-        <strong>Runway PGBL:</strong> Eduardo tem <span id="pgbl-anos2">17</span> anos até a aposentadoria aos <span id="pgbl-idade-apo">55</span> para deduzir 12% da renda tributável no PGBL. Economia fiscal estimada: <strong id="pgbl-econ-total">R$ 321.300</strong> (R$ 18.900/ano × 17 anos). Manter aporte anual ao PGBL é uma das ações de maior retorno garantido do plano.<br><br>
+        <strong>Runway PGBL:</strong> Eduardo tem <span id="pgbl-anos2">17</span> anos até a aposentadoria aos <span id="pgbl-idade-apo">55</span> para deduzir 12% da renda tributável no PGBL. Economia fiscal estimada: <strong id="pgbl-econ-total">R$ 235.620</strong> (R$ 13.860/ano × 17 anos). Manter aporte anual ao PGBL é uma das ações de maior retorno garantido do plano.<br><br>
         <strong>Hedge cambial (USD):</strong> A caixinha Exterior representa <span id="usd-pct2">—</span> do patrimônio. O BRL se desvalorizou em média 6% a.a. frente ao USD nos últimos 10 anos. Com <span id="usd-pct2b">—</span> em Treasuries, o casal está protegido contra uma desvalorização de até <span id="usd-pct2c">—</span>% do real sem impacto no poder de compra total.
       </div>
       <div class="alert ag">🎯 <span>Os <strong>isentos de IR</strong> (LCI/LCA/CRI) são a principal vantagem do plano — Eduardo já domina esses instrumentos como tributarista.</span></div>
@@ -1073,6 +1080,16 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="bi-head"><div class="bi-icon">🏥</div><div><div class="bi-title">Plano de Saúde e Pais de Mariana</div><span class="badge bb">ANALISAR</span></div></div>
         <div class="bi-txt">Mariana tem pais doentes — risco de desembolso não planejado elevado. Revisar cobertura do plano de saúde familiar, considerar seguro de saúde global (offshore) e reserva específica para cuidados de longa duração. Impacto pode ser de R$ 20–50K/mês em casos graves.</div>
         <div class="bi-act">→ Mapear exposição financeira · Revisar apólice atual · Considerar reserva separada</div>
+      </div>
+      <div class="bi">
+        <div class="bi-head"><div class="bi-icon">🇺🇸</div><div><div class="bi-title">Risco Sucessório EUA (US Estate Tax)</div><span class="badge bo">URGENTE</span></div></div>
+        <div class="bi-txt">A conta Offshore projetada pode cruzar US$ 1M rapidamente. Nos EUA, ativos acima de US$ 60.000 pertencentes a não-residentes são taxados em até <strong>40% de imposto de herança</strong> caso o titular venha a faltar, além do bloqueio da conta no inventário (Probate).</div>
+        <div class="bi-act">→ Estruturar Offshore via PIC (Empresa BVI/Bahamas) ou apólice PPLI</div>
+      </div>
+      <div class="bi">
+        <div class="bi-head"><div class="bi-icon">💎</div><div><div class="bi-title">Fundo Exclusivo</div><span class="badge bg">LONGO PRAZO</span></div></div>
+        <div class="bi-txt">A família cruza a marca de R$ 10 MM nos próximos 3 anos. Nesse patamar, um Fundo de Investimento Multimercado (FIM) Fechado torna-se o veículo definitivo para centralizar o patrimônio, blindar de penhoras e realizar doação de cotas para os filhos sem perder o usufruto e controle dos ativos.</div>
+        <div class="bi-act">→ Planejar transição ao atingir R$ 10 MM de patrimônio líquido</div>
       </div>
     </div>
     <div id="s8-legado" style="display:none" class="alert ao">
@@ -1150,7 +1167,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
       <div class="card" style="padding:13px;display:flex;flex-direction:column;gap:4px">
         <div class="frow"><span class="flbl" style="font-weight:600">Resumo do plano</span></div>
         <div class="sep"></div>
-        <div class="frow"><span class="flbl">Patrimônio hoje</span><span class="fval neutral">R$ 6,13 MM</span></div>
+        <div class="frow"><span class="flbl">Patrimônio hoje</span><span class="fval neutral">R$ 6,14 MM</span></div>
         <div class="frow"><span class="flbl">Retorno estruturado</span><span class="fval good" id="s9-blend">—</span></div>
         <div class="frow"><span class="flbl">Bônus abr/2027 investido</span><span class="fval neutral" id="s9-bonus">—</span></div>
         <div class="frow"><span class="flbl">Meta: aposent. Eduardo</span><span class="fval neutral" id="s9-apo">55 anos</span></div>
@@ -1174,7 +1191,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 
 <script>
 // ── CONSTANTES BASE ──
-const PAT=6134320, DIVIDENDOS=2000000, RV_AMT=210000;
+const PAT=6135361, DIVIDENDOS=2000000, RV_AMT=210000;
 const SBPE=0.1169, DIV_RATE=0.11, OFF_RATE=0.04, AP_RATE=0.10;
 const RES_RATE=0.1475; // CDI atual 14,75% a.a.
 const RV_RATE=0.05, IPCA=0.0414;
@@ -1285,12 +1302,17 @@ function updDivTargetNote(){
   const divMetaParc=Math.ceil(parcela1/DIV_RATE*12); // capital para cobrir parcela
   const pctAlug=Math.round(divMes/RENT*100);
   const pctParc=Math.round(divMes/parcela1*100);
-  const texts={
-    0:`Rendimentos (~R$ ${Math.round(divMes/1000)}K/mês) disponíveis para qualquer uso. Para cobrir o aluguel de R$ 25K/mês, seria necessário R$ ${(divMetaAlug/1e6).toFixed(1).replace('.',',')}MM em renda fixa isenta.`,
-    1:`Rendimentos atuais: ~R$ ${Math.round(divMes/1000)}K/mês · Cobrem ${pctAlug}% do aluguel (R$ 25K/mês) ou ${pctParc}% da 1ª parcela SAC (~R$ ${Math.round(parcela1/1000)}K). Para cobrir 100% da parcela, meta: R$ ${(divMetaParc/1e6).toFixed(1).replace('.',',')}MM em renda fixa isenta.`,
-    2:`Reinvestindo R$ ${Math.round(divMes/1000)}K/mês ao longo de 10 anos (a 11% a.a.), a caixinha de renda fixa chegaria a ~R$ ${(Math.round(DIVIDENDOS*Math.pow(1.11,10)/1e5)/10).toFixed(1).replace('.',',')}MM — maximizando o patrimônio sem saques intermediários.`
+  const textsS3={
+    0:'Os rendimentos gerados pela carteira de renda fixa isenta servirão como complemento de renda livre — sem destinação específica para moradia. Flexibilidade total de uso.',
+    1:'A meta é que os rendimentos mensais cubram o custo de moradia (aluguel atual ou parcela do financiamento), reduzindo o custo efetivo de vida do casal.',
+    2:'Reinvestir integralmente os rendimentos maximiza o crescimento patrimonial no longo prazo. Custo de moradia fica a cargo da renda ativa.'
   };
-  if(divNote)divNote.textContent=texts[choice.divTarget]||texts[1];
+  const textsImovel={
+    0:`Rendimentos mensais (~R$ ${Math.round(divMes/1000)}K/mês) disponíveis para qualquer uso. Para cobrir o aluguel de R$ 25K/mês integralmente, meta: R$ ${(divMetaAlug/1e6).toFixed(1).replace('.',',')}MM em renda fixa isenta.`,
+    1:`Rendimentos mensais: ~R$ ${Math.round(divMes/1000)}K/mês · Cobrem ${pctAlug}% do aluguel (R$ 25K/mês) ou ${pctParc}% da 1ª parcela SAC (~R$ ${Math.round(parcela1/1000)}K/mês). Para cobrir 100% da parcela, meta: R$ ${(divMetaParc/1e6).toFixed(1).replace('.',',')}MM em renda fixa isenta.`,
+    2:`Reinvestindo os rendimentos mensais ao longo de 10 anos (a 11% a.a.), a carteira de renda fixa isenta chegaria a ~R$ ${(Math.round(DIVIDENDOS*Math.pow(1.11,10)/1e5)/10).toFixed(1).replace('.',',')}MM — maximizando o patrimônio sem saques intermediários.`
+  };
+  if(divNote)divNote.textContent=textsS3[choice.divTarget]||textsS3[1];
   if(divNoteImovel)divNoteImovel.textContent=texts[choice.divTarget]||texts[1];
 }
 
@@ -1534,7 +1556,7 @@ function updChoicesSummary(){
   ].map(([l,v])=>`<div class="frow"><span class="flbl">${l}</span><span class="fval neutral" style="font-size:.78rem">${v}</span></div>`).join('');
   // PGBL runway
   const wYears=choice.edadEdu-38;
-  const econAnual=18900, econTotal=econAnual*wYears;
+  const econAnual=13860, econTotal=econAnual*wYears;
   const pgA=document.getElementById('pgbl-anos');if(pgA)pgA.textContent=wYears+' anos';
   const pgT=document.getElementById('pgbl-total');if(pgT)pgT.textContent='Economia fiscal acumulada: '+fmt(econTotal);
   const pgA2=document.getElementById('pgbl-anos2');if(pgA2)pgA2.textContent=wYears;
@@ -1646,19 +1668,20 @@ function buildC15(pe){
   const labs=[],d1=[],d2=[];let p=PAT;
   const imovEnt=choice.compraImovel?Math.round(choice.imovelValor*choice.imovelEntrada/100):0;
   for(let y=0;y<=wYears+15;y++){
-    if(y<=wYears){
+    labs.push((38+y)+'a');d1.push(Math.round(p/1e6*10)/10);
+    if(y<wYears){
       p*=(1+r);p+=APORTE_MES*12;
       p+=BONUS_ANUAL*(choice.bonus/100); // R$ 1,5MM todo abril
       if(y===0&&choice.compraImovel)p-=imovEnt;
     } else {
       p*=(1+r); // base growth
     }
-    labs.push((38+y)+'a');d1.push(Math.round(p/1e6*10)/10);
   }
   // "Consumindo": mesma acumulação até aposentadoria, depois saca DESP_MES/mês
   let p2=PAT;
   for(let y=0;y<=wYears+15;y++){
-    if(y<=wYears){
+    d2.push(Math.round(p2/1e6*10)/10);
+    if(y<wYears){
       p2*=(1+r);p2+=APORTE_MES*12;
       p2+=BONUS_ANUAL*(choice.bonus/100); // R$ 1,5MM todo abril
       if(y===0&&choice.compraImovel)p2-=imovEnt;
@@ -1666,7 +1689,6 @@ function buildC15(pe){
       p2=p2*(1+r)-DESP_MES*12; // sacar DESP_MES/mês do patrimônio
       if(p2<0)p2=0;
     }
-    d2.push(Math.round(p2/1e6*10)/10);
   }
   const activeData=mode===1?d1:d2;
   if(ch.c15){ch.c15.data.labels=labs;ch.c15.data.datasets[0].data=activeData;ch.c15.update('none');}
@@ -1767,9 +1789,9 @@ function initS5(){
   // c15: dados iniciais (buildC15 vai atualizar com modo correto)
   const wYears=choice.edadEdu-38;const labs2=[],d2=[];let p2=PAT;
   for(let y=0;y<=wYears+15;y++){
-    if(y<=wYears){p2*=(1+r);p2+=APORTE_MES*12;p2+=BONUS_ANUAL*(choice.bonus/100);if(y===0&&choice.compraImovel)p2-=imovEnt;}
-    else{p2*=(1+r);}
     labs2.push((38+y)+'a');d2.push(Math.round(p2/1e6*10)/10);
+    if(y<wYears){p2*=(1+r);p2+=APORTE_MES*12;p2+=BONUS_ANUAL*(choice.bonus/100);if(y===0&&choice.compraImovel)p2-=imovEnt;}
+    else{p2*=(1+r);}
   }
   ch.c15=mkLine('c15',labs2,d2,'#a8883a');
   initCCaixinhas();
@@ -1906,7 +1928,7 @@ function updImovel(){
   }
   if(ch.cSAC){
     const yrs=30,labs=[],data=[];let f2=fin;
-    for(let y=1;y<=yrs;y+=2){f2-=fin/360*24;labs.push(y+'a');data.push(Math.round((f2/360+f2*SBPE/12)/500)*500);}
+    for(let y=1;y<=yrs;y+=2){labs.push(y+'a');data.push(Math.round((f2/360+f2*SBPE/12)/500)*500);f2-=fin/360*24;}
     ch.cSAC.data.labels=labs;ch.cSAC.data.datasets[0].data=data;
     ch.cSAC.data.datasets[1].data=labs.map(()=>RENT);ch.cSAC.update('none');
   }
@@ -1918,7 +1940,7 @@ function initSAC(){
   const val=sv?+sv.value:5000000,ent=0.30;
   const fin=Math.round(val*(1-ent));
   const yrs=30,labs=[],data=[];let f2=fin;
-  for(let y=1;y<=yrs;y+=2){f2-=fin/360*24;labs.push(y+'a');data.push(Math.round((f2/360+f2*SBPE/12)/500)*500);}
+  for(let y=1;y<=yrs;y+=2){labs.push(y+'a');data.push(Math.round((f2/360+f2*SBPE/12)/500)*500);f2-=fin/360*24;}
   const c=document.getElementById('cSAC');if(!c)return;
   ch.cSAC=new Chart(c,{type:'line',data:{labels:labs,datasets:[{label:'Parcela SAC',data:data,borderColor:'#c0392b',backgroundColor:'#c0392b22',tension:.3,fill:true,pointRadius:0},{label:'Aluguel atual',data:labs.map(()=>RENT),borderColor:'#1a7a4a',borderDash:[4,4],tension:0,fill:false,pointRadius:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{font:{size:9},padding:6,boxWidth:10}}},scales:{x:{ticks:{font:{size:8.5}},grid:{display:false}},y:{ticks:{callback:v=>'R$'+Math.round(v/1000)+'K',font:{size:8.5}},grid:{color:'#f0f0ec'}}}}});
 }
