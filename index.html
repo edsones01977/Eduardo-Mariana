@@ -16,230 +16,252 @@
   --g50:#f4f4f2;--g100:#edede9;--g200:#e0e0da;--g400:#b8b8b0;
   --g500:#6c6c68;--g700:#3d3d38;--g800:#1e1e1a;
   --green:#1a7a4a;--red:#c0392b;--orange:#d4680a;--purple:#6d3494;
-  --r:8px;--sh:0 2px 16px rgba(0,0,0,.08);--sh2:0 6px 28px rgba(0,0,0,.14);
+  --r:8px;--sh:0 2px 10px rgba(0,0,0,.07);--sh2:0 5px 22px rgba(0,0,0,.13);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--g800);height:100vh;overflow:hidden}
 
+/* ── NÚMEROS: Inter tabular, sem serrilha ── */
+.kval,.kcard-dark .kval,.caixa-val,.sval,.fval,.bbar-val,.bbar-pct{
+  font-family:'Inter',system-ui,sans-serif!important;
+  font-variant-numeric:tabular-nums;
+  letter-spacing:0!important;
+}
+
 /* LOGIN */
-#ls{position:fixed;inset:0;background:var(--navy);display:flex;align-items:center;justify-content:center;z-index:1000;flex-direction:column;gap:28px}
-#lb{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:32px;width:310px;display:flex;flex-direction:column;gap:14px}
-#pi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:12px 14px;color:#fff;font-size:.92rem;font-family:'Inter',sans-serif;width:100%;outline:none}
+#ls{position:fixed;inset:0;background:var(--navy);display:flex;align-items:center;justify-content:center;z-index:1000;flex-direction:column;gap:20px}
+#lb{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:26px;width:296px;display:flex;flex-direction:column;gap:11px}
+#pi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:11px 13px;color:#fff;font-size:.9rem;font-family:'Inter',sans-serif;width:100%;outline:none}
 #pi:focus{border-color:var(--gold-l)}
-#lbtn{background:var(--gold);color:var(--navy);border:none;border-radius:6px;padding:12px;font-weight:700;font-size:.92rem;font-family:'Inter',sans-serif;cursor:pointer;letter-spacing:.5px}
+#lbtn{background:var(--gold);color:var(--navy);border:none;border-radius:6px;padding:11px;font-weight:700;font-size:.9rem;font-family:'Inter',sans-serif;cursor:pointer;letter-spacing:.5px}
 #lerr{color:#e57373;font-size:.72rem;display:none;text-align:center}
 
 /* APP SHELL */
 #app{display:none;flex-direction:column;height:100vh}
-header{height:52px;background:var(--navy);display:flex;align-items:center;padding:0 24px;gap:16px;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,.06)}
+header{height:46px;background:var(--navy);display:flex;align-items:center;padding:0 18px;gap:12px;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,.06)}
 .hb{color:var(--gold-l);font-size:.6rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;line-height:1.4;white-space:nowrap;flex-shrink:0}
-.hb span{display:block;color:rgba(255,255,255,.35);font-size:.52rem;letter-spacing:1.5px;font-weight:400}
-.hs{width:1px;height:22px;background:rgba(255,255,255,.12);flex-shrink:0}
-/* STEP NAV */
+.hb span{display:block;color:rgba(255,255,255,.35);font-size:.51rem;letter-spacing:1.5px;font-weight:400}
+.hs{width:1px;height:20px;background:rgba(255,255,255,.12);flex-shrink:0}
 .steps{display:flex;gap:0;flex:1;justify-content:center;overflow:hidden}
-.step{font-family:'Inter',sans-serif;font-size:.52rem;font-weight:500;color:rgba(255,255,255,.35);padding:0 10px;cursor:pointer;position:relative;transition:.2s;white-space:nowrap;letter-spacing:.8px;text-transform:uppercase;height:100%;display:flex;align-items:center}
+.step{font-family:'Inter',sans-serif;font-size:.49rem;font-weight:500;color:rgba(255,255,255,.35);padding:0 8px;cursor:pointer;position:relative;transition:.2s;white-space:nowrap;letter-spacing:.7px;text-transform:uppercase;height:100%;display:flex;align-items:center}
 .step:hover{color:rgba(255,255,255,.65)}
 .step.active{color:var(--gold-l)}
-.step.active::after{content:'';position:absolute;bottom:0;left:10px;right:10px;height:2px;background:var(--gold-l);border-radius:2px 2px 0 0}
+.step.active::after{content:'';position:absolute;bottom:0;left:8px;right:8px;height:2px;background:var(--gold-l);border-radius:2px 2px 0 0}
 .step.visited{color:rgba(255,255,255,.5)}
-.ht{color:rgba(255,255,255,.5);font-size:.6rem;white-space:nowrap;min-width:80px;text-align:right;font-family:'Inter',sans-serif;flex-shrink:0}
-footer{height:46px;background:var(--white);border-top:1px solid var(--g200);display:flex;align-items:center;justify-content:space-between;padding:0 24px;flex-shrink:0}
-.nb{background:var(--navy);color:#fff;border:none;border-radius:6px;padding:7px 20px;cursor:pointer;font-size:.78rem;font-family:'Inter',sans-serif;letter-spacing:.3px}
+.ht{color:rgba(255,255,255,.5);font-size:.59rem;white-space:nowrap;min-width:60px;text-align:right;font-family:'Inter',sans-serif;flex-shrink:0}
+footer{height:40px;background:var(--white);border-top:1px solid var(--g200);display:flex;align-items:center;justify-content:space-between;padding:0 18px;flex-shrink:0}
+.nb{background:var(--navy);color:#fff;border:none;border-radius:6px;padding:6px 16px;cursor:pointer;font-size:.75rem;font-family:'Inter',sans-serif;letter-spacing:.3px}
 .nb:hover{background:var(--navy2)}.nb:disabled{background:var(--g400);cursor:default}
-.sc{color:var(--g400);font-size:.78rem}
+.sc{color:var(--g400);font-size:.74rem}
 
 /* SLIDES */
 #sw{flex:1;position:relative;overflow:hidden}
-.slide{position:absolute;inset:0;padding:20px 28px;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .35s;display:flex;flex-direction:column;gap:14px;background:var(--cream)}
+.slide{position:absolute;inset:0;padding:13px 18px;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .3s;display:flex;flex-direction:column;gap:9px;background:var(--cream)}
 .slide.active{opacity:1;pointer-events:auto}
 .slide::-webkit-scrollbar{width:4px}.slide::-webkit-scrollbar-thumb{background:var(--g200);border-radius:2px}
 
-/* SLIDE 1 — DARK HERO */
-#slide-1{background:var(--navy);gap:0;justify-content:space-between;padding:28px}
-.hero-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;font-style:italic;color:rgba(255,255,255,.9);line-height:1.7;max-width:600px;text-align:center;padding:0 20px}
-.hero-attr{font-size:.65rem;color:rgba(255,255,255,.35);letter-spacing:1.5px;text-transform:uppercase;margin-top:8px;text-align:center}
-.hero-badge{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25);border-radius:var(--r);padding:10px 18px;font-size:.76rem;color:rgba(255,255,255,.75);line-height:1.6;max-width:480px;text-align:center}
+/* ── SLIDE 1 ── */
+#slide-1{background:var(--navy);gap:0;padding:20px 26px;justify-content:space-between}
+.hero-center{display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:12px;text-align:center;padding:4% 0 2%}
+.hero-quote{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-style:italic;color:rgba(255,255,255,.92);line-height:1.6;max-width:600px;padding:0 16px}
+.hero-attr{font-size:.61rem;color:rgba(255,255,255,.32);letter-spacing:1.5px;text-transform:uppercase}
+.hero-badge{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.25);border-radius:var(--r);padding:10px 18px;font-size:.76rem;color:rgba(255,255,255,.72);line-height:1.6;max-width:450px}
 .hero-badge strong{color:var(--gold-l)}
-.kcard-dark{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:14px 16px;flex:1}
-.kcard-dark .klbl{color:rgba(255,255,255,.4);font-size:.6rem;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
-.kcard-dark .kval{color:#fff;font-size:1.25rem;font-weight:700;font-family:'Cormorant Garamond',serif;letter-spacing:-.5px}
-.kcard-dark .ksub{color:rgba(255,255,255,.35);font-size:.63rem;margin-top:2px}
+.kcard-dark{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:13px 14px;flex:1}
+.kcard-dark .klbl{color:rgba(255,255,255,.38);font-size:.57rem;text-transform:uppercase;letter-spacing:.8px;margin-bottom:3px}
+.kcard-dark .kval{color:#fff!important;font-size:1.3rem;font-weight:700}
+.kcard-dark .ksub{color:rgba(255,255,255,.32);font-size:.61rem;margin-top:2px}
 .kcard-dark.accent{border-color:rgba(168,136,58,.4);background:rgba(168,136,58,.08)}
-.kcard-dark.accent .kval{color:var(--gold-l)}
+.kcard-dark.accent .kval{color:var(--gold-l)!important}
 
 /* TYPOGRAPHY */
-.stag{font-size:.56rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:-4px}
-.stitle{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.55rem;font-weight:600;color:var(--navy);line-height:1.15}
-.ssub{font-size:.76rem;color:var(--g500)}
+.stag{font-size:.54rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:-2px}
+.stitle{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.5rem;font-weight:600;color:var(--navy);line-height:1.15}
+.ssub{font-size:.74rem;color:var(--g500);line-height:1.5}
 
 /* CARDS */
-.cards{display:grid;gap:12px}
+.cards{display:grid;gap:9px}
 .c4{grid-template-columns:repeat(4,1fr)}.c3{grid-template-columns:repeat(3,1fr)}.c2{grid-template-columns:1fr 1fr}
-.card{background:var(--white);border-radius:var(--r);padding:15px;box-shadow:var(--sh);border:1px solid var(--g200)}
-.csm{padding:12px 14px}
-.klbl{font-size:.6rem;color:var(--g500);text-transform:uppercase;letter-spacing:.7px;margin-bottom:3px;font-weight:500}
-.kval{font-size:1.3rem;font-weight:700;color:var(--navy);font-family:'Cormorant Garamond',serif;letter-spacing:-.3px}
-.ksub{font-size:.64rem;color:var(--g500);margin-top:2px}
+.card{background:var(--white);border-radius:var(--r);padding:11px 13px;box-shadow:var(--sh);border:1px solid var(--g200)}
+.csm{padding:9px 11px}
+.klbl{font-size:.57rem;color:var(--g500);text-transform:uppercase;letter-spacing:.7px;margin-bottom:2px;font-weight:500}
+.kval{font-size:1.25rem;font-weight:700;color:var(--navy)}
+.ksub{font-size:.61rem;color:var(--g500);margin-top:2px}
 
 /* ALERTS */
-.alert{border-radius:var(--r);padding:10px 13px;font-size:.74rem;display:flex;gap:9px;align-items:flex-start;line-height:1.55}
+.alert{border-radius:var(--r);padding:8px 11px;font-size:.71rem;display:flex;gap:8px;align-items:flex-start;line-height:1.55}
 .ao{background:#fef5e4;border-left:3px solid var(--orange);color:#7a4a0a}
 .ab{background:#ebf0fa;border-left:3px solid var(--blue);color:#1a3460}
 .ag{background:#eaf5ee;border-left:3px solid var(--green);color:#0f4a28}
 .ar{background:#fdecea;border-left:3px solid var(--red);color:#7a1a14}
-.badge{display:inline-block;font-size:.56rem;font-weight:700;padding:2px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
+.badge{display:inline-block;font-size:.54rem;font-weight:700;padding:2px 6px;border-radius:20px;text-transform:uppercase;letter-spacing:.5px}
 .bg{background:#d1e8d8;color:#0f4a28}.bb{background:#dce8f8;color:#1a3460}.bo{background:#fef0d4;color:#7a4a0a}
 
 /* BBAR */
-.bbar-wrap{display:flex;flex-direction:column;gap:8px}
-.bbar-row{display:flex;align-items:center;gap:8px}
-.bbar-lbl{font-size:.67rem;width:115px;flex-shrink:0;color:var(--g700)}
-.bbar-track{flex:1;height:10px;background:var(--g100);border-radius:20px;overflow:hidden}
+.bbar-wrap{display:flex;flex-direction:column;gap:6px}
+.bbar-row{display:flex;align-items:center;gap:7px}
+.bbar-lbl{font-size:.64rem;width:108px;flex-shrink:0;color:var(--g700)}
+.bbar-track{flex:1;height:9px;background:var(--g100);border-radius:20px;overflow:hidden}
 .bbar-fill{height:100%;border-radius:20px}
-.bbar-pct{font-size:.62rem;color:var(--g500);width:28px;text-align:right;flex-shrink:0}
-.bbar-val{font-size:.62rem;color:var(--g700);width:78px;text-align:right;flex-shrink:0}
+.bbar-pct{font-size:.6rem;color:var(--g500);width:28px;text-align:right;flex-shrink:0}
+.bbar-val{font-size:.6rem;color:var(--g700);width:72px;text-align:right;flex-shrink:0}
 
 /* ACCORDION */
 .acc{border:1px solid var(--g200);border-radius:var(--r);overflow:hidden}
-.acc-hd{background:var(--g50);padding:9px 13px;cursor:pointer;display:flex;justify-content:space-between;font-size:.76rem;font-weight:600;color:var(--g700)}
+.acc-hd{background:var(--g50);padding:7px 11px;cursor:pointer;display:flex;justify-content:space-between;font-size:.73rem;font-weight:600;color:var(--g700)}
 .acc-hd:hover{background:var(--g100)}.acc-arr{transition:transform .3s}
-.acc-body{max-height:0;overflow:hidden;transition:max-height .4s}.acc-body.open{max-height:1000px}
-.acc-inner{padding:10px 13px}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .4s}.acc-body.open{max-height:2000px}
+.acc-inner{padding:9px 11px}
 
 /* QUESTION CARDS */
-.qcard{background:var(--white);border-radius:var(--r);padding:14px;box-shadow:var(--sh);border:1px solid var(--g200)}
-.qnum{font-size:.56rem;font-weight:700;color:var(--gold);letter-spacing:1.5px;margin-bottom:2px;text-transform:uppercase}
-.qtxt{font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:5px}
-.qsub{font-size:.67rem;color:var(--g500);margin-bottom:8px;line-height:1.55}
-.opts{display:flex;gap:6px;flex-wrap:wrap}
-.opt{background:var(--g50);border:1.5px solid var(--g200);border-radius:var(--r);padding:7px 11px;cursor:pointer;font-size:.71rem;color:var(--g700);transition:.2s;line-height:1.35;text-align:left}
-.opt:hover{border-color:var(--blue);background:#eef3fc}.opt.sel{border-color:var(--blue);background:#eef3fc;color:var(--blue);font-weight:600}
+.qcard{background:var(--white);border-radius:var(--r);padding:11px 12px;box-shadow:var(--sh);border:1px solid var(--g200)}
+.qnum{font-size:.53rem;font-weight:700;color:var(--gold);letter-spacing:1.5px;margin-bottom:2px;text-transform:uppercase}
+.qtxt{font-size:.79rem;font-weight:600;color:var(--navy);margin-bottom:3px}
+.qsub{font-size:.65rem;color:var(--g500);margin-bottom:7px;line-height:1.5}
+.opts{display:flex;gap:5px;flex-wrap:wrap}
+.opt{background:var(--g50);border:1.5px solid var(--g200);border-radius:var(--r);padding:7px 9px;cursor:pointer;font-size:.69rem;color:var(--g700);transition:.2s;line-height:1.35;text-align:left;flex:1;min-width:110px}
+.opt:hover{border-color:var(--blue);background:#eef3fc}
+.opt.sel{border-color:var(--blue);background:#eef3fc;color:var(--blue);font-weight:600}
+.opt-desc{font-size:.62rem;color:var(--g500);margin-top:4px;font-weight:400;line-height:1.4;border-top:1px solid rgba(0,0,0,.06);padding-top:3px}
+.opt.sel .opt-desc{color:#3a5fa0}
+.opt-impact{font-size:.61rem;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums;color:#1a3460}
+.opt.sel .opt-impact{color:var(--navy)}
+.impact-panel{background:linear-gradient(135deg,#eef3fc,#f0f7ff);border:1px solid #c5d8f5;border-radius:var(--r);padding:9px 11px;margin-top:6px;display:none}
+.impact-panel.vis{display:block}
+.ip-title{font-size:.58rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.ip-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.ip-item{text-align:center}
+.ip-lbl{font-size:.6rem;color:var(--g500);display:block}
+.ip-val{font-size:.84rem;font-weight:700;color:var(--navy);display:block;font-variant-numeric:tabular-nums}
 .srow{display:flex;align-items:center;gap:8px;margin-top:4px}
-.srow input[type=range]{flex:1;accent-color:var(--blue)}
-.sval{font-size:.88rem;font-weight:700;color:var(--navy);min-width:64px;text-align:right;font-family:'Cormorant Garamond',serif;font-size:1rem}
-.slbls{display:flex;justify-content:space-between;font-size:.58rem;color:var(--g400);margin-top:1px}
+.srow input[type=range]{flex:1;accent-color:var(--blue);cursor:pointer}
+.sval{font-size:.95rem;font-weight:700;color:var(--navy);min-width:68px;text-align:right}
+.slbls{display:flex;justify-content:space-between;font-size:.56rem;color:var(--g400);margin-top:1px}
 
-/* CAIXINHAS — novo layout 2+3 */
-.cx-wrap{display:flex;flex-direction:column;gap:12px;flex:1}
-.cx-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.cx-row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-.caixa{background:var(--white);border-radius:var(--r);padding:15px;box-shadow:var(--sh);border:1px solid var(--g200);position:relative;cursor:default;transition:transform .2s,box-shadow .2s}
-.caixa:hover{transform:translateY(-3px);box-shadow:var(--sh2)}
+/* MESES TABS (Q6) */
+.mtabs{display:flex;gap:5px;margin-top:7px}
+.mtab{flex:1;background:var(--g50);border:1.5px solid var(--g200);border-radius:6px;padding:7px 4px;text-align:center;cursor:pointer;font-size:.64rem;color:var(--g700);transition:.2s;line-height:1.3}
+.mtab:hover{border-color:var(--blue);background:#eef3fc}
+.mtab.sel{border-color:var(--blue);background:#eef3fc;color:var(--blue);font-weight:700}
+.mtab .mv{font-size:.82rem;font-weight:700;display:block;font-variant-numeric:tabular-nums;margin-top:1px}
+
+/* CAIXINHAS */
+.cx-wrap{display:flex;flex-direction:column;gap:9px;flex:1}
+.cx-row2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.cx-row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
+.caixa{background:var(--white);border-radius:var(--r);padding:12px 13px;box-shadow:var(--sh);border:1px solid var(--g200);position:relative;cursor:default;transition:transform .2s,box-shadow .2s}
+.caixa:hover{transform:translateY(-2px);box-shadow:var(--sh2)}
 .caixa:hover .ctip{opacity:1;pointer-events:auto;transform:translateY(0)}
-.caixa-icon{font-size:1.25rem;margin-bottom:5px}
-.caixa-name{font-size:.64rem;font-weight:600;color:var(--g500);text-transform:uppercase;letter-spacing:1px}
-.caixa-val{font-size:1.2rem;font-weight:700;color:var(--navy);margin:4px 0;font-family:'Cormorant Garamond',serif;letter-spacing:-.3px}
-.caixa-rate{font-size:.63rem;color:var(--g500)}
-.caixa-tag{font-size:.6rem;font-weight:700;margin-top:6px;padding-top:6px;border-top:1px solid var(--g100)}
-.ctip{position:absolute;bottom:calc(100% + 8px);left:0;right:0;background:var(--navy);color:#fff;border-radius:var(--r);padding:10px 12px;font-size:.67rem;line-height:1.6;opacity:0;pointer-events:none;transform:translateY(5px);transition:.25s;z-index:20;box-shadow:0 4px 20px rgba(0,0,0,.25)}
-.ctip::after{content:'';position:absolute;top:100%;left:18px;border:5px solid transparent;border-top-color:var(--navy)}
+.caixa-icon{font-size:1.1rem;margin-bottom:3px}
+.caixa-name{font-size:.61rem;font-weight:600;color:var(--g500);text-transform:uppercase;letter-spacing:1px}
+.caixa-val{font-size:1.2rem;font-weight:700;color:var(--navy);margin:3px 0}
+.caixa-rate{font-size:.61rem;color:var(--g500)}
+.caixa-tag{font-size:.58rem;font-weight:700;margin-top:4px;padding-top:4px;border-top:1px solid var(--g100)}
+.ctip{position:absolute;bottom:calc(100% + 6px);left:0;right:0;background:var(--navy);color:#fff;border-radius:var(--r);padding:9px 11px;font-size:.64rem;line-height:1.6;opacity:0;pointer-events:none;transform:translateY(5px);transition:.25s;z-index:20;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+.ctip::after{content:'';position:absolute;top:100%;left:16px;border:5px solid transparent;border-top-color:var(--navy)}
 
 /* CHART */
-.chart-wrap{background:var(--white);border-radius:var(--r);padding:13px;box-shadow:var(--sh);border:1px solid var(--g200)}
-.ch-title{font-size:.72rem;font-weight:600;color:var(--navy);margin-bottom:1px}
-.ch-sub{font-size:.63rem;color:var(--g500);margin-bottom:8px}
+.chart-wrap{background:var(--white);border-radius:var(--r);padding:11px;box-shadow:var(--sh);border:1px solid var(--g200)}
+.ch-title{font-size:.71rem;font-weight:600;color:var(--navy);margin-bottom:1px}
+.ch-sub{font-size:.61rem;color:var(--g500);margin-bottom:6px}
 .tog-row{display:flex;gap:4px}
-.tog{background:var(--g50);border:1px solid var(--g200);border-radius:4px;padding:3px 8px;font-size:.63rem;cursor:pointer;color:var(--g500);transition:.2s}
+.tog{background:var(--g50);border:1px solid var(--g200);border-radius:4px;padding:3px 8px;font-size:.61rem;cursor:pointer;color:var(--g500);transition:.2s}
 .tog.on{background:var(--navy);border-color:var(--navy);color:#fff}
 
 /* INSIGHT */
-.insight{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:var(--r);padding:16px 20px;color:#fff}
-.ins-tag{font-size:.56rem;font-weight:700;letter-spacing:2px;color:var(--gold-l);text-transform:uppercase;margin-bottom:5px}
-.ins-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;margin-bottom:4px}
-.ins-txt{font-size:.74rem;color:rgba(255,255,255,.7);line-height:1.65}
+.insight{background:linear-gradient(135deg,var(--navy),var(--navy2));border-radius:var(--r);padding:13px 17px;color:#fff;flex-shrink:0}
+.ins-tag{font-size:.54rem;font-weight:700;letter-spacing:2px;color:var(--gold-l);text-transform:uppercase;margin-bottom:4px}
+.ins-title{font-family:'Cormorant Garamond',serif;font-size:1.08rem;font-weight:600;margin-bottom:4px}
+.ins-txt{font-size:.71rem;color:rgba(255,255,255,.7);line-height:1.65}
 
 /* TABLE */
-table{width:100%;border-collapse:collapse;font-size:.71rem}
-th{background:var(--g50);padding:6px 9px;text-align:left;font-size:.6rem;text-transform:uppercase;letter-spacing:.7px;color:var(--g500);border-bottom:2px solid var(--g200);font-weight:600}
-td{padding:6px 9px;border-bottom:1px solid var(--g100);color:var(--g700)}
+table{width:100%;border-collapse:collapse;font-size:.69rem}
+th{background:var(--g50);padding:5px 8px;text-align:left;font-size:.57rem;text-transform:uppercase;letter-spacing:.7px;color:var(--g500);border-bottom:2px solid var(--g200);font-weight:600}
+td{padding:5px 8px;border-bottom:1px solid var(--g100);color:var(--g700)}
 tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;color:var(--navy)}
-.frow{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--g100)}
-.flbl{font-size:.74rem;color:var(--g700)}.fval{font-size:.82rem;font-weight:700;font-family:'Cormorant Garamond',serif;font-size:.9rem}
+.frow{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--g100)}
+.flbl{font-size:.71rem;color:var(--g700)}
+.fval{font-size:.87rem;font-weight:700}
 .fval.bad{color:var(--red)}.fval.good{color:var(--green)}.fval.warn{color:var(--orange)}.fval.neutral{color:var(--navy)}
-.sep{height:1px;background:var(--g200)}
+.sep{height:1px;background:var(--g200);margin:2px 0}
 
 /* TIMELINE */
-.tl{display:flex;flex-direction:column;gap:13px;position:relative}
-.tl::before{content:'';position:absolute;left:14px;top:10px;bottom:10px;width:1px;background:var(--g200)}
-.tli{display:flex;gap:12px;align-items:flex-start}
-.tldot{width:28px;height:28px;border-radius:50%;background:var(--navy);color:var(--gold-l);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.85rem;font-weight:700;flex-shrink:0;z-index:1}
-.tlc{flex:1;padding-top:3px}
-.tl-tag{font-size:.58rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px}
-.tl-name{font-size:.8rem;font-weight:600;color:var(--navy);margin:2px 0}
-.tl-desc{font-size:.7rem;color:var(--g500);line-height:1.55}
+.tl{display:flex;flex-direction:column;gap:10px;position:relative}
+.tl::before{content:'';position:absolute;left:12px;top:10px;bottom:10px;width:1px;background:var(--g200)}
+.tli{display:flex;gap:10px;align-items:flex-start}
+.tldot{width:25px;height:25px;border-radius:50%;background:var(--navy);color:var(--gold-l);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;flex-shrink:0;z-index:1}
+.tlc{flex:1;padding-top:2px}
+.tl-tag{font-size:.55rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.tl-name{font-size:.77rem;font-weight:600;color:var(--navy);margin:2px 0}
+.tl-desc{font-size:.67rem;color:var(--g500);line-height:1.55}
 
 /* BLINDAGEM */
-.bg2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.bi{background:var(--white);border-radius:var(--r);padding:14px;border:1px solid var(--g200);box-shadow:var(--sh)}
-.bi-head{display:flex;align-items:center;gap:8px;margin-bottom:7px}
-.bi-icon{font-size:1.05rem}
-.bi-title{font-size:.76rem;font-weight:700;color:var(--navy)}
-.bi-txt{font-size:.68rem;color:var(--g500);line-height:1.6}
-.bi-act{font-size:.65rem;font-weight:600;color:var(--blue);margin-top:7px;padding-top:7px;border-top:1px solid var(--g100)}
+.bg2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.bi{background:var(--white);border-radius:var(--r);padding:11px 12px;border:1px solid var(--g200);box-shadow:var(--sh)}
+.bi-head{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+.bi-icon{font-size:.95rem}
+.bi-title{font-size:.73rem;font-weight:700;color:var(--navy)}
+.bi-txt{font-size:.66rem;color:var(--g500);line-height:1.58}
+.bi-act{font-size:.63rem;font-weight:600;color:var(--blue);margin-top:5px;padding-top:5px;border-top:1px solid var(--g100)}
 
-/* CONTACT — premium versão */
-.contact-card{background:var(--navy);border-radius:var(--r);padding:20px 24px;color:#fff;display:flex;align-items:center;gap:18px}
-.cav{width:48px;height:48px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.cav-ltr{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;color:var(--navy)}
-.cn{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;letter-spacing:.3px}
-.cr{font-size:.63rem;color:rgba(255,255,255,.45);margin-bottom:5px;letter-spacing:.5px;text-transform:uppercase}
-.cd{font-size:.7rem;color:rgba(255,255,255,.7);line-height:1.8}
+/* CONTACT */
+.contact-card{background:var(--navy);border-radius:var(--r);padding:16px 20px;color:#fff;display:flex;align-items:center;gap:14px}
+.cav{width:42px;height:42px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cav-ltr{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;color:var(--navy)}
+.cn{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;letter-spacing:.3px}
+.cr{font-size:.6rem;color:rgba(255,255,255,.42);margin-bottom:3px;letter-spacing:.5px;text-transform:uppercase}
+.cd{font-size:.67rem;color:rgba(255,255,255,.7);line-height:1.75}
+
+/* FOCUS / NOTA */
+.focus-note{background:#f0f7ff;border:1px solid #c5d8f5;border-radius:6px;padding:6px 10px;font-size:.63rem;color:#1a3460;line-height:1.55;margin-top:3px}
+.focus-note strong{color:var(--blue)}
+.nota{background:var(--g50);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:7px 10px;font-size:.66rem;color:var(--g700);line-height:1.6}
+.nota strong{color:var(--navy)}
+.nota em{color:var(--blue);font-style:normal}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .c4{grid-template-columns:repeat(2,1fr)}
-  .c3{grid-template-columns:repeat(2,1fr)}
-  .cx-row3{grid-template-columns:1fr 1fr}
-  .bg2{grid-template-columns:1fr}
-  .sg2,.sg2a{grid-template-columns:1fr}
-  .sg2.sf1,.sg2a.sf1{flex:unset}
-  .slide{padding:14px 16px}
-  header{padding:0 14px}
-  .step{padding:0 7px;font-size:.48rem}
-  .ht{display:none}
+  .c4{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:repeat(2,1fr)}
+  .cx-row3{grid-template-columns:1fr 1fr}.bg2{grid-template-columns:1fr}
+  .sg2,.sg2a{grid-template-columns:1fr}.slide{padding:11px 13px}
+  header{padding:0 11px}.step{padding:0 6px;font-size:.45rem}.ht{display:none}
 }
-
 @media(max-width:820px){
-  .cx-row2{grid-template-columns:1fr}
-  .cx-row3{grid-template-columns:1fr}
-  .hero-quote{font-size:1.1rem;padding:0 10px}
-  .cards.c2{grid-template-columns:1fr}
+  .cx-row2,.cx-row3{grid-template-columns:1fr}
+  .hero-quote{font-size:1.15rem;padding:0 8px}
+  .cards.c2{grid-template-columns:1fr}.opt{min-width:auto}
+  .ip-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:600px){
   .c4,.c3,.c2{grid-template-columns:1fr}
   .cx-row2,.cx-row3,.bg2{grid-template-columns:1fr}
-  .slide{padding:12px}
-  .steps{gap:0}
-  .step{padding:0 5px;font-size:.44rem;letter-spacing:.3px}
-  .hero-quote{font-size:1.1rem}
-  .opts{flex-direction:column}
+  .slide{padding:9px 10px}.hero-quote{font-size:1rem}
 }
-
-/* SLIDE GRIDS — responsive */
-.sg2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.sg2a{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}
+.sg2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.sg2a{display:grid;grid-template-columns:1.2fr 1fr;gap:11px}
 .sf1{flex:1}
 </style>
 </head>
 <body>
+
 <!-- LOGIN -->
 <div id="ls">
-  <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.4rem;color:var(--gold-l);letter-spacing:1px;text-align:center;line-height:1.4">
-    Planejamento Patrimonial<br><span style="font-size:.85rem;color:rgba(255,255,255,.4);font-family:'Inter',sans-serif;font-style:italic;letter-spacing:.5px">Eduardo & Mariana Pinho</span>
+  <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.35rem;color:var(--gold-l);letter-spacing:1px;text-align:center;line-height:1.4">
+    Planejamento Patrimonial<br><span style="font-size:.82rem;color:rgba(255,255,255,.38);font-family:'Inter',sans-serif;font-style:italic;letter-spacing:.5px">Eduardo & Mariana Pinho</span>
   </div>
   <div id="lb">
-    <label style="font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:1px;text-transform:uppercase">Senha de acesso</label>
+    <label style="font-size:.63rem;color:rgba(255,255,255,.38);letter-spacing:1px;text-transform:uppercase">Senha de acesso</label>
     <input id="pi" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
     <button id="lbtn" onclick="doLogin()">ACESSAR</button>
     <div id="lerr">Senha incorreta. Tente novamente.</div>
   </div>
-  <div style="font-size:.58rem;color:rgba(255,255,255,.2);text-align:center;letter-spacing:.5px">CORDIER INVESTIMENTOS · CONFIDENCIAL</div>
+  <div style="font-size:.56rem;color:rgba(255,255,255,.18);text-align:center;letter-spacing:.5px">EDSON SANTOS · BTG PACTUAL · CONFIDENCIAL</div>
 </div>
 
 <!-- APP -->
 <div id="app">
 <header>
-  <div class="hb">CORDIER <span>Planejamento Patrimonial</span></div>
+  <div class="hb">EDSON SANTOS <span>Planejamento Patrimonial</span></div>
   <div class="hs"></div>
   <div class="steps" id="steps"></div>
   <div class="hs"></div>
@@ -250,8 +272,8 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 
 <!-- S1: ABERTURA -->
 <div class="slide active" id="slide-1">
-  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;text-align:center">
-    <div style="font-size:.56rem;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase">Planejamento Patrimonial · 2026</div>
+  <div class="hero-center">
+    <div style="font-size:.54rem;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase">Planejamento Patrimonial · 2026</div>
     <div class="hero-quote">"Riqueza não é sobre ter muito dinheiro — é sobre ter muitas opções."</div>
     <div class="hero-attr">CHRIS ROCK · ADAPTADO</div>
     <div class="hero-badge">
@@ -310,41 +332,37 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
       <div class="ksub">Banco do Brasil</div>
     </div>
   </div>
-  <div class="bbar-wrap card" style="padding:16px">
+  <div class="bbar-wrap card" style="padding:14px 15px">
     <div class="bbar-row">
       <div class="bbar-lbl">Eduardo · XP</div>
       <div class="bbar-track"><div class="bbar-fill" style="width:49.5%;background:#1e4d8c"></div></div>
-      <div class="bbar-pct">49,5%</div>
-      <div class="bbar-val">R$ 3,04 MM</div>
+      <div class="bbar-pct">49,5%</div><div class="bbar-val">R$ 3,04 MM</div>
     </div>
     <div class="bbar-row">
       <div class="bbar-lbl">Mariana · BB</div>
       <div class="bbar-track"><div class="bbar-fill" style="width:25.3%;background:#a8883a"></div></div>
-      <div class="bbar-pct">25,3%</div>
-      <div class="bbar-val">R$ 1,55 MM</div>
+      <div class="bbar-pct">25,3%</div><div class="bbar-val">R$ 1,55 MM</div>
     </div>
     <div class="bbar-row">
       <div class="bbar-lbl">Eduardo · Itaú</div>
       <div class="bbar-track"><div class="bbar-fill" style="width:13.4%;background:#2e6db4"></div></div>
-      <div class="bbar-pct">13,4%</div>
-      <div class="bbar-val">R$ 820 K</div>
+      <div class="bbar-pct">13,4%</div><div class="bbar-val">R$ 820 K</div>
     </div>
     <div class="bbar-row">
       <div class="bbar-lbl">Mariana · XP</div>
       <div class="bbar-track"><div class="bbar-fill" style="width:11.9%;background:#c9a84c"></div></div>
-      <div class="bbar-pct">11,9%</div>
-      <div class="bbar-val">R$ 729 K</div>
+      <div class="bbar-pct">11,9%</div><div class="bbar-val">R$ 729 K</div>
     </div>
   </div>
   <div class="sg2">
     <div class="card csm">
-      <div class="klbl">Previdências (Eduardo PGBL)</div>
-      <div class="kval" style="font-size:1rem">R$ 391.617</div>
+      <div class="klbl">Previdências Eduardo (PGBL)</div>
+      <div class="kval" style="font-size:1.05rem">R$ 391.617</div>
       <div class="ksub">Kinea Atlas + SPX Seahawk + Trend Pós · Regime regressivo</div>
     </div>
     <div class="card csm">
-      <div class="klbl">Previdências (Mariana VGBL)</div>
-      <div class="kval" style="font-size:1rem">R$ 730.782</div>
+      <div class="klbl">Previdências Mariana (VGBL)</div>
+      <div class="kval" style="font-size:1.05rem">R$ 730.782</div>
       <div class="ksub">Brasilprev · 4 fundos · Regime regressivo</div>
     </div>
   </div>
@@ -355,8 +373,11 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 <div class="slide" id="slide-3">
   <div class="stag">02 · Preferências</div>
   <div class="stitle">Suas escolhas moldam o plano</div>
+  <div class="ssub">Cada decisão aqui atualiza as caixinhas, a projeção e as recomendações nas próximas páginas.</div>
+
+  <!-- ROW 1: Q1 + Q2 -->
   <div class="sg2">
-    <!-- Q1 -->
+    <!-- Q1: BÔNUS -->
     <div class="qcard">
       <div class="qnum">Pergunta 1</div>
       <div class="qtxt">O que fazer com o bônus de abr/2027?</div>
@@ -366,58 +387,145 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="sval" id="vb">50%</div>
       </div>
       <div class="slbls"><span>0% → consumo</span><span>100% → investe tudo</span></div>
-      <div id="binfo" style="margin-top:8px;font-size:.7rem;color:var(--blue);font-weight:500"></div>
+      <div id="binfo" style="margin-top:6px;font-size:.68rem;color:var(--blue);font-weight:500"></div>
     </div>
-    <!-- Q2 -->
+    <!-- Q2: HORIZONTE -->
     <div class="qcard">
       <div class="qnum">Pergunta 2</div>
       <div class="qtxt">Qual é o horizonte de tempo?</div>
       <div class="qsub">Por quanto tempo planejamos antes de precisar dos recursos?</div>
       <div class="opts">
-        <div class="opt sel" onclick="setHorizonte(0,this)">🚀 Curto prazo<br><small>1–3 anos</small></div>
-        <div class="opt" onclick="setHorizonte(1,this)">⚖️ Médio prazo<br><small>3–7 anos</small></div>
-        <div class="opt" onclick="setHorizonte(2,this)">🏔️ Longo prazo<br><small>7–15 anos</small></div>
+        <div class="opt" onclick="setHorizonte(0,this)">🚀 Curto prazo<br><small>1–3 anos</small>
+          <div class="opt-desc">Prioridade em liquidez. Peso maior em Reserva e Cetipados. Limita crescimento.</div>
+        </div>
+        <div class="opt sel" onclick="setHorizonte(1,this)">⚖️ Médio prazo<br><small>3–7 anos</small>
+          <div class="opt-desc">Equilíbrio ideal. Janela para multimercado e offshore crescerem.</div>
+          <div class="opt-impact">✓ Perfil recomendado para este patrimônio</div>
+        </div>
+        <div class="opt" onclick="setHorizonte(2,this)">🏔️ Longo prazo<br><small>7–15 anos</small>
+          <div class="opt-desc">Aceita mais volatilidade. Maximiza retorno; assume risco no curto.</div>
+        </div>
       </div>
     </div>
-    <!-- Q3 -->
-    <div class="qcard">
-      <div class="qnum">Pergunta 3</div>
-      <div class="qtxt">Como usar o Exterior?</div>
-      <div class="qsub">A caixinha offshore pode ter finalidade diferente conforme o objetivo do casal.</div>
-      <div class="opts" id="offOpts">
-        <div class="opt sel" onclick="setOffshore(0,this)">🎓 Educação filhos<br><small>EUA/Europa · 55% off / 45% apo</small></div>
-        <div class="opt" onclick="setOffshore(1,this)">🌍 Temporadas fora<br><small>Experiências · 40% off / 60% apo</small></div>
-        <div class="opt" onclick="setOffshore(2,this)">🏡 Mudança de país<br><small>Residência fixa · 65% off / 35% apo</small></div>
-        <div class="opt" onclick="setOffshore(3,this)">🛡️ Proteção cambial<br><small>Hedge USD · 30% off / 70% apo</small></div>
+  </div>
+
+  <!-- Q3: OFFSHORE (largura total) -->
+  <div class="qcard">
+    <div class="qnum">Pergunta 3</div>
+    <div class="qtxt">Como usar o Exterior?</div>
+    <div class="qsub">A caixinha offshore (USD) pode ter finalidade diferente conforme o objetivo do casal. A escolha define o tamanho desta caixinha e impacta diretamente a Aposentadoria.</div>
+    <div class="opts" id="offOpts">
+      <div class="opt sel" onclick="setOffshore(0,this)">🎓 Educação filhos<br><small>EUA/Europa</small>
+        <div class="opt-desc">Acumular USD para custear faculdade ou pós-graduação no exterior. Horizonte: 10–15 anos. Maior exposição cambial.</div>
+        <div class="opt-impact">→ Exterior 55% | Apo 45%</div>
       </div>
-      <div id="q2-summary" style="margin-top:8px;background:var(--g50);border-radius:6px;padding:8px 10px;font-size:.68rem;gap:14px;display:none">
-        <div>🌎 <strong>Exterior:</strong> <span id="q2-off">—</span></div>
-        <div>🏦 <strong>Aposentadoria:</strong> <span id="q2-apo">—</span></div>
+      <div class="opt" onclick="setOffshore(1,this)">🌍 Temporadas fora<br><small>Experiências</small>
+        <div class="opt-desc">Capital para sabbaticals e experiências internacionais. Horizonte: 5–10 anos. Resgates parciais mais frequentes.</div>
+        <div class="opt-impact">→ Exterior 40% | Apo 60%</div>
+      </div>
+      <div class="opt" onclick="setOffshore(2,this)">🏡 Mudança de país<br><small>Residência fixa</small>
+        <div class="opt-desc">Planejamento para moradia permanente no exterior. Maior concentração em ativos internacionais e conta robusta no exterior.</div>
+        <div class="opt-impact">→ Exterior 65% | Apo 35%</div>
+      </div>
+      <div class="opt" onclick="setOffshore(3,this)">🛡️ Proteção cambial<br><small>Hedge USD</small>
+        <div class="opt-desc">Hedge contra desvalorização do Real. Sem uso imediato. Foco em preservar poder de compra em dólar a longo prazo.</div>
+        <div class="opt-impact">→ Exterior 30% | Apo 70%</div>
       </div>
     </div>
-    <!-- Q4 -->
+    <div class="impact-panel vis" id="off-impact">
+      <div class="ip-title">📌 Com esta escolha, as caixinhas ficam:</div>
+      <div class="ip-grid">
+        <div class="ip-item"><span class="ip-lbl">🌎 Exterior</span><span class="ip-val" id="ip-off">—</span></div>
+        <div class="ip-item"><span class="ip-lbl">🏦 Aposentadoria</span><span class="ip-val" id="ip-apo">—</span></div>
+        <div class="ip-item"><span class="ip-lbl">📈 Blend estimado</span><span class="ip-val" id="ip-blend">—</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Q4 + Q5 -->
+  <div class="sg2">
+    <!-- Q4: RENDA -->
     <div class="qcard">
       <div class="qnum">Pergunta 4</div>
-      <div class="qtxt">Qual é o nível de renda desejado na aposentadoria?</div>
-      <div class="qsub">Em % da renda atual de Eduardo (R$ 80k/mês bruto estimado)</div>
+      <div class="qtxt">Renda desejada na aposentadoria?</div>
+      <div class="qsub">Em % da renda atual de Eduardo (~R$ 80k/mês bruto). Mariana já tem RPPS de R$ 50k/mês garantido.</div>
       <div class="srow">
         <input type="range" min="40" max="100" step="10" value="80" oninput="setRenda(this.value)">
         <div class="sval" id="vr">80%</div>
       </div>
-      <div class="slbls"><span>40% = estilo mais simples</span><span>100% = mesmo padrão</span></div>
-      <div id="rendaInfo" style="margin-top:6px;font-size:.68rem;color:var(--g500)"></div>
+      <div class="slbls"><span>40% = estilo simples</span><span>100% = mesmo padrão</span></div>
+      <div id="rendaInfo" style="margin-top:5px;font-size:.66rem;color:var(--g500)"></div>
     </div>
-    <!-- Q5 (legado) -->
-    <div class="qcard" style="grid-column:1/-1">
+    <!-- Q5: LEGADO -->
+    <div class="qcard">
       <div class="qnum">Pergunta 5</div>
-      <div class="qtxt">Deixar herança é uma prioridade?</div>
-      <div class="qsub">Isso afeta a estrutura de sucessão e a agressividade do plano patrimonial.</div>
+      <div class="qtxt">Deixar herança é prioridade?</div>
+      <div class="qsub">Afeta a estrutura de sucessão, holding e a agressividade do plano patrimonial.</div>
       <div class="opts">
-        <div class="opt" onclick="setLegado(0,this)">❌ Não é prioridade agora<br><small>Foco em qualidade de vida</small></div>
-        <div class="opt sel" onclick="setLegado(1,this)">⚖️ Importante, mas não prioritário<br><small>Equilibrar ambos</small></div>
-        <div class="opt" onclick="setLegado(2,this)">👑 Sim, é objetivo central<br><small>Estruturar para herdeiros</small></div>
+        <div class="opt" onclick="setLegado(0,this)">❌ Não agora<br><small>Foco em qualidade de vida</small>
+          <div class="opt-desc">Sem holding no curto prazo. Mas testamento ainda é recomendado para proteger os filhos.</div>
+        </div>
+        <div class="opt sel" onclick="setLegado(1,this)">⚖️ Importante<br><small>Equilibrar ambos</small>
+          <div class="opt-desc">Holding e testamento planejados para médio prazo. Doação em vida para reduzir ITCMD.</div>
+        </div>
+        <div class="opt" onclick="setLegado(2,this)">👑 Central<br><small>Estruturar para herdeiros</small>
+          <div class="opt-desc">Holding agora. Dividendos via PJ com tributação ótima. Ver slide 8 (Blindagem).</div>
+          <div class="opt-impact">→ Ação imediata — ver slide 8</div>
+        </div>
       </div>
-      <div id="leg-hint" style="display:none;margin-top:8px" class="alert ao">🏛️ Sem estrutura sucessória, a herança entra em inventário (18–24 meses + custos). Veja a pág. de Blindagem.</div>
+      <div id="leg-hint" style="display:none;margin-top:7px" class="alert ao">🏛️ Sem estrutura sucessória, a herança entra em inventário (18–24 meses + custos). Veja a pág. de Blindagem.</div>
+    </div>
+  </div>
+
+  <!-- ROW 3: Q6 + Q7 -->
+  <div class="sg2">
+    <!-- Q6: RESERVA -->
+    <div class="qcard">
+      <div class="qnum">Pergunta 6</div>
+      <div class="qtxt">Quantos meses de reserva manter?</div>
+      <div class="qsub">Calculado sobre R$ 150k/mês de despesas do casal. Rendimento em Tesouro Selic / CDB DI (CDI atual: 14,75% a.a.).</div>
+      <div class="mtabs">
+        <div class="mtab" onclick="setReserva(3,this)">3 meses<span class="mv">R$ 450K</span></div>
+        <div class="mtab sel" onclick="setReserva(6,this)">6 meses<span class="mv">R$ 900K</span></div>
+        <div class="mtab" onclick="setReserva(9,this)">9 meses<span class="mv">R$ 1,35MM</span></div>
+        <div class="mtab" onclick="setReserva(12,this)">12 meses<span class="mv">R$ 1,80MM</span></div>
+      </div>
+      <div id="res-info" style="margin-top:6px;font-size:.65rem;color:var(--g500)"></div>
+    </div>
+    <!-- Q7: IMÓVEL -->
+    <div class="qcard">
+      <div class="qnum">Pergunta 7</div>
+      <div class="qtxt">Vai comprar imóvel em abr/2027?</div>
+      <div class="qsub">A entrada sai do patrimônio junto com o bônus. Esta decisão impacta a projeção (slide 5) e a análise completa está no slide 6.</div>
+      <div class="opts">
+        <div class="opt" onclick="setCompraImovel(false,this)">❌ Não — continuar alugando<br><small>Investir bônus integral</small>
+          <div class="opt-desc">Reserva intacta. Bônus vai todo para as caixinhas. Menor pressão patrimonial no curto prazo.</div>
+        </div>
+        <div class="opt sel" onclick="setCompraImovel(true,this)">🏠 Sim — comprar em 2027<br><small>Entrada em abr/2027</small>
+          <div class="opt-desc">Entrada reduz patrimônio investido em abr/2027. Análise detalhada no slide 6.</div>
+        </div>
+      </div>
+      <div id="imov-details" style="margin-top:8px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px">
+          <div>
+            <div style="font-size:.57rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">Valor do imóvel</div>
+            <div class="srow">
+              <input type="range" min="3000000" max="8000000" step="500000" value="5000000" oninput="setImovVal(+this.value)" id="s3-imov-val">
+              <div class="sval" id="s3-vimt" style="font-size:.82rem">R$ 5MM</div>
+            </div>
+            <div class="slbls"><span>R$ 3MM</span><span>R$ 8MM</span></div>
+          </div>
+          <div>
+            <div style="font-size:.57rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:3px">Entrada (%)</div>
+            <div class="srow">
+              <input type="range" min="20" max="60" step="5" value="30" oninput="setImovEntr(+this.value)" id="s3-imov-ent">
+              <div class="sval" id="s3-ventr" style="font-size:.82rem">30%</div>
+            </div>
+            <div class="slbls"><span>20%</span><span>60%</span></div>
+          </div>
+        </div>
+        <div class="focus-note" style="margin-top:5px" id="imov-calc">—</div>
+      </div>
     </div>
   </div>
 </div>
@@ -426,19 +534,19 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 <div class="slide" id="slide-4">
   <div class="stag">03 · Alocação</div>
   <div class="stitle">As 5 caixinhas do plano</div>
-  <div class="ssub">Cada objetivo tem sua própria lógica de risco, prazo e liquidez — esta é a essência da gestão baseada em objetivos.</div>
+  <div class="ssub">Cada objetivo tem sua própria lógica de risco, prazo e liquidez. Passe o mouse sobre cada caixinha para ver a explicação detalhada.</div>
   <div class="cx-wrap">
     <div class="cx-row2">
       <div class="caixa">
-        <div class="ctip">💧 <strong>Reserva de Emergência:</strong> 6 meses de despesas (R$ 75k/mês). Rende ~12,75% a.a. via Tesouro Selic / CDB liquidez diária. Nunca toque nessa caixinha — ela é sua proteção.</div>
+        <div class="ctip">💧 <strong>Reserva de Emergência:</strong> <span id="ct-res-meses">6 meses</span> de despesas (R$ 150k/mês). Rende <strong>14,75% a.a.</strong> via Tesouro Selic / CDB liquidez diária (CDI atual). <em>Projeção Focus 26/06: Selic cai para 14,00% ao final de 2026 e 12,00% em 2027.</em> Nunca toque nessa caixinha — ela é sua proteção.</div>
         <div class="caixa-icon">💧</div>
         <div class="caixa-name">Reserva de Emergência</div>
-        <div class="caixa-val">R$ 900 K</div>
-        <div class="caixa-rate">~12,75% a.a. · Tesouro Selic / CDB</div>
+        <div class="caixa-val" id="cx-res">R$ 900 K</div>
+        <div class="caixa-rate" id="cx-res-rate">14,75% a.a. (CDI atual) · Tesouro Selic / CDB</div>
         <div class="caixa-tag" style="color:var(--blue)">⚡ Liquidez imediata · Sempre disponível</div>
       </div>
       <div class="caixa">
-        <div class="ctip">🏛️ <strong>Dividendos Cetipados:</strong> Renda passiva via LCIs, LCAs e CRIs isentos de IR. Distribuição de lucros dos negócios de Eduardo pode ser reinvestida aqui via estrutura PJ. Meta: ~11% a.a. isentos.</div>
+        <div class="ctip">🏛️ <strong>Dividendos Cetipados:</strong> Renda passiva via LCIs, LCAs e CRIs isentos de IR (Lei 12.431/2011). Equivale a ~13,5% a.a. bruto. Meta: ~11% a.a. isentos. Renda mensal de R$ 18,3K sem tocar no principal. Eduardo pode reinvestir distribuição de lucros via PJ aqui.</div>
         <div class="caixa-icon">🏛️</div>
         <div class="caixa-name">Dividendos Cetipados</div>
         <div class="caixa-val">R$ 2,00 MM</div>
@@ -448,7 +556,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
     </div>
     <div class="cx-row3">
       <div class="caixa">
-        <div class="ctip">🌎 <strong>Exterior (Offshore):</strong> US Treasuries em conta no exterior (IB ou similar). Protege contra desvalorização do Real e gera retorno em USD. Ideal para educação dos filhos no exterior ou residência fora. ~4% a.a. em USD.</div>
+        <div class="ctip">🌎 <strong>Exterior (Offshore):</strong> US Treasuries em conta no exterior (IB ou similar). Protege contra desvalorização do Real. ~4% a.a. em USD. O tamanho desta caixinha depende da escolha feita no slide 3 (Pergunta 3).</div>
         <div class="caixa-icon">🌎</div>
         <div class="caixa-name">Exterior</div>
         <div class="caixa-val" id="cx-off">—</div>
@@ -456,7 +564,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="caixa-tag" style="color:var(--purple)">🛡️ Hedge cambial · Longo prazo</div>
       </div>
       <div class="caixa">
-        <div class="ctip">🏦 <strong>Aposentadoria:</strong> Crescimento de longo prazo via previdência privada (PGBL/VGBL regressivo já existente) + multimercado. Eduardo se aposenta aos 55, Mariana tem RPPS que garante R$ 50k/mês. Mira ~10% a.a.</div>
+        <div class="ctip">🏦 <strong>Aposentadoria:</strong> Crescimento de longo prazo via previdência privada (PGBL/VGBL regressivo já existente) + multimercado. Eduardo se aposenta aos 55 (17 anos). Mariana tem RPPS garantido. Mira ~10% a.a.</div>
         <div class="caixa-icon">🏦</div>
         <div class="caixa-name">Aposentadoria</div>
         <div class="caixa-val" id="cx-apo">—</div>
@@ -464,7 +572,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="caixa-tag" style="color:var(--orange)">📈 Crescimento · 17+ anos</div>
       </div>
       <div class="caixa">
-        <div class="ctip">📊 <strong>Renda Variável:</strong> Exposição a ações e FIIs para potencializar o crescimento no longo prazo. Risco maior, horizonte de 10+ anos. Limite de 3–5% do patrimônio total (R$ 210k). Não invista mais do que pode ver cair 30%.</div>
+        <div class="ctip">📊 <strong>Renda Variável:</strong> Ações e FIIs para potencializar crescimento de longo prazo. Risco maior, horizonte 10+ anos. Limite saudável: 3–5% do patrimônio total (R$ 210k). Não invista mais do que pode ver cair 30% sem resgatar.</div>
         <div class="caixa-icon">📊</div>
         <div class="caixa-name">Renda Variável</div>
         <div class="caixa-val">R$ 210 K</div>
@@ -482,7 +590,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
     <div class="card csm">
       <div class="klbl">Renda mensal estimada (dividendos)</div>
       <div class="kval">R$ 18,3 K</div>
-      <div class="ksub">sem tocar no principal</div>
+      <div class="ksub">sem tocar no principal · isento de IR</div>
     </div>
     <div class="card csm">
       <div class="klbl">Concentração em risco</div>
@@ -490,6 +598,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
       <div class="ksub">apenas RV = saudável</div>
     </div>
   </div>
+  <div class="focus-note">📊 <strong>CDI atual: 14,75% a.a.</strong> · Boletim Focus 26/06/2026 projeta Selic em <strong>14,00%</strong> ao final de 2026 e <strong>12,00%</strong> em 2027 — o rendimento da Reserva de Emergência deve reduzir gradualmente. As demais caixinhas têm taxas contratuais ou de longo prazo e não são afetadas.</div>
 </div>
 
 <!-- S5: PROJEÇÃO -->
@@ -497,8 +606,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
   <div class="stag">04 · Simulação</div>
   <div class="stitle">Projeção patrimonial</div>
   <div class="sg2 sf1">
-    <div style="display:flex;flex-direction:column;gap:10px">
-      <!-- Slider Eduardo -->
+    <div style="display:flex;flex-direction:column;gap:9px">
       <div class="qcard">
         <div class="qnum">Aposentadoria de Eduardo</div>
         <div class="srow">
@@ -506,9 +614,8 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
           <div class="sval" id="vae">55 anos</div>
         </div>
         <div class="slbls"><span>45 anos</span><span>70 anos</span></div>
-        <div id="edu-apo-info" style="font-size:.68rem;color:var(--blue);margin-top:4px"></div>
+        <div id="edu-apo-info" style="font-size:.66rem;color:var(--blue);margin-top:3px"></div>
       </div>
-      <!-- Slider Mariana -->
       <div class="qcard">
         <div class="qnum">Aposentadoria de Mariana</div>
         <div class="srow">
@@ -516,36 +623,36 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
           <div class="sval" id="vam">60 anos</div>
         </div>
         <div class="slbls"><span>45 anos</span><span>70 anos</span></div>
-        <div class="alert ab" style="margin-top:4px;font-size:.67rem;padding:7px 10px">🏛️ Mariana tem RPPS: R$ 50k/mês garantidos pelo governo independente da data.</div>
+        <div class="alert ab" style="margin-top:4px;font-size:.65rem;padding:6px 9px">🏛️ Mariana tem RPPS: R$ 50k/mês garantidos pelo governo independente da data escolhida.</div>
       </div>
-      <!-- KPIs -->
       <div class="cards c2">
         <div class="card csm">
           <div class="klbl">Patrimônio na apos. (Eduardo)</div>
-          <div class="kval" id="patEdu" style="font-size:1.05rem">—</div>
+          <div class="kval" id="patEdu" style="font-size:1rem">—</div>
         </div>
         <div class="card csm">
           <div class="klbl">Renda mensal total</div>
-          <div class="kval" id="rendaTotal" style="font-size:1.05rem">—</div>
+          <div class="kval" id="rendaTotal" style="font-size:1rem">—</div>
         </div>
         <div class="card csm">
           <div class="klbl">TRS aplicada</div>
-          <div class="kval" id="trsVal" style="font-size:1.05rem">4%</div>
+          <div class="kval" id="trsVal" style="font-size:1rem">4%</div>
           <div class="ksub">Taxa de Retirada Segura</div>
         </div>
         <div class="card csm">
           <div class="klbl">Gap mensal</div>
-          <div class="kval" id="gapVal" style="font-size:1.05rem">—</div>
+          <div class="kval" id="gapVal" style="font-size:1rem">—</div>
         </div>
       </div>
+      <div id="s5-imov-note" style="display:none" class="alert ao">🏠 <span>Compra do imóvel em abr/2027 incluída: entrada de <strong id="s5-imov-val">—</strong> reduz patrimônio naquele mês.</span></div>
       <div class="acc">
         <div class="acc-hd" onclick="tog(this)">O que é a Taxa de Retirada Segura (TRS)? <span class="acc-arr">▼</span></div>
-        <div class="acc-body"><div class="acc-inner" style="font-size:.7rem;color:var(--g700);line-height:1.7">
-          A <strong>Taxa de Retirada Segura (TRS)</strong> — em inglês, <em>Safe Withdrawal Rate</em> — é o percentual máximo que você pode sacar do patrimônio por ano sem risco de esgotá-lo durante a aposentadoria. A referência clássica é <strong>4% ao ano</strong> (Regra dos 4%), estudada por William Bengen (1994) com 50 anos de dados históricos de mercado norte-americano. Aplicada ao patrimônio projetado, ela determina qual renda mensal o casal pode sacar com segurança.
+        <div class="acc-body"><div class="acc-inner" style="font-size:.68rem;color:var(--g700);line-height:1.7">
+          A <strong>Taxa de Retirada Segura (TRS)</strong> — <em>Safe Withdrawal Rate</em> — é o percentual máximo que você pode sacar do patrimônio por ano sem risco de esgotá-lo durante a aposentadoria. A referência clássica é <strong>4% ao ano</strong> (Regra dos 4%), estudada por Bengen (1994). Aplicada ao patrimônio projetado, ela determina a renda mensal que o casal pode sacar com segurança sem consumir o principal ao longo de 30+ anos.
         </div></div>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;flex-direction:column;gap:9px">
       <div class="chart-wrap" style="flex:1">
         <div class="ch-title">Evolução dos próximos 24 meses</div>
         <div class="ch-sub" id="ch-sub24">Aporte mensal + bônus abr/2027 ★</div>
@@ -554,11 +661,15 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
       <div class="chart-wrap" style="flex:1.2">
         <div class="ch-title">Projeção de longo prazo</div>
         <div class="ch-sub">Até aposentadoria de Eduardo</div>
-        <div class="tog-row" style="margin-bottom:6px">
+        <div class="tog-row" style="margin-bottom:5px">
           <button class="tog on" onclick="setLegado2(1,this)">Com legado</button>
           <button class="tog" onclick="setLegado2(0,this)">Consumindo</button>
         </div>
-        <div style="position:relative;height:155px"><canvas id="c15"></canvas></div>
+        <div style="position:relative;height:148px"><canvas id="c15"></canvas></div>
+      </div>
+      <div class="nota">
+        <strong>Com legado:</strong> patrimônio cresce indefinidamente; Eduardo retira apenas os rendimentos.<br>
+        <strong>Consumindo:</strong> saca acima dos rendimentos para manter o padrão de vida desejado. O patrimônio reduz mas não zera dentro do horizonte de 30 anos se a TRS de 4% for respeitada.
       </div>
     </div>
   </div>
@@ -568,32 +679,34 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 <div class="slide" id="slide-6">
   <div class="stag">05 · Cenário Imóvel</div>
   <div class="stitle">Comprar ou continuar alugando?</div>
-  <div class="ssub">Simulação de financiamento SAC em Vila Nova Conceição com juros SBPE (11,69% a.a.).</div>
+  <div class="ssub">Simulação de financiamento SAC em Vila Nova Conceição com juros SBPE (11,69% a.a.). Os valores abaixo vêm das suas escolhas no slide 3 — ajuste se necessário.</div>
   <div class="sg2 sf1">
-    <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;flex-direction:column;gap:9px">
       <div class="qcard">
         <div class="qnum">Valor do imóvel</div>
         <div class="srow">
-          <input type="range" min="3000000" max="8000000" step="500000" value="5000000" oninput="updImovel()">
-          <div class="sval" id="vimt" style="font-size:.9rem">R$ 5,0 MM</div>
+          <input type="range" min="3000000" max="8000000" step="500000" value="5000000" id="s6-imov-val" oninput="updImovel()">
+          <div class="sval" id="vimt" style="font-size:.88rem">R$ 5,0 MM</div>
         </div>
         <div class="slbls"><span>R$ 3 MM</span><span>R$ 8 MM</span></div>
       </div>
       <div class="qcard">
         <div class="qnum">Entrada (% do valor)</div>
         <div class="srow">
-          <input type="range" min="20" max="60" step="5" value="30" oninput="updImovel()">
+          <input type="range" min="20" max="60" step="5" value="30" id="s6-imov-ent" oninput="updImovel()">
           <div class="sval" id="ventr">30%</div>
         </div>
         <div class="slbls"><span>20%</span><span>60%</span></div>
       </div>
-      <div class="card" style="padding:14px;display:flex;flex-direction:column;gap:6px">
+      <div class="card" style="padding:13px;display:flex;flex-direction:column;gap:5px">
         <div class="frow"><span class="flbl">Valor financiado</span><span class="fval neutral" id="f-fin">—</span></div>
         <div class="frow"><span class="flbl">1ª parcela SAC</span><span class="fval bad" id="f-parc">—</span></div>
         <div class="frow"><span class="flbl">Aluguel atual</span><span class="fval neutral">R$ 25.000</span></div>
         <div class="sep"></div>
         <div class="frow"><span class="flbl">Sobra mensal (vs. aluguel)</span><span class="fval" id="f-sav">—</span></div>
-        <div class="frow"><span class="flbl">Impacto na reserva</span><span class="fval bad" id="f-res">—</span></div>
+        <div class="frow"><span class="flbl">Entrada necessária</span><span class="fval bad" id="f-entrada">—</span></div>
+        <div class="frow"><span class="flbl">Coberta pelo bônus abr/2027</span><span class="fval good" id="f-bonus-cob">—</span></div>
+        <div class="frow"><span class="flbl">Saldo a tirar do patrimônio</span><span class="fval" id="f-res">—</span></div>
       </div>
       <div class="insight">
         <div class="ins-tag">📌 Ponto-chave</div>
@@ -601,14 +714,14 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="ins-txt" id="ins-imov-sub">—</div>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;flex-direction:column;gap:9px">
       <div class="chart-wrap" style="flex:1">
-        <div class="ch-title">Simulação SAC — Parcelas ao longo de 30 anos</div>
-        <div class="ch-sub">Parcela inicial vs. aluguel atual</div>
-        <div style="position:relative;height:200px"><canvas id="cSAC"></canvas></div>
+        <div class="ch-title">Parcelas SAC ao longo de 30 anos</div>
+        <div class="ch-sub">Parcela inicial vs. aluguel atual de R$ 25.000</div>
+        <div style="position:relative;height:190px"><canvas id="cSAC"></canvas></div>
       </div>
       <div class="alert ao" id="a-imov">—</div>
-      <div class="alert ab">💡 <span>Edson avalia que <strong>a queda de juros no 2º semestre de 2026</strong> pode reduzir a taxa SBPE e melhorar a viabilidade do financiamento. Vale revisar esse cenário em dez/2026.</span></div>
+      <div class="alert ab">💡 <span>Edson avalia que a <strong>queda de juros projetada pelo Focus</strong> (Selic 14,00% em dez/2026 → 12,00% em 2027) pode reduzir a taxa SBPE e melhorar a viabilidade. Vale revisar em dez/2026.</span></div>
     </div>
   </div>
 </div>
@@ -618,34 +731,52 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
   <div class="stag">06 · Renda & Tributação</div>
   <div class="stitle">Quanto você vai receber — e quanto vai pagar de IR</div>
   <div class="sg2 sf1">
-    <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;flex-direction:column;gap:9px">
+      <!-- Resumo das escolhas do slide 3 -->
+      <div class="card" style="padding:12px">
+        <div class="klbl" style="margin-bottom:6px">📌 Memória das escolhas (slide 3)</div>
+        <div id="s7-choices" style="display:flex;flex-direction:column;gap:0"></div>
+      </div>
+      <div class="nota">
+        <strong>Como funciona a Caixinha Dividendos Cetipados:</strong><br>
+        <em>R$ 2,00 MM</em> alocados em LCI, LCA e CRI — isentos de IR para Pessoa Física (Lei 12.431/2011 + Res. CMN 4.476). A taxa de <em>11% a.a. isenta</em> equivale a ~13,5% a.a. bruto (CDI). Renda mensal: <strong>R$ 18.333/mês</strong> sem tocar no principal.<br><br>
+        <strong>Por que é isento?</strong> LCI e LCA financiam o setor imobiliário e agro — a lei incentiva captações com isenção de IR para PF. CRI e CRA seguem a mesma lógica. Eduardo já conhece bem esses instrumentos como tributarista.
+      </div>
       <div class="qcard">
         <div class="qnum">Projeção de dividendos cetipados anuais</div>
         <div class="srow">
           <input type="range" min="100000" max="1500000" step="50000" value="220000" oninput="updFiscal()">
-          <div class="sval" id="vdiv" style="font-size:.9rem">R$ 220 K</div>
+          <div class="sval" id="vdiv" style="font-size:.88rem">R$ 220 K</div>
         </div>
         <div class="slbls"><span>R$ 100 K/ano</span><span>R$ 1,5 MM/ano</span></div>
+        <div style="font-size:.63rem;color:var(--g500);margin-top:4px">⬆ Mova para simular diferentes volumes de resgate anual da caixinha.</div>
       </div>
-      <div class="card" style="padding:14px;display:flex;flex-direction:column;gap:5px">
+      <div class="card" style="padding:13px;display:flex;flex-direction:column;gap:4px">
         <div class="frow"><span class="flbl">Dividendos brutos/ano</span><span class="fval neutral" id="f-div">—</span></div>
         <div class="frow"><span class="flbl">IRRF (Lei 15.270/2025)</span><span class="fval bad" id="f-irrf">—</span></div>
         <div class="frow"><span class="flbl">Dividendos líquidos/ano</span><span class="fval good" id="f-liq">—</span></div>
         <div class="sep"></div>
-        <div class="frow"><span class="flbl">Renda mensal líquida (div.)</span><span class="fval good" id="f-mes">—</span></div>
+        <div class="frow"><span class="flbl">Renda mensal líquida (dividendos)</span><span class="fval good" id="f-mes">—</span></div>
       </div>
       <div class="acc">
-        <div class="acc-hd" onclick="tog(this)">Como funciona a Lei 15.270/2025? <span class="acc-arr">▼</span></div>
-        <div class="acc-body"><div class="acc-inner" style="font-size:.7rem;color:var(--g700);line-height:1.7">
-          A Lei 15.270/2025 (PL 1.087/2025) reintroduz o IRRF de <strong>10%</strong> sobre dividendos distribuídos a partir de <strong>R$ 50.000/mês</strong> (R$ 600.000/ano). Abaixo do limite: isento. Acima: 10% apenas sobre o excedente. Para Eduardo: o bônus de R$ 1,5 MM ultrapassa o limite e sofre IRRF de R$ 90.000 (10% × R$ 900.000).
+        <div class="acc-hd" onclick="tog(this)">Como funciona a Lei 15.270/2025 (dividendos)? <span class="acc-arr">▼</span></div>
+        <div class="acc-body"><div class="acc-inner" style="font-size:.68rem;color:var(--g700);line-height:1.7">
+          A Lei 15.270/2025 reintroduz o IRRF de <strong>10%</strong> sobre dividendos acima de <strong>R$ 50.000/mês</strong> (R$ 600.000/ano). Abaixo do limite: isento. Acima: 10% apenas sobre o excedente. Para Eduardo: o bônus de R$ 1,5 MM como distribuição de lucros ultrapassa o limite → IRRF de R$ 90.000 (10% × R$ 900.000). A <strong>Caixinha Dividendos Cetipados</strong> (LCI/LCA/CRI) é <em>sempre isenta</em> — não sofre essa lei, pois não são dividendos e sim rendimentos de títulos de renda fixa isentos.
         </div></div>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;flex-direction:column;gap:9px">
       <div class="chart-wrap" style="flex:1">
         <div class="ch-title">Composição de renda mensal na aposentadoria</div>
-        <div class="ch-sub">Eduardo aos 55 · Mariana aos 60</div>
-        <div style="position:relative;height:175px"><canvas id="cRenda"></canvas></div>
+        <div class="ch-sub" id="s7-sub">Eduardo aos 55 · Mariana aos 60</div>
+        <div style="position:relative;height:190px"><canvas id="cRenda"></canvas></div>
+      </div>
+      <div class="nota">
+        <strong>4 fontes de renda na aposentadoria:</strong><br>
+        1. <em>RPPS Mariana</em> — R$ 50.000/mês garantidos pelo governo. Reajuste anual pelo INPC.<br>
+        2. <em>TRS Aposentadoria</em> — 4% a.a. do fundo de crescimento. Não esgota o principal em 30+ anos.<br>
+        3. <em>Dividendos Cetipados</em> — LCI/LCA/CRI. Isentos de IR. Renda sem tocar no principal.<br>
+        4. <em>Exterior USD</em> — Rendimento em dólar para despesas internacionais ou reforço de renda.
       </div>
       <div class="cards c2">
         <div class="card csm">
@@ -656,10 +787,10 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="card csm">
           <div class="klbl">Vantagem fiscal PGBL</div>
           <div class="kval" style="font-size:1rem">R$ 18.900</div>
-          <div class="ksub">~37,5% de 50.400</div>
+          <div class="ksub">~37,5% de R$ 50.400</div>
         </div>
       </div>
-      <div class="alert ag">🎯 <span>Os <strong>isentos de IR</strong> (LCI/LCA/CRI) são a principal vantagem do plano — Eduardo já tem domínio tributário para otimizá-los.</span></div>
+      <div class="alert ag">🎯 <span>Os <strong>isentos de IR</strong> (LCI/LCA/CRI) são a principal vantagem do plano — Eduardo já domina esses instrumentos como tributarista.</span></div>
     </div>
   </div>
 </div>
@@ -668,27 +799,27 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 <div class="slide" id="slide-8">
   <div class="stag">07 · Proteção</div>
   <div class="stitle">Pontos de atenção a discutir</div>
-  <div style="display:flex;flex-direction:column;gap:12px;flex:1">
+  <div style="display:flex;flex-direction:column;gap:10px;flex:1">
     <div class="bg2">
       <div class="bi">
         <div class="bi-head"><div class="bi-icon">💼</div><div><div class="bi-title">Seguro de Vida — Eduardo</div><span class="badge bo">URGENTE</span></div></div>
-        <div class="bi-txt">Eduardo concentra ~80% da renda do casal. Com 2 filhos pequenos (e 2º chegando), a ausência dele geraria um gap imenso. Seguro de vida deve cobrir pelo menos 10× a renda anual (≈ R$ 19 MM) ou repor o patrimônio faltante.</div>
+        <div class="bi-txt">Eduardo concentra ~80% da renda privada do casal e não tem proteção previdenciária equivalente ao de um servidor público. Com 2 filhos pequenos (e 2º chegando), a ausência dele geraria um gap imenso na renda familiar por décadas. <strong>Por que não a Mariana?</strong> Mariana é servidora federal com RPPS: em caso de falecimento, a pensão por morte converte-se automaticamente para os dependentes — cobertura equivalente ao seguro de vida, custeada pelo Estado. Eduardo não tem essa proteção: é pessoa física/PJ sem benefício previdenciário equivalente. Recomendação de mercado: cobrir 10–15× a renda anual (R$ 15–22 MM) ou pelo menos o patrimônio que falta acumular para os filhos. Verificar também se Eduardo possui cobertura via empresa ou plano de saúde.</div>
         <div class="bi-act">→ Cotar apólice: R$ 5–10 MM de cobertura · <strong>Ação imediata</strong></div>
       </div>
       <div class="bi">
         <div class="bi-head"><div class="bi-icon">🏛️</div><div><div class="bi-title">Holding Patrimonial</div><span class="badge bg">ATENÇÃO</span></div></div>
-        <div class="bi-txt">Com R$ 6+ MM em ativos financeiros e 2 herdeiros, uma holding familiar reduziria o custo de inventário (0 vs. 4–6% ITCMD + honorários), blindaria o patrimônio de processos e permitiria distribuição programada de dividendos com planejamento tributário.</div>
+        <div class="bi-txt">Com R$ 6+ MM em ativos financeiros e 2 herdeiros, uma holding familiar eliminaria o custo de inventário (0 vs. 4–6% ITCMD + honorários), blindaria o patrimônio de eventuais processos e permitiria distribuição programada de dividendos com planejamento tributário ótimo (distribuição de LCI/LCA via PJ pode ser mais eficiente). Eduardo já domina o tema como tributarista.</div>
         <div class="bi-act">→ Avaliar constituição com advogado tributarista · <strong>Eduardo já domina o tema</strong></div>
       </div>
       <div class="bi">
         <div class="bi-head"><div class="bi-icon">📋</div><div><div class="bi-title">Testamento e Inventário</div><span class="badge bg">IMPORTANTE</span></div></div>
-        <div class="bi-txt">Comunhão parcial sem testamento = inventário de até 24 meses para os filhos herdarem. Com 2 filhos pequenos e patrimônio relevante, testamento + escritura de partilha em vida são essenciais.</div>
-        <div class="bi-act">→ Formalizar testamento · Sem custo via Cartório · <strong>Alta prioridade</strong></div>
+        <div class="bi-txt">Comunhão parcial sem testamento = inventário de até 24 meses para os filhos herdarem. Com 2 filhos pequenos e patrimônio relevante, testamento + escritura de partilha em vida são essenciais para garantir que os recursos chegam rápido a quem precisa.</div>
+        <div class="bi-act">→ Formalizar testamento · Via Cartório · <strong>Alta prioridade — sem custo expressivo</strong></div>
       </div>
       <div class="bi">
         <div class="bi-head"><div class="bi-icon">🏥</div><div><div class="bi-title">Plano de Saúde e Pais de Mariana</div><span class="badge bb">ANALISAR</span></div></div>
-        <div class="bi-txt">Mariana tem pais doentes — risco de desembolso não planejado. Revisar cobertura do plano de saúde, considerar seguro de saúde global (offshore) e reserva específica para cuidados de longa duração.</div>
-        <div class="bi-act">→ Mapear exposição financeira · Revisar apólice atual</div>
+        <div class="bi-txt">Mariana tem pais doentes — risco de desembolso não planejado elevado. Revisar cobertura do plano de saúde familiar, considerar seguro de saúde global (offshore) e reserva específica para cuidados de longa duração. Impacto pode ser de R$ 20–50K/mês em casos graves.</div>
+        <div class="bi-act">→ Mapear exposição financeira · Revisar apólice atual · Considerar reserva separada</div>
       </div>
     </div>
     <div id="s8-legado" style="display:none" class="alert ao">
@@ -697,7 +828,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
     <div class="insight" style="flex-shrink:0">
       <div class="ins-tag">💡 Para Eduardo</div>
       <div class="ins-title">Você já tem o conhecimento técnico — só precisa aplicar ao próprio patrimônio</div>
-      <div class="ins-txt">Como tributarista experiente, Eduardo entende cada um desses instrumentos. O passo seguinte é tratar o próprio patrimônio com a mesma rigorosidade que trata o dos clientes.</div>
+      <div class="ins-txt">Como tributarista experiente, Eduardo entende cada um desses instrumentos. O passo seguinte é tratar o próprio patrimônio com a mesma rigorosidade que trata o dos clientes. Prioridade imediata: seguro de vida + testamento. Em seguida: avaliar holding.</div>
     </div>
   </div>
 </div>
@@ -713,7 +844,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="tlc">
           <div class="tl-tag">Semana 1</div>
           <div class="tl-name">Abertura de conta BTG Pactual</div>
-          <div class="tl-desc">Conta individual Eduardo + conta individual Mariana. Documentação: RG, CPF, comprovante de renda, comprovante de endereço. Processo 100% digital.</div>
+          <div class="tl-desc">Conta individual Eduardo + conta individual Mariana. Documentação: RG, CPF, comprovante de renda, comprovante de endereço. Processo 100% digital — Edson conduz.</div>
         </div>
       </div>
       <div class="tli">
@@ -721,7 +852,7 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="tlc">
           <div class="tl-tag">Semana 2–3</div>
           <div class="tl-name">Portabilidade dos ativos</div>
-          <div class="tl-desc">Transferência dos saldos de XP (Eduardo + Mariana), Itaú e BB sem liquidar posições. Ativos migram com custo zero via TED custódia. Previdências: manter onde estão — regressivo ativo.</div>
+          <div class="tl-desc">Transferência dos saldos de XP (Eduardo + Mariana), Itaú e BB sem liquidar posições. Ativos migram via TED custódia sem custo. Previdências: manter onde estão — regressivo ativo.</div>
         </div>
       </div>
       <div class="tli">
@@ -745,33 +876,29 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
         <div class="tlc">
           <div class="tl-tag">Dez/2026</div>
           <div class="tl-name">Revisão anual + imóvel</div>
-          <div class="tl-desc">Rever SBPE e condições de financiamento imóvel. Atualizar projeções com nascimento do 2º filho. Check-up anual obrigatório.</div>
+          <div class="tl-desc">Rever SBPE e condições de financiamento imóvel. Atualizar projeções com nascimento do 2º filho. Conferir seguro de vida. Check-up anual obrigatório.</div>
         </div>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;flex-direction:column;gap:9px">
       <div class="contact-card">
         <div class="cav"><div class="cav-ltr">E</div></div>
         <div style="flex:1">
           <div class="cr">Seu assessor</div>
           <div class="cn">Edson E. dos Santos</div>
-          <div class="cd">
-            📱 (11) 9 8244-9155<br>
-            ✉️ edsones@gmail.com<br>
-            🏢 Cordier Investimentos · BTG Pactual
-          </div>
+          <div class="cd">📱 (11) 9 8244-9155<br>✉️ edsones@gmail.com<br>🏢 Cordier Investimentos · BTG Pactual</div>
         </div>
         <div style="text-align:right;flex-shrink:0">
-          <div style="font-size:.55rem;color:rgba(255,255,255,.25);text-transform:uppercase;letter-spacing:1px">Parceiro</div>
+          <div style="font-size:.54rem;color:rgba(255,255,255,.22);text-transform:uppercase;letter-spacing:1px">Parceiro</div>
           <div style="font-size:.7rem;color:var(--gold-l);font-weight:600;margin-top:2px">BTG Pactual</div>
-          <div style="font-size:.55rem;color:rgba(255,255,255,.2);margin-top:4px">Maior banco de<br>investimentos da AL</div>
+          <div style="font-size:.54rem;color:rgba(255,255,255,.18);margin-top:3px">Maior banco de<br>investimentos da AL</div>
         </div>
       </div>
-      <div class="card" style="padding:14px;display:flex;flex-direction:column;gap:5px">
+      <div class="card" style="padding:13px;display:flex;flex-direction:column;gap:4px">
         <div class="frow"><span class="flbl" style="font-weight:600">Resumo do plano</span></div>
         <div class="sep"></div>
         <div class="frow"><span class="flbl">Patrimônio hoje</span><span class="fval neutral">R$ 6,13 MM</span></div>
-        <div class="frow"><span class="flbl">Retorno estruturado</span><span class="fval good" id="s9-blend">~9,5% a.a.</span></div>
+        <div class="frow"><span class="flbl">Retorno estruturado</span><span class="fval good" id="s9-blend">—</span></div>
         <div class="frow"><span class="flbl">Bônus abr/2027 investido</span><span class="fval neutral" id="s9-bonus">—</span></div>
         <div class="frow"><span class="flbl">Meta: aposent. Eduardo</span><span class="fval neutral" id="s9-apo">55 anos</span></div>
         <div class="frow"><span class="flbl">Renda projetada (apos.)</span><span class="fval good" id="s9-renda">—</span></div>
@@ -793,110 +920,137 @@ tr:hover td{background:var(--g50)}.tdr{text-align:right}.tdb{font-weight:700;col
 </div><!-- /app -->
 
 <script>
-// === CONSTANTS ===
-const PAT=6134320,RESERVA=900000,DIVIDENDOS=2000000,RV_AMT=210000;
-const POOL=3030000;
+// ── CONSTANTES BASE ──
+const PAT=6134320, DIVIDENDOS=2000000, RV_AMT=210000;
+const SBPE=0.1169, DIV_RATE=0.11, OFF_RATE=0.04, AP_RATE=0.10;
+const RES_RATE=0.1475; // CDI atual 14,75% a.a.
+const RV_RATE=0.05, IPCA=0.0414;
+const RENT=25000, BONUS_ANUAL=1500000, APORTE_MES=5000, RPPS=50000;
+const DESP_MES=150000; // despesas mensais para cálculo da reserva
 const SPLITS=[{off:.55,apo:.45},{off:.40,apo:.60},{off:.65,apo:.35},{off:.30,apo:.70}];
-const SBPE=0.1169,DIV_RATE=0.11,OFF_RATE=0.04,AP_RATE=0.10;
-const RES_RATE=0.1275,RV_RATE=0.05,IPCA=0.0414;
-const RENT=25000,BONUS_ANUAL=1500000,APORTE_MES=5000,RPPS=50000,USD_BRL=5.5;
 const STEP_NAMES=['Abertura','Patrimônio','Escolhas','Caixinhas','Projeção','Imóvel','Fiscal','Blindagem','Ação'];
+const OFF_NAMES=['Educação filhos','Temporadas fora','Mudança de país','Proteção cambial'];
 
-let choice={bonus:50,horizonte:1,offshore:0,edadEdu:55,edadMar:60,renda:80,legado:1};
-let cur=1,total=9;
+let choice={
+  bonus:50, horizonte:1, offshore:0, edadEdu:55, edadMar:60, renda:80, legado:1,
+  legadoMode:1, reservaMeses:6, compraImovel:true, imovelValor:5000000, imovelEntrada:30
+};
+let cur=1, total=9;
 const ch={};
 
-// === AUTH ===
+// ── HELPERS ──
+function fmt(n){return'R$ '+Math.round(n).toLocaleString('pt-BR')}
+function fmtk(n){if(n>=1e6)return'R$ '+(n/1e6).toFixed(1).replace('.',',')+'MM';return'R$ '+(n/1e3).toFixed(0)+'K'}
+function fmtPct(r){return(r*100).toFixed(1).replace('.',',')}
+function getDynRes(){return choice.reservaMeses*DESP_MES;}
+function getDynPool(){return Math.max(0,PAT-getDynRes()-DIVIDENDOS-RV_AMT);}
+function getOA(){const s=SPLITS[choice.offshore]||SPLITS[3];const pool=getDynPool();return{offAmt:Math.round(pool*s.off),apoAmt:Math.round(pool*s.apo)};}
+function blend(){const{offAmt,apoAmt}=getOA();const res=getDynRes();return(res*RES_RATE+DIVIDENDOS*DIV_RATE+offAmt*OFF_RATE+apoAmt*AP_RATE+RV_AMT*(RV_RATE+IPCA))/PAT;}
+
+// ── AUTH ──
 function doLogin(){
   const p=document.getElementById('pi').value;
   if(btoa(p)==='UGluaG8yMDI2'||btoa(p)==='cGluaG8yMDI2'){
     document.getElementById('ls').style.display='none';
     document.getElementById('app').style.display='flex';
-    buildSteps();updQ2Summary();updCaixinhas();setRenda(80);
+    buildSteps();
+    updQ3Impact();updCaixinhas();setRenda(80);setBonus(50);
+    updImovCalc();updChoicesSummary();
     document.getElementById('s9-blend').textContent='~'+fmtPct(blend())+' a.a.';
+    // ResizeObserver for charts
+    if(typeof ResizeObserver!=='undefined'){
+      new ResizeObserver(()=>{Object.values(ch).forEach(c=>c&&c.resize&&c.resize());}).observe(document.getElementById('sw'));
+    }
   } else {
     document.getElementById('lerr').style.display='block';
     document.getElementById('pi').value='';
   }
 }
 
-// === HELPERS ===
-function fmt(n){return'R$ '+Math.round(n).toLocaleString('pt-BR')}
-function fmtk(n){if(n>=1e6)return(n/1e6).toFixed(1).replace('.',',')+'MM';return(n/1e3).toFixed(0)+'K'}
-function fmtPct(r){return(r*100).toFixed(1).replace('.',',')}
-function getOA(){const s=SPLITS[choice.offshore]||SPLITS[3];return{offAmt:Math.round(POOL*s.off),apoAmt:Math.round(POOL*s.apo)};}
-function blend(){const{offAmt,apoAmt}=getOA();return(RESERVA*RES_RATE+DIVIDENDOS*DIV_RATE+offAmt*OFF_RATE+apoAmt*AP_RATE+RV_AMT*(RV_RATE+IPCA))/PAT;}
-
-// === NAVIGATION ===
+// ── NAV ──
 function buildSteps(){
-  const c=document.getElementById('steps');
-  c.innerHTML='';
+  const c=document.getElementById('steps');c.innerHTML='';
   STEP_NAMES.forEach((name,i)=>{
     const d=document.createElement('div');
-    d.className='step'+(i===0?' active visited':'');
-    d.id='stp'+(i+1);
-    d.textContent=name;
-    d.onclick=()=>goSlide(i+1);
-    c.appendChild(d);
+    d.className='step'+(i===0?' active visited':'');d.id='stp'+(i+1);
+    d.textContent=name;d.onclick=()=>goSlide(i+1);c.appendChild(d);
   });
 }
 function goSlide(n){
   document.getElementById('slide-'+cur).classList.remove('active');
   document.getElementById('stp'+cur).classList.remove('active');
   cur=n;
-  const sl=document.getElementById('slide-'+cur);
-  sl.classList.add('active');
-  const stp=document.getElementById('stp'+cur);
-  stp.classList.add('active','visited');
+  document.getElementById('slide-'+cur).classList.add('active');
+  document.getElementById('stp'+cur).classList.add('active','visited');
   document.getElementById('btnPrev').disabled=(cur===1);
   document.getElementById('btnNext').disabled=(cur===total);
   document.getElementById('ht').textContent=cur+' / '+total;
   document.getElementById('sc').textContent='Slide '+cur+' de '+total+' · Planejamento Patrimonial Eduardo & Mariana Pinho';
-  if(n===5){if(!ch.c24)setTimeout(initS5,80);else{updS5();ch.c24?.resize();ch.c15?.resize();}}
-  if(n===6){if(!ch.cSAC)setTimeout(()=>{initSAC();updImovel();},80);else updImovel();}
-  if(n===7){if(!ch.cRenda)setTimeout(initRenda,80);}
+  if(n===5){
+    if(!ch.c24)setTimeout(initS5,80);
+    else{updS5();setTimeout(()=>{ch.c24&&ch.c24.resize();ch.c15&&ch.c15.resize();},100);}
+  }
+  if(n===6){
+    // Pre-populate from slide 3
+    const sv=document.getElementById('s6-imov-val');
+    const se=document.getElementById('s6-imov-ent');
+    if(sv)sv.value=choice.imovelValor;
+    if(se)se.value=choice.imovelEntrada;
+    if(!ch.cSAC)setTimeout(()=>{initSAC();updImovel();},80);else updImovel();
+  }
+  if(n===7){
+    if(!ch.cRenda)setTimeout(()=>{initRenda();updFiscal();},80);
+    else updChoicesSummary();
+  }
 }
 function next(){if(cur<total)goSlide(cur+1);}
 function prev(){if(cur>1)goSlide(cur-1);}
 
-// === ACCORDION ===
+// ── ACCORDION ──
 function tog(h){
   const b=h.nextElementSibling,a=h.querySelector('.acc-arr');
-  b.classList.toggle('open');
-  a.textContent=b.classList.contains('open')?'▲':'▼';
+  b.classList.toggle('open');a.textContent=b.classList.contains('open')?'▲':'▼';
 }
 
-// === Q HANDLERS ===
+// ── Q HANDLERS ──
 function setBonus(v){
   choice.bonus=+v;
   document.getElementById('vb').textContent=v+'%';
   const amt=Math.round(BONUS_ANUAL*v/100);
-  document.getElementById('binfo').textContent=v>0?'→ '+fmt(amt)+' investido | '+fmt(BONUS_ANUAL-amt)+' consumido':'→ Tudo consumido';
-  const s9=document.getElementById('s9-bonus');if(s9)s9.textContent=amt>0?fmt(amt):'—';
+  const cons=BONUS_ANUAL-amt;
+  document.getElementById('binfo').textContent=v>0?'→ '+fmt(amt)+' investido | '+fmt(cons)+' consumido':'→ Tudo consumido';
+  const s9=document.getElementById('s9-bonus');if(s9)s9.textContent=amt>0?fmt(amt):'R$ 0';
   const tl=document.getElementById('tl-bonus');if(tl)tl.textContent=v+'% investido = '+fmt(amt);
-  updS5();
+  updS5();updImovCalc();
 }
-function setHorizonte(v,el){choice.horizonte=v;[...document.querySelectorAll('.qcard:nth-child(2) .opt')].forEach(o=>o.classList.remove('sel'));el.classList.add('sel');}
+function setHorizonte(v,el){
+  choice.horizonte=v;
+  [...document.querySelectorAll('#slide-3 .qcard:nth-child(1) .opt')].forEach(o=>o.classList.remove('sel'));
+  // Better: target Q2 specifically
+  el.closest('.qcard').querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+}
 function setOffshore(v,el){
   choice.offshore=v;
   [...document.querySelectorAll('#offOpts .opt')].forEach(o=>o.classList.remove('sel'));
   el.classList.add('sel');
-  updQ2Summary();updCaixinhas();
+  updQ3Impact();updCaixinhas();
   document.getElementById('s9-blend').textContent='~'+fmtPct(blend())+' a.a.';
+  updChoicesSummary();
 }
 function setRenda(v){
   choice.renda=+v;
   document.getElementById('vr').textContent=v+'%';
   const alvo=Math.round(80000*v/100);
-  document.getElementById('rendaInfo').textContent='→ Meta: '+fmt(alvo)+'/mês bruto na aposentadoria';
+  document.getElementById('rendaInfo').textContent='→ Meta: '+fmt(alvo)+'/mês bruto | '+fmt(Math.round(alvo*0.75))+'/mês líquido est.';
   updS5();
 }
 function setLegado(v,el){
   choice.legado=v;
-  [...document.querySelectorAll('.qcard:last-child .opt')].forEach(o=>o.classList.remove('sel'));
+  el.closest('.qcard').querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
   el.classList.add('sel');
   document.getElementById('leg-hint').style.display=(v===0)?'flex':'none';
-  document.getElementById('s8-legado').style.display=(v===0)?'flex':'none';
+  const s8=document.getElementById('s8-legado');if(s8)s8.style.display=(v===0)?'flex':'none';
 }
 function setLegado2(v,el){
   choice.legadoMode=v;
@@ -904,20 +1058,85 @@ function setLegado2(v,el){
   el.classList.add('on');
   updS5();
 }
-function updQ2Summary(){
+function setReserva(meses,el){
+  choice.reservaMeses=meses;
+  [...document.querySelectorAll('.mtab')].forEach(t=>t.classList.remove('sel'));
+  el.classList.add('sel');
+  const res=getDynRes();
+  document.getElementById('res-info').textContent='→ '+meses+' meses × R$ 150K = '+fmtk(res)+' em liquidez imediata';
+  const ctRes=document.getElementById('ct-res-meses');if(ctRes)ctRes.textContent=meses+' meses';
+  updCaixinhas();updS5();
+  document.getElementById('s9-blend').textContent='~'+fmtPct(blend())+' a.a.';
+  updChoicesSummary();
+}
+function setCompraImovel(v,el){
+  choice.compraImovel=v;
+  el.closest('.qcard').querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  document.getElementById('imov-details').style.display=v?'block':'none';
+  updS5();updImovCalc();
+}
+function setImovVal(v){
+  choice.imovelValor=v;
+  document.getElementById('s3-vimt').textContent='R$ '+(v/1e6).toFixed(1)+'MM';
+  updImovCalc();updS5();
+  // Sync slide 6
+  const s6v=document.getElementById('s6-imov-val');if(s6v)s6v.value=v;
+  if(ch.cSAC)updImovel();
+}
+function setImovEntr(v){
+  choice.imovelEntrada=v;
+  document.getElementById('s3-ventr').textContent=v+'%';
+  updImovCalc();updS5();
+  const s6e=document.getElementById('s6-imov-ent');if(s6e)s6e.value=v;
+  if(ch.cSAC)updImovel();
+}
+function updImovCalc(){
+  if(!choice.compraImovel){document.getElementById('imov-details').style.display='none';return;}
+  const entrada=Math.round(choice.imovelValor*choice.imovelEntrada/100);
+  const fin=choice.imovelValor-entrada;
+  const bonusInv=Math.round(BONUS_ANUAL*choice.bonus/100);
+  const coberto=Math.min(bonusInv,entrada);
+  const saldo=Math.max(0,entrada-bonusInv);
+  const el=document.getElementById('imov-calc');
+  if(el)el.innerHTML='<strong>Entrada:</strong> '+fmt(entrada)+' → Coberta pelo bônus: '+fmt(coberto)+(saldo>0?' + <strong style="color:var(--red)">R$'+fmtk(saldo)+' do patrimônio</strong>':' ✓ bônus cobre tudo');
+  const s5n=document.getElementById('s5-imov-note');
+  if(s5n){
+    s5n.style.display=choice.compraImovel?'flex':'none';
+    const s5v=document.getElementById('s5-imov-val');if(s5v)s5v.textContent=fmt(entrada);
+  }
+}
+function updQ3Impact(){
   const{offAmt,apoAmt}=getOA();
-  document.getElementById('q2-off').textContent='R$ '+fmtk(offAmt);
-  document.getElementById('q2-apo').textContent='R$ '+fmtk(apoAmt);
-  document.getElementById('q2-summary').style.display='flex';
+  const el=document.getElementById('off-impact');if(!el)return;
+  el.classList.add('vis');
+  document.getElementById('ip-off').textContent=fmtk(offAmt);
+  document.getElementById('ip-apo').textContent=fmtk(apoAmt);
+  document.getElementById('ip-blend').textContent='~'+fmtPct(blend())+'% a.a.';
 }
 function updCaixinhas(){
   const{offAmt,apoAmt}=getOA();
-  const oe=document.getElementById('cx-off');if(oe)oe.textContent='R$ '+fmtk(offAmt);
-  const ae=document.getElementById('cx-apo');if(ae)ae.textContent='R$ '+fmtk(apoAmt);
+  const res=getDynRes();
+  const oe=document.getElementById('cx-off');if(oe)oe.textContent=fmtk(offAmt);
+  const ae=document.getElementById('cx-apo');if(ae)ae.textContent=fmtk(apoAmt);
+  const re=document.getElementById('cx-res');if(re)re.textContent=fmtk(res);
   const be=document.getElementById('cx-blend');if(be)be.textContent='~'+fmtPct(blend())+' a.a.';
+  updQ3Impact();
+}
+function updChoicesSummary(){
+  const{offAmt,apoAmt}=getOA();
+  const el=document.getElementById('s7-choices');if(!el)return;
+  el.innerHTML=[
+    ['🌎 Offshore (Pergunta 3)', OFF_NAMES[choice.offshore]],
+    ['🏗️ Caixinha Exterior', fmtk(offAmt)],
+    ['🏦 Caixinha Aposentadoria', fmtk(apoAmt)],
+    ['🏛️ Dividendos Cetipados', fmtk(DIVIDENDOS)+' → R$ 18,3K/mês'],
+    ['💼 Bônus a investir', choice.bonus+'% = '+fmtk(Math.round(BONUS_ANUAL*choice.bonus/100))],
+    ['💧 Reserva', choice.reservaMeses+' meses = '+fmtk(getDynRes())]
+  ].map(([l,v])=>`<div class="frow"><span class="flbl">${l}</span><span class="fval neutral" style="font-size:.78rem">${v}</span></div>`).join('');
 }
 
-// === SLIDE 5 ===
+// ── SLIDE 5 ──
 function setIdadeEdu(v){
   choice.edadEdu=+v;const a=+v-38;
   document.getElementById('vae').textContent=v+' anos';
@@ -926,7 +1145,7 @@ function setIdadeEdu(v){
   updS5();
 }
 function setIdadeMar(v){
-  choice.edadMar=+v;const a=+v-38;
+  choice.edadMar=+v;
   document.getElementById('vam').textContent=v+' anos';
   updS5();
 }
@@ -935,7 +1154,11 @@ function calcPatEdu(){
   let p=PAT;
   for(let y=0;y<wYears;y++){
     p*=(1+r);
-    p+=APORTE_MES*12+BONUS_ANUAL*(choice.bonus/100)*(y===9?1:0);
+    p+=APORTE_MES*12;
+    if(y===9){
+      p+=BONUS_ANUAL*(choice.bonus/100);
+      if(choice.compraImovel)p-=Math.round(choice.imovelValor*choice.imovelEntrada/100);
+    }
   }
   return Math.round(p);
 }
@@ -943,127 +1166,140 @@ function updS5(){
   const pe=calcPatEdu();
   const alvoMes=Math.round(80000*choice.renda/100);
   const trs=pe*0.04/12;
-  const total2=trs+RPPS;
-  const gap=alvoMes-total2;
-  const pE=document.getElementById('patEdu');if(pE)pE.textContent='R$ '+fmtk(pe);
-  const rT=document.getElementById('rendaTotal');if(rT)rT.textContent=fmt(total2)+'/mês';
-  const gV=document.getElementById('gapVal');if(gV){gV.textContent=gap>0?'-'+fmt(gap)+'/mês':'+'+fmt(-gap)+'/mês';gV.className='fval '+(gap>0?'bad':'good');}
-  document.getElementById('s9-renda').textContent=fmt(total2)+'/mês';
-  buildC24();buildC15(pe);
+  const totalR=trs+RPPS;
+  const gap=alvoMes-totalR;
+  const pE=document.getElementById('patEdu');if(pE)pE.textContent=fmtk(pe);
+  const rT=document.getElementById('rendaTotal');if(rT)rT.textContent=fmt(totalR)+'/mês';
+  const gV=document.getElementById('gapVal');
+  if(gV){gV.textContent=gap>0?'–'+fmt(gap)+'/mês':'+'+fmt(-gap)+'/mês';gV.className='fval '+(gap>0?'bad':'good');}
+  document.getElementById('s9-renda').textContent=fmt(totalR)+'/mês';
+  updImovCalc();
+  if(ch.c24)buildC24();
+  if(ch.c15)buildC15(pe);
 }
 function buildC24(){
-  const r=blend();
-  const labs=[],d24=[];
-  let p=PAT;
-  for(let m=1;m<=24;m++){
-    p*=(1+r/12);p+=APORTE_MES;
-    if(m===10)p+=BONUS_ANUAL*(choice.bonus/100);
-    const mo=new Date(2026,5+m-1);
-    const mn=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'][mo.getMonth()];
-    const yr=mo.getFullYear().toString().slice(2);
-    labs.push(m===10?'Abr/27 ★':mn+'/'+yr);
-    d24.push(Math.round(p/1e5)/10);
-  }
-  if(ch.c24){ch.c24.data.labels=labs;ch.c24.data.datasets[0].data=d24;ch.c24.update();}
-}
-function buildC15(pe){
-  const wYears=choice.edadEdu-38;
-  const labs=[],d=[],mode=choice.legadoMode||1;
-  const r=blend();
-  let p=PAT;
-  for(let y=0;y<=wYears+10;y++){
-    if(y<=wYears){p*=(1+r);p+=APORTE_MES*12+BONUS_ANUAL*(choice.bonus/100)*(y===9?1:0);}
-    else{
-      if(mode===1){p*=(1+r);}
-      else{const gap2=Math.max(0,80000*choice.renda/100-RPPS-p*0.04/12);p*=(1+r);p-=gap2*12;}
-    }
-    labs.push((38+y)+'a');
-    d.push(Math.round(p/1e6*10)/10);
-  }
-  if(ch.c15){ch.c15.data.labels=labs;ch.c15.data.datasets[0].data=d;ch.c15.update();}
-}
-function initS5(){
-  const mk=(id,lb,dat,col)=>{
-    const c=document.getElementById(id);if(!c)return null;
-    return new Chart(c,{type:'line',data:{labels:lb,datasets:[{data:dat,borderColor:col,backgroundColor:col+'22',tension:.35,fill:true,pointRadius:dat.map((v,i)=>i===9&&id==='c24'?5:0),pointBackgroundColor:col}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>id==='c24'?'R$ '+ctx.parsed.y.toFixed(1)+' MM':'R$ '+ctx.parsed.y.toFixed(1)+' MM'}}},scales:{x:{ticks:{maxRotation:0,font:{size:9}},grid:{display:false}},y:{ticks:{callback:v=>'R$'+v+'MM',font:{size:9}},grid:{color:'#f0f0ec'}}}}});
-  };
-  const r=blend();
+  const r=blend(),imovEnt=choice.compraImovel?Math.round(choice.imovelValor*choice.imovelEntrada/100):0;
   const labs=[],d24=[];let p=PAT;
   for(let m=1;m<=24;m++){
     p*=(1+r/12);p+=APORTE_MES;
-    if(m===10)p+=BONUS_ANUAL*(choice.bonus/100);
+    if(m===10){p+=BONUS_ANUAL*(choice.bonus/100);p-=imovEnt;}
     const mo=new Date(2026,5+m-1);
     const mn=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'][mo.getMonth()];
     const yr=mo.getFullYear().toString().slice(2);
     labs.push(m===10?'Abr/27 ★':mn+'/'+yr);
     d24.push(Math.round(p/1e5)/10);
   }
-  ch.c24=mk('c24',labs,d24,'#1e4d8c');
+  if(ch.c24){ch.c24.data.labels=labs;ch.c24.data.datasets[0].data=d24;ch.c24.update('none');}
+  const sub=document.getElementById('ch-sub24');
+  if(sub){
+    let txt='Aporte mensal + bônus abr/2027 ★';
+    if(choice.compraImovel&&imovEnt>0)txt+=' – entrada imóvel ('+fmtk(imovEnt)+')';
+    sub.textContent=txt;
+  }
+}
+function buildC15(pe){
+  const wYears=choice.edadEdu-38,r=blend(),mode=choice.legadoMode;
+  const labs=[],d=[];let p=PAT;
+  const imovEnt=choice.compraImovel?Math.round(choice.imovelValor*choice.imovelEntrada/100):0;
+  for(let y=0;y<=wYears+10;y++){
+    if(y<=wYears){
+      p*=(1+r);p+=APORTE_MES*12;
+      if(y===9){p+=BONUS_ANUAL*(choice.bonus/100);p-=imovEnt;}
+    } else {
+      if(mode===1){p*=(1+r);}
+      else{const gap2=Math.max(0,80000*choice.renda/100-RPPS-p*0.04/12);p*=(1+r);p-=gap2*12;}
+    }
+    labs.push((38+y)+'a');d.push(Math.round(p/1e6*10)/10);
+  }
+  if(ch.c15){ch.c15.data.labels=labs;ch.c15.data.datasets[0].data=d;ch.c15.update('none');}
+}
+function initS5(){
+  const mkLine=(id,lb,dat,col)=>{
+    const c=document.getElementById(id);if(!c)return null;
+    return new Chart(c,{type:'line',data:{labels:lb,datasets:[{data:dat,borderColor:col,backgroundColor:col+'22',tension:.35,fill:true,pointRadius:dat.map((v,i)=>i===9&&id==='c24'?5:0),pointBackgroundColor:col}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>'R$ '+ctx.parsed.y.toFixed(1)+' MM'}}},scales:{x:{ticks:{maxRotation:0,font:{size:8.5}},grid:{display:false}},y:{ticks:{callback:v=>'R$'+v+'MM',font:{size:8.5}},grid:{color:'#f0f0ec'}}}}});
+  };
+  const r=blend(),imovEnt=choice.compraImovel?Math.round(choice.imovelValor*choice.imovelEntrada/100):0;
+  const labs=[],d24=[];let p=PAT;
+  for(let m=1;m<=24;m++){
+    p*=(1+r/12);p+=APORTE_MES;
+    if(m===10){p+=BONUS_ANUAL*(choice.bonus/100);p-=imovEnt;}
+    const mo=new Date(2026,5+m-1);
+    const mn=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'][mo.getMonth()];
+    const yr=mo.getFullYear().toString().slice(2);
+    labs.push(m===10?'Abr/27 ★':mn+'/'+yr);d24.push(Math.round(p/1e5)/10);
+  }
+  ch.c24=mkLine('c24',labs,d24,'#1e4d8c');
   const wYears=choice.edadEdu-38;const labs2=[],d2=[];let p2=PAT;
   for(let y=0;y<=wYears+10;y++){
-    if(y<=wYears){p2*=(1+r);p2+=APORTE_MES*12+BONUS_ANUAL*(choice.bonus/100)*(y===9?1:0);}
+    if(y<=wYears){p2*=(1+r);p2+=APORTE_MES*12;if(y===9){p2+=BONUS_ANUAL*(choice.bonus/100);p2-=imovEnt;}}
     else{p2*=(1+r);}
     labs2.push((38+y)+'a');d2.push(Math.round(p2/1e6*10)/10);
   }
-  ch.c15=mk('c15',labs2,d2,'#a8883a');
+  ch.c15=mkLine('c15',labs2,d2,'#a8883a');
   updS5();
 }
 
-// === SLIDE 6 ===
-function getImovSliders(){
-  const vs=document.querySelectorAll('#slide-6 input[type=range]');
-  const val=+vs[0].value,ent=+vs[1].value/100;
+// ── SLIDE 6 ──
+function updImovel(){
+  const sv=document.getElementById('s6-imov-val'),se=document.getElementById('s6-imov-ent');
+  if(!sv||!se)return;
+  const val=+sv.value,ent=+se.value/100;
   document.getElementById('vimt').textContent='R$ '+(val/1e6).toFixed(1).replace('.',',')+' MM';
   document.getElementById('ventr').textContent=(ent*100).toFixed(0)+'%';
-  return{val,ent};
-}
-function updImovel(){
-  const{val,ent}=getImovSliders();
   const fin=Math.round(val*(1-ent));
   const parcela=Math.round((fin/360+fin*SBPE/12)/500)*500;
   const saving=RENT-parcela;
+  const entradaVal=Math.round(val*ent);
+  const bonusInv=Math.round(BONUS_ANUAL*choice.bonus/100);
+  const coberto=Math.min(bonusInv,entradaVal);
+  const saldo=Math.max(0,entradaVal-bonusInv);
   document.getElementById('f-fin').textContent=fmt(fin);
   document.getElementById('f-parc').textContent=fmt(parcela);
   document.getElementById('f-sav').textContent=(saving>0?'+':'')+fmt(saving);
   document.getElementById('f-sav').className='fval '+(saving>=0?'good':'bad');
-  document.getElementById('f-res').textContent=fmt(Math.round(val*ent))+' saem do patrimônio';
+  document.getElementById('f-entrada').textContent=fmt(entradaVal);
+  document.getElementById('f-bonus-cob').textContent=fmt(coberto)+(coberto>=entradaVal?' ✓ cobre tudo':'');
+  document.getElementById('f-bonus-cob').className='fval '+(coberto>=entradaVal?'good':'warn');
+  document.getElementById('f-res').textContent=saldo>0?fmt(saldo)+' saem do patrimônio existente':'R$ 0 — bônus cobre a entrada';
+  document.getElementById('f-res').className='fval '+(saldo>0?'bad':'good');
   const pct=Math.round(val*ent/PAT*100);
   if(parcela>RENT){
     document.getElementById('ins-imov').textContent='Parcela maior que o aluguel';
-    document.getElementById('ins-imov-sub').textContent='Com R$ '+fmtk(fin)+' financiado, a 1ª parcela SAC supera o aluguel de R$ 25.000. O financiamento fica mais barato ao longo dos anos.';
+    document.getElementById('ins-imov-sub').textContent='Com R$ '+fmtk(fin)+' financiado, a 1ª parcela SAC supera o aluguel atual (R$ 25.000). O financiamento fica progressivamente mais barato com o SAC e a queda de juros projetada pelo Focus.';
     document.getElementById('a-imov').className='alert ao';
-    document.getElementById('a-imov').innerHTML='⚠️ <span>Entrada exige <strong>'+fmt(Math.round(val*ent))+'</strong> ('+pct+'% do patrimônio). Avalie impacto nas caixinhas.</span>';
+    document.getElementById('a-imov').innerHTML='⚠️ <span>Entrada exige <strong>'+fmt(entradaVal)+'</strong> ('+pct+'% do patrimônio). Bônus cobre <strong>'+fmt(coberto)+'</strong>. Avalie impacto nas caixinhas.</span>';
   } else {
     document.getElementById('ins-imov').textContent='Parcela menor que o aluguel';
-    document.getElementById('ins-imov-sub').textContent='Com '+fmt(fin)+' financiado, a parcela inicial é menor que o aluguel atual — migração pode ser vantajosa financeiramente.';
+    document.getElementById('ins-imov-sub').textContent='Com '+fmt(fin)+' financiado, a parcela inicial já é menor que o aluguel atual — migração financeiramente vantajosa já no 1º mês.';
     document.getElementById('a-imov').className='alert ag';
-    document.getElementById('a-imov').innerHTML='✅ <span>Parcela menor que aluguel neste cenário. Ainda assim, a entrada de '+fmt(Math.round(val*ent))+' impacta as caixinhas.</span>';
+    document.getElementById('a-imov').innerHTML='✅ <span>Parcela menor que aluguel neste cenário. Entrada de '+fmt(entradaVal)+' — bônus cobre '+fmt(coberto)+'.</span>';
   }
   if(ch.cSAC){
     const yrs=30,labs=[],data=[];let f2=fin;
     for(let y=1;y<=yrs;y+=2){f2-=fin/360*24;labs.push(y+'a');data.push(Math.round((f2/360+f2*SBPE/12)/500)*500);}
     ch.cSAC.data.labels=labs;ch.cSAC.data.datasets[0].data=data;
-    ch.cSAC.data.datasets[1].data=labs.map(()=>RENT);ch.cSAC.update();
+    ch.cSAC.data.datasets[1].data=labs.map(()=>RENT);ch.cSAC.update('none');
   }
 }
 function initSAC(){
-  const{val,ent}=getImovSliders();
+  const sv=document.getElementById('s6-imov-val');
+  const val=sv?+sv.value:5000000,ent=0.30;
   const fin=Math.round(val*(1-ent));
   const yrs=30,labs=[],data=[];let f2=fin;
   for(let y=1;y<=yrs;y+=2){f2-=fin/360*24;labs.push(y+'a');data.push(Math.round((f2/360+f2*SBPE/12)/500)*500);}
   const c=document.getElementById('cSAC');if(!c)return;
-  ch.cSAC=new Chart(c,{type:'line',data:{labels:labs,datasets:[{label:'Parcela SAC',data:data,borderColor:'#c0392b',backgroundColor:'#c0392b22',tension:.3,fill:true,pointRadius:0},{label:'Aluguel atual',data:labs.map(()=>RENT),borderColor:'#1a7a4a',borderDash:[4,4],tension:0,fill:false,pointRadius:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{font:{size:9}}}},scales:{x:{ticks:{font:{size:9}},grid:{display:false}},y:{ticks:{callback:v=>'R$'+Math.round(v/1000)+'K',font:{size:9}},grid:{color:'#f0f0ec'}}}}});
+  ch.cSAC=new Chart(c,{type:'line',data:{labels:labs,datasets:[{label:'Parcela SAC',data:data,borderColor:'#c0392b',backgroundColor:'#c0392b22',tension:.3,fill:true,pointRadius:0},{label:'Aluguel atual',data:labs.map(()=>RENT),borderColor:'#1a7a4a',borderDash:[4,4],tension:0,fill:false,pointRadius:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{font:{size:9},padding:6,boxWidth:10}}},scales:{x:{ticks:{font:{size:8.5}},grid:{display:false}},y:{ticks:{callback:v=>'R$'+Math.round(v/1000)+'K',font:{size:8.5}},grid:{color:'#f0f0ec'}}}}});
 }
 
-// === SLIDE 7 ===
+// ── SLIDE 7 ──
 function updFiscal(){
   const vs=document.querySelectorAll('#slide-7 input[type=range]');
   const val=+vs[0].value;
-  document.getElementById('vdiv').textContent='R$ '+fmtk(val);
+  document.getElementById('vdiv').textContent=fmtk(val);
   const irrf=val>600000?Math.round((val-600000)*0.1):0;
   const liq=val-irrf;
   document.getElementById('f-div').textContent=fmt(val);
-  document.getElementById('f-irrf').textContent=irrf>0?fmt(irrf):'Isento (< R$ 600K)';
+  document.getElementById('f-irrf').textContent=irrf>0?fmt(irrf):'Isento (abaixo de R$ 600K/ano)';
   document.getElementById('f-liq').textContent=fmt(liq);
   document.getElementById('f-mes').textContent=fmt(Math.round(liq/12));
 }
@@ -1073,12 +1309,18 @@ function initRenda(){
   const trs4=apoAmt*0.04/12;
   const divMes=Math.round(DIVIDENDOS*DIV_RATE/12);
   const offMes=Math.round(offAmt*OFF_RATE/12);
-  ch.cRenda=new Chart(c,{type:'doughnut',data:{labels:['RPPS Mariana','TRS (Aposentadoria)','Dividendos Cetipados','Exterior USD'],datasets:[{data:[RPPS,Math.round(trs4),divMes,offMes],backgroundColor:['#1e4d8c','#a8883a','#1a7a4a','#6d3494'],borderWidth:3,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'right',labels:{font:{size:9},padding:8}},tooltip:{callbacks:{label:ctx=>{const t=ctx.parsed+ctx.dataset.data.reduce((a,b)=>a+b,0);return ctx.label+': '+fmt(ctx.parsed)+'/mês ('+Math.round(ctx.parsed/ctx.dataset.data.reduce((a,b)=>a+b,0)*100)+'%)';}}}}}});
-  updFiscal();
+  ch.cRenda=new Chart(c,{type:'doughnut',data:{
+    labels:['RPPS Mariana','TRS (Aposentadoria)','Dividendos Cetipados (isentos)','Exterior USD'],
+    datasets:[{data:[RPPS,Math.round(trs4),divMes,offMes],backgroundColor:['#1e4d8c','#a8883a','#1a7a4a','#6d3494'],borderWidth:3,borderColor:'#fff'}]
+  },options:{responsive:true,maintainAspectRatio:false,plugins:{
+    legend:{position:'bottom',labels:{font:{size:9},padding:8,boxWidth:10}},
+    tooltip:{callbacks:{label:ctx=>{const tot=ctx.dataset.data.reduce((a,b)=>a+b,0);return ctx.label+': '+fmt(ctx.parsed)+'/mês ('+Math.round(ctx.parsed/tot*100)+'%)';}}}
+  }}});
+  updFiscal();updChoicesSummary();
 }
 
 window.onload=()=>{};
-document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev();if(e.key==='Escape'&&document.getElementById('app').style.display!='none'){}});
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')next();if(e.key==='ArrowLeft')prev();});
 </script>
 </body>
 </html>
